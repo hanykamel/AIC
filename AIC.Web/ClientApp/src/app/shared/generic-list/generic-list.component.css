@@ -1,0 +1,123 @@
+.NewsContainer {
+  position: relative;
+  display: block;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  opacity: 1;
+  width: 90%;
+  height: fit-content;
+  margin: 0 auto 50px;
+  padding: 30px 20px;
+}
+
+.NewsCard {
+  position: relative;
+  display: inline-block;
+  width: calc(94% / 3);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #00000012;
+  border-radius: 18px;
+  opacity: 1;
+  overflow: hidden;
+  padding: 20px;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.NewsCard img {
+  border-radius: 16px;
+  height: 184px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+span.DateLabel {
+  position: relative;
+  display: flex;
+  text-align: left;
+  font: italic normal medium 18px/28px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+  opacity: 1;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+p.Title {
+  position: relative;
+  display: block;
+  text-align: left;
+  font: normal normal bold 19px/28px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+p.Discription {
+  position: relative;
+  display: block;
+  text-align: left;
+  font: normal normal medium 16px/28px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+}
+
+.TitleCont {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 2% auto;
+  text-align: left;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3c57a1;
+}
+
+.TitleCont button {
+  background: #f6be00 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  margin-left: auto;
+  border: navajowhite;
+  font: normal normal normal 18px/22px Roboto;
+  cursor: pointer;
+}
+::ng-deep body.ar .TitleCont button {
+  margin-left: 0 !important;
+  margin-right: auto;
+}
+::ng-deep app-performance-computing p.Title {
+  font: normal normal bold 26px/34px Roboto !important;
+}
+::ng-deep body.ar p.Discription,
+::ng-deep body.ar p.Title {
+  text-align: right !important;
+}
+/* .NewsCard:hover img {
+  height: 170px;
+} */
+@media screen and (max-width: 480px) {
+  .NewsCard {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+  .NewsContainer{
+    width: unset;
+    margin: 0 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .NewsContainer{
+    width: unset;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .NewsCard:hover img {
+    height: 184px !important;
+  }
+}

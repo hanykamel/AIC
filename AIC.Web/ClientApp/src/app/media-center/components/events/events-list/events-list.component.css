@@ -1,0 +1,35 @@
+.TitleCont {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 2% auto;
+  text-align: left;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  justify-content: space-between;
+  align-items:center
+}
+
+  .TitleCont button {
+    border-radius: 12px;
+    max-width: 150px;
+  }
+@media only screen and (max-width:768px) {
+  .TitleCont {
+    width: unset;
+    margin: 2% 20px;
+  }
+  .TitleCont button {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+ 
+    .TitleCont button {
+      margin-top: 10px;
+      margin-left: auto;
+    }
+}

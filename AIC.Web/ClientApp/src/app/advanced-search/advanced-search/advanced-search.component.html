@@ -1,0 +1,72 @@
+<div class="sectionPadding">
+  <div class="advancedSearch">
+    <div class="p-grid">
+      <div class="p-col-12">
+        <p class="text-16 whiteColor alignText">{{'Search.AdvancedSearch' | translate}}</p>
+      </div>
+
+      <div class="p-col-12 p-md-6 p-lg-3">
+        <label>{{'Search.SelectCategory' | translate}}</label>
+        <p-dropdown [options]="categories" [(ngModel)]="selected" placeholder="{{'Search.SelectCategory' | translate}}" optionLabel="name" [showClear]="false"></p-dropdown>
+        <p class="errorText" *ngIf="errorMsg">{{'Search.SearchError' | translate}}</p>
+      </div>
+      <!--End col-->
+      <div class="p-col-12 p-md-6 p-lg-5">
+        <label>{{'Search.EnterKeyword' | translate}}</label>
+        <input placeholder="{{'Search.EnterKeyword' | translate}}" [(ngModel)]="searchKey" />
+        <p class="errorText" *ngIf="searchMinLength">{{'Search.MinLength' | translate}}</p>
+      </div>
+      <!--End col-->
+      <div class="p-col-12 p-md-6 p-lg-2">
+        <label>{{'Search.StartDate' | translate}}</label>
+        <p-calendar dateFormat="dd/mm/yy"  placeholder="{{'Search.StartDate' | translate}}" [(ngModel)]="startDate" #fromDate></p-calendar>
+      </div>
+      <!--End col-->
+      <div class="p-col-12 p-md-6 p-lg-2 secondDate">
+        <label>{{'Search.EndDate' | translate}}</label>
+        <p-calendar dateFormat="dd/mm/yy"  placeholder="{{'Search.EndDate' | translate}}"  [(ngModel)]="endDate" [minDate]="fromDate.value"></p-calendar>
+      </div>
+      <!--End col-->
+      <div class="p-col-12">
+       
+       
+        <div class="flexBtnEnd">
+          <button class="btn transparentBtn" (click)="RedirectToSearch()">
+            <i class="material-icons">search</i>
+            <span>{{'Search.Search' | translate}}</span>
+          </button>
+          <button class="btn transparentBtn" (click)="Reset()">
+            <i class="material-icons">refresh</i>
+            <span>{{'Search.Reset' | translate}}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr *ngIf="results.length > 0 || noDataFound" />
+    <div *ngIf="results.length > 0" class="p-grid">
+      <div class="p-col-12">
+        <p class="text-16 whiteColor resultTitle alignText">
+          <span>{{'Search.SearchResult' | translate}}</span>
+          <i class="material-icons-outlined p-mr-2 p-ml-2">
+            content_paste_search
+          </i>
+        </p>
+      </div>
+      <div *ngFor="let item of results" class="p-lg-4 p-mg-6 p-col-12 p-mb-3">
+        <div (click)="GetRoute(item)" 
+              [ngClass]="{ rtl: item.Lang === 'ar', ltr: item.Lang === 'en'}" 
+              class="whiteCard careersCard cursorPointer searchCard">
+            <div class="searchText">
+              <p class="greyColor text-12 p-mb-1" style="height: 20px;" >{{item | itemDateFormate}}</p>
+              <p class=" title text-24 p-mb-2">{{item.Title}}</p>
+              <p class="descText text-14 p-mb-1" *ngIf="item.Brief">{{item.Brief | trimwords:100}}</p>
+              <p class="descText text-14 p-mb-1" *ngIf="!item.Brief" class="innerText"  [innerHTML]="item.Description"></p>  
+            </div>
+        </div>
+      </div>
+      <!--End Card-->
+    </div>
+    <app-no-data-found *ngIf="noDataFound"></app-no-data-found>
+  </div>
+</div>
+

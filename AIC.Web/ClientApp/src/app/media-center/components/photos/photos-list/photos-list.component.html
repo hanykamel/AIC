@@ -1,0 +1,8 @@
+<div class="TitleCont">
+  <h1 class="text-30">{{'PagesTitle.PhotoGallery' | translate}}</h1>
+</div>
+<app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [isSortingAscending] ="false" [sortingField]="'AICDate'">
+  <ng-template let-Data="Data">
+    <app-generic-gallery [icards]="prepareData(Data)"></app-generic-gallery>
+  </ng-template>
+</app-sharepoint-pagination>

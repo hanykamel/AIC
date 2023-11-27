@@ -1,0 +1,223 @@
+.sliderSection {
+  padding-top: 100px;
+}
+
+.videoDialog iframe {
+  width: 100%;
+}
+
+.slideCont {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+.slideCont .desc {
+  height: 110px;
+  overflow: hidden;
+  font: normal normal normal 18px/22px Roboto;
+}
+.sliderSection img {
+  height: 360px;
+  width: 90%;
+  margin-left: auto;
+  display: flex;
+}
+
+.ar :host ::ng-deep .sliderSection img {
+  transform: rotateY(180deg);
+}
+
+.sliderSection .imgLayout::before {
+  content: "";
+  box-shadow: 0px 3px 15px #f6be00;
+  border: 3px solid #f6be00;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  height: 370px;
+  left: 150px;
+}
+
+.ar :host ::ng-deep .sliderSection .imgLayout::before {
+  left: usnet !important;
+  right: 150px;
+}
+
+.sliderSection ::ng-deep .owl-theme .owl-dots {
+  display: flex;
+  position: absolute;
+  top: 305px;
+  left: 0;
+}
+
+.ar :host ::ng-deep .sliderSection ::ng-deep .owl-theme .owl-dots {
+  right: 0;
+  left: unset !important;
+}
+
+.sliderSection ::ng-deep .owl-theme .owl-dots .owl-dot {
+  width: 50px;
+  background: #424b54ba;
+}
+
+.sliderSection ::ng-deep .owl-theme .owl-dots .owl-dot:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.sliderSection ::ng-deep .owl-theme .owl-dots .owl-dot:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.ar
+  :host
+  ::ng-deep
+  .sliderSection
+  ::ng-deep
+  .owl-theme
+  .owl-dots
+  .owl-dot:first-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.ar
+  :host
+  ::ng-deep
+  .sliderSection
+  ::ng-deep
+  .owl-theme
+  .owl-dots
+  .owl-dot:last-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.sliderSection ::ng-deep .owl-theme .owl-dots .owl-dot span {
+  width: 50px;
+  background: #424b54ba;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.sliderSection ::ng-deep .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #fff;
+}
+.slideTitle {
+  height: 75px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .slideCont {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .slideCont .imgLayout {
+    width: 132px;
+    height: 160px;
+  }
+
+  .slideCont .imgLayout img {
+    height: 180px;
+    bottom: 20px;
+    width: 160px;
+  }
+
+  .textCont {
+    margin: 0;
+  }
+
+  .slideCont .imgLayout::before {
+    display: none;
+  }
+
+  .sliderSection ::ng-deep .owl-theme .owl-dots {
+    top: 251px;
+    left: 0;
+    right: unset !important;
+  }
+
+  .ar :host ::ng-deep .sliderSection ::ng-deep .owl-theme .owl-dots {
+    left: unset !important;
+    right: 0 !important;
+  }
+
+  .sliderSection img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .slideCont {
+    height: 300px;
+  }
+  .sliderSection {
+    padding-top: 30px;
+  }
+  .numText {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .slideCont {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .slideCont .imgLayout {
+    width: 132px;
+    height: 160px;
+  }
+
+  .slideCont .imgLayout img {
+    height: 180px;
+    bottom: 20px;
+    width: 160px;
+  }
+
+  .textCont {
+    margin: 0;
+  }
+
+  .slideCont .imgLayout::before {
+    display: none;
+  }
+
+  .sliderSection ::ng-deep .owl-theme .owl-dots {
+    top: 251px;
+    left: 0;
+    right: unset !important;
+  }
+
+  .ar :host ::ng-deep .sliderSection ::ng-deep .owl-theme .owl-dots {
+    left: unset !important;
+    right: 0 !important;
+  }
+
+  .sliderSection img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .slideCont {
+    height: 300px;
+  }
+
+  .sliderSection {
+    padding-top: 30px;
+  }
+
+  .numText {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 1180px) and (min-width: 784px) {
+  .sliderSection .btn {
+    min-width: 110px !important;
+  }
+
+  .slideTitle {
+    font: normal normal bold 26px/65px Roboto;
+  }
+}
+
+

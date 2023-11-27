@@ -1,0 +1,44 @@
+.genericDetails .whiteCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.genericDetails .shadowCont{
+  padding-top: 100px;
+}
+.genericDetails .whiteCard {
+  height: 330px;
+  position: relative;
+  padding-top: 160px;
+}
+  .genericDetails .whiteCard img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #00C4FF;
+    padding: 3px;
+    position: absolute;
+    bottom: 180px;
+  }
+
+.btnTitle {
+  background: #3C57A1 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  color: #fff;
+  min-width: 60%;
+  text-align: center;
+  padding: 4px;
+  font-size: 14px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.genericDetails .text-14{
+    padding:0 10px 
+}
+.genericDetails .text-18 {
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
+}

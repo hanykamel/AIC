@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ed79932c-7c54-4a5d-b5cb-b4ddb3b40946" solutionId="ed79932c-7c54-4a5d-b5cb-b4ddb3b40946" resetWebServer="true" sharePointProductVersion="19.0" name="AIC.Sharepoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="0f6fc7df-28f2-41be-9ead-2b946db238dc" />
+    <featureReference itemId="a1104343-080d-4771-91ad-08961bfbc333" />
+    <featureReference itemId="2a6cd41b-9358-4610-9949-b1033ca09b9c" />
+    <featureReference itemId="8e74de71-08b1-4be2-8b0a-b1c0faa79f6b" />
+    <featureReference itemId="d73ef720-210d-48d5-9798-561514ec7df1" />
+    <featureReference itemId="d6f8956e-8d5a-4f6c-96f2-f06e4ccad9ca" />
+    <featureReference itemId="c5e7f5f3-4073-4fbd-a03b-111d1f67b6e8" />
+    <featureReference itemId="4e88d4e8-8f4b-4c1c-9a9f-a66325c8908c" />
+    <featureReference itemId="a214a15b-1baa-4b21-aa5c-df035526ff6c" />
+    <featureReference itemId="d64698dd-20ff-4214-968d-481b2f20b715" />
+    <featureReference itemId="065b6a33-5ffd-4add-bf38-20f63dbb0bbb" />
+    <featureReference itemId="c60d2191-5eca-47f9-9a94-4d08746fd45a" />
+    <featureReference itemId="8d09d3eb-e955-47ef-9438-3a53e2d41b2e" />
+    <featureReference itemId="7304bd76-05c8-4216-b68b-5b9e924b1c16" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="ceacf778-ab26-4f90-a9a3-f25992837903" />
+    <projectItemReference itemId="ffa336e3-8cca-4f47-98a9-61d2dec3cb42" />
+  </projectItems>
+</package>

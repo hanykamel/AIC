@@ -1,0 +1,81 @@
+footer {
+  box-shadow: 0px 3px 20px #0000000C;
+  border-radius: 24px 24px 0px 0px;
+  background: #fff
+}
+
+.footerInput {
+  position: relative;
+}
+.footerInput i {
+  position: absolute;
+  right: 7px;
+  color: #000;
+  top: 11px;
+  font-size: 13px;
+}
+.sectionPadding.siteMapCont {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  margin: 50px 70px;
+  padding: 30px;
+}
+.ar :host ::ng-deep .footerInput i {
+  right: unset !important;
+  left: 7px;
+  transform: rotateY('180deg');
+}
+h2.title {
+  position: relative;
+  display: flex;
+  margin: 10px 70px -20px;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  opacity: 1;
+}
+.blackColor {
+  font-weight: 600;
+}
+.sectionPadding.siteMapCont ::ng-deep p.greyColor.text-14.p-mb-1 {
+    margin: 10px 0;
+}
+.sectionPadding.siteMapCont ::ng-deep p.greyColor.text-14.p-mb-1 a {
+  color: #000;
+  text-decoration: none;
+  font: normal normal normal 15px/18px Roboto;
+  letter-spacing: 0px;
+  cursor:pointer
+}
+  .sectionPadding.siteMapCont ::ng-deep a.blackColor.text-14 {
+    text-decoration: none;
+  }
+.sitemapCard {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width:768px) {
+  .sitemapCard {
+      flex-direction:column
+  }
+  .sectionPadding.siteMapCont {
+      margin:30px
+  }
+  h2.title {
+    margin: 10px 30px -20px;
+  }
+  }
+  @media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+    .sitemapCard {
+      flex-direction: column
+    }
+    .sectionPadding.siteMapCont {
+      margin: 30px
+    }
+
+    h2.title {
+      margin: 10px 30px -20px;
+    }
+}

@@ -1,0 +1,12 @@
+<div class="GallCont">
+  <div class="GallHead" *ngIf="albumDetails">
+    <h3>{{albumDetails.Title}}</h3>
+    <p>{{albumDetails.Brief}}</p>
+  </div>
+  <app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [sortingField]="sortingField"
+                             [isSortingAscending]="isSortingAscending" [pagination]="pagination" [Filters]="Filters">
+    <ng-template let-Data="Data">
+      <app-generic-gallery-view [images]="Data"></app-generic-gallery-view>
+    </ng-template>
+  </app-sharepoint-pagination>
+</div>

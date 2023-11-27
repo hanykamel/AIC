@@ -1,0 +1,47 @@
+<div class=" homeSectionPadding sliderSection" *ngIf="!noDataAvailable" >
+  <div class="p-grid">
+    <div class="p-col-12 p-md-6">
+        <img class="thumb" src="../../../../assets/images/home/slider.png" >
+    </div>
+  <app-no-data-found *ngIf="noDataAvailable"></app-no-data-found>
+
+    <div class="p-col-12 p-md-6 homeSlider">
+      <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of data; let i = index">
+          <ng-template carouselSlide [id]="slide.id">
+            <div class="slideCont">
+              
+              <div class="textCont">
+                <h2 class="slideTitle text-60 whiteColor p-mb-2">{{slide.title}}</h2>
+                <p class="desc whiteColor text-16 p-mb-3">{{slide.desc}}</p>
+                <button *ngIf="slide.readMoreUrl" class="btn whiteBtn p-mb-3"
+                        (click)="onClick(slide)">
+                  {{'HomePage.ShowMore' | translate}}
+                </button>
+                <button *ngIf="slide.videoUrl" class="btn whiteBtn p-mr-2 p-ml-2"
+                        (click)="showDialog()">
+                  {{'HomePage.Video' | translate}}
+                </button>
+                <p class="text-32 whiteColor numText"> 0{{i+1}}</p>
+              </div>
+            </div>
+            <!-- End Card -->
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+    </div>
+
+  </div>
+  
+</div>
+
+
+
+<p-dialog [(visible)]="display"
+          class="videoDialog"
+          [modal]="true"
+          [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}" role="alert"
+           [draggable]="false" [resizable]="false">
+  <iframe  height="315" src="https://www.youtube.com/embed/_ivIUCSOZ78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p-dialog>

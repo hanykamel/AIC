@@ -1,0 +1,16 @@
+.screenreader-summary {
+    position: absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    outline: none; /* Important, don't show an outline on-focus */
+  }
+  .screenreader-en{
+    left:-10000px;
+    right: unset;
+  }
+  .screenreader-ar{
+    right:-10000px;
+    left: unset;
+  }

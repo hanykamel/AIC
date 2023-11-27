@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+  .cardCont .whiteCard {
+    height: 413px;
+    cursor: pointer
+  }
+  .cardCont .whiteCard:hover .projectImg {
+    height: 130px;
+    object-fit: cover;
+    transition: ease-out 0.3s;
+  }
+  .cardCont .whiteCard:hover .desc {
+    height: 120px;
+  }
+}

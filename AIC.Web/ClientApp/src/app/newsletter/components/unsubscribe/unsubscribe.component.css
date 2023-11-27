@@ -1,0 +1,59 @@
+
+.subDialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+  border-radius: 15px;
+  padding: 50px 40px;
+  width: 50%;
+  margin: auto;
+}
+
+  .subDialog i {
+    font-size: 60px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #EEFFF8;
+    color: #16BC7A;
+  }
+
+  .subDialog .close {
+    background-color: #FFF2F2;
+    color: #CA2323;
+  }
+
+  .subDialog p {
+    text-align: center
+  }
+
+@media only screen and (max-width:768px) {
+  .subDialog i {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .subDialog {
+    width: 90%
+  }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .subDialog i {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .subDialog {
+    width: 90%
+  }
+}

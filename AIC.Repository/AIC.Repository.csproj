@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AIC.CrossCutting\AIC.CrossCutting.csproj" />
+    <ProjectReference Include="..\AIC.Data\AIC.Data.csproj" />
+  </ItemGroup>
+
+</Project>

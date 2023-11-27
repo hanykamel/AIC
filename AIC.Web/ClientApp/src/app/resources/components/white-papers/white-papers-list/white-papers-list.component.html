@@ -1,0 +1,25 @@
+<div class="whitePaperCont">
+  <h1 class="text-24 blueColor p-mb-5 p-mt-3 font-bold paddingTitle">
+    {{ "PagesTitle.WhitePapers" | translate }}
+  </h1>
+  <div class="cardCont">
+    <app-sharepoint-pagination
+      [url]="url"
+      [pageSize]="pageSize"
+      [sortingField]="sortingField"
+      [isSortingAscending]="isSortingAscending"
+      [pagination]="pagination"
+      [Filters]="Filters"
+    >
+      <ng-template let-Data="Data">
+        <app-generic-list
+          [cards]="
+            _resourcesService.ParsingWhitePapersDataToSharedComponent(Data)
+          "
+          [WhitePapersView]="true"
+        >
+        </app-generic-list>
+      </ng-template>
+    </app-sharepoint-pagination>
+  </div>
+</div>

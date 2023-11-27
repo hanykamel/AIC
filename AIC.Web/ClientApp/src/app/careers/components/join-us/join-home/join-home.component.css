@@ -1,0 +1,54 @@
+.applyNowCont {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #00000014;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+  padding: 83px 40px;
+  text-align: center;
+}
+.applyNowCont .blackColor {
+  margin: 30px 0;
+}
+.applyNowCont .btn {
+  border-radius: 54px;
+  min-width: 200px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.applyNowCont .btn i {
+  margin-right: 5px;
+}
+.ar :host ::ng-deep .applyNowCont .btn i {
+  margin-left: 5px;
+  margin-right: 0 !important;
+}
+
+::ng-deep .emailDialog .pRelative {
+  margin-bottom: unset;
+}
+.emailDialog ::ng-deep p-captcha {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 304px;
+  height: 78px;
+}
+
+@media only screen and (max-width: 768px) {
+  .applyNowCont {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .applyNowCont {
+    width: 100%;
+    padding: 20px;
+  }
+}

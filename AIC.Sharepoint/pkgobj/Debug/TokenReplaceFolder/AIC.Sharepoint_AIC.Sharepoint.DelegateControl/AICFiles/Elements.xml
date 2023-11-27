@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="AICFiles" Url="_catalogs/masterpage" RootWebOnly="FALSE">
+    <File Path="AICFiles\seattle.master" Url="seattle.master" ReplaceContent="TRUE" Type="GhostableInLibrary"/>
+    <File Path="AICFiles\jquery-3.5.1.min.js" Url="AIC/JS/jquery.jtable.min.js" ReplaceContent="TRUE" Type="GhostableInLibrary" />
+    <File Path="AICFiles\jquery-ui.min.js" Url="AIC/JS/jquery.jtable.min.js" ReplaceContent="TRUE" Type="GhostableInLibrary"  />
+    <File Path="AICFiles\jquery.jtable.min.js" Url="AIC/JS/jquery.jtable.min.js" ReplaceContent="TRUE" Type="GhostableInLibrary"  />
+    <File Path="AICFiles\bootstrap.min.css" Url="AIC/CSS/bootstrap.min.css" ReplaceContent="TRUE" Type="GhostableInLibrary" />
+    <File Path="AICFiles\jquery-ui.css" Url="AIC/CSS/jquery-ui.css" ReplaceContent="TRUE" Type="GhostableInLibrary" />
+    <File Path="AICFiles\jtable_basic.min.css" Url="AIC/CSS/jtable_basic.min.css" ReplaceContent="TRUE" Type="GhostableInLibrary"/>
+    <File Path="AICFiles\styles.css" Url="AIC/CSS/styles.css" ReplaceContent="TRUE" Type="GhostableInLibrary"/>
+    <File Path="AICFiles\jquery.SPServices.min.js" Url="AIC/JS/jquery.SPServices.min.js" ReplaceContent="TRUE" Type="GhostableInLibrary"/>
+    <File Path="AICFiles\jquery.table2excel.min.js" Url="AIC/JS/jquery.table2excel.min.js" ReplaceContent="TRUE" Type="GhostableInLibrary"/>
+  </Module>
+</Elements>

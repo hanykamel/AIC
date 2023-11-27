@@ -1,0 +1,48 @@
+<div class="sectionPadding partners">
+  <h1 class="blueColor text-28 p-mb-4 font-bold">
+    {{ "PartnerShips.Partners" | translate }}
+  </h1>
+  <div class="shadowCont">
+    <div *ngIf="internationalPartners?.length > 0" class="p-mb-3">
+      <p class="blueColor font-bold p-mb-2">
+        {{ types[1] }}
+      </p>
+      <div class="p-grid">
+        <div
+          *ngFor="let item of internationalPartners"
+          class="p-col-12 p-lg-3 p-md-3"
+        >
+          <div class="shadowCont">
+            <img
+              class="p-w-100"
+              src="{{ item.Logo }}"
+              (click)="onClick(item.Url)"
+            />
+          </div>
+        </div>
+        <!--End Row-->
+      </div>
+    </div>
+    <div *ngIf="nationalPartners?.length > 0">
+      <p class="blueColor font-bold p-mb-2">
+        {{ types[0] }}
+      </p>
+      <div class="p-grid">
+        <div
+          *ngFor="let item of nationalPartners"
+          class="p-col-12 p-lg-3 p-md-3"
+        >
+          <div class="shadowCont">
+            <img
+              class="p-w-100"
+              src="{{ item.Logo }}"
+              (click)="onClick(item.Url)"
+            />
+          </div>
+        </div>
+        <!--End Row-->
+      </div>
+    </div>
+  </div>
+  <app-no-data-found *ngIf="noDataAvailable"></app-no-data-found>
+</div>

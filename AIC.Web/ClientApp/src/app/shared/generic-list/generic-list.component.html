@@ -1,0 +1,36 @@
+<!--<div class="TitleCont">
+  <h4>{{'HPC.HPCProjects'|translate}}</h4>
+  <button *ngIf="newsView" (click)="(newsView == true && archivedNewsView == false) ? onClickArchived() : onClickNews() ">
+    {{'News.ArchivedNews' | translate}}
+  </button>
+  <button *ngIf="eventsView"
+          (click)="(eventsView == true && archivedEventsView == false) ? onClickArchivedEvents() : onClickEvents() ">
+    {{'Events.ArchivedEvents' | translate}}
+  </button>
+
+</div>-->
+<div class="NewsContainer" *ngIf="cards?.length > 0">
+  <div class="p-grid">
+    <div
+      (click)="onClickForDetails(card.id)"
+      class="NewsCard"
+      *ngFor="let card of cards"
+    >
+      <img
+        class="borderedImg"
+        *ngIf="!WhitePapersView && !BestPracticeView"
+        [src]="card.img"
+      />
+      <span class="DateLabel font-italic font-bold">{{
+        card.date | formatDate
+      }}</span>
+
+      <p class="Title">{{ card.title }}</p>
+      <div [innerHTML]="card.desc | safeHtml" class="innerText"></div>
+      <p *ngIf="eventsView || WhitePapersView" class="text-14 font-bold p-mt-2">
+        {{ card.type }}
+      </p>
+    </div>
+  </div>
+</div>
+<app-no-data-found *ngIf="!cards"></app-no-data-found>

@@ -1,0 +1,10 @@
+<div *ngIf="projectDetails" class="sectionPadding projDet">
+  <div class="shadowCont">
+    <div class="headerTitle p-mb-4">
+      <p class="blueColor text-24">{{projectDetails.Title}}</p>
+    </div>
+      <img class="p-mb-4" [src]="projectDetails.AICImage" />
+      <div class=" p-mb-4 innerText" [innerHTML]="projectDetails.AICDesc | safeHtml"> </div>
+  </div>
+</div>
+

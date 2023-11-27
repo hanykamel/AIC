@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="AppliedToCareersList" List="113" Url="_catalogs/wp">
+    <File Path="AppliedToCareersList\AppliedToCareersList.webpart" Url="AIC.Sharepoint_AppliedToCareersList.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

@@ -1,0 +1,69 @@
+<div class="homeCont">
+  <app-header></app-header>
+  <div #banner id="banner" role="main">
+    <app-slider (dataEmitter)="slidesExist($event)"></app-slider>
+  </div>
+  <div #projects id="projects">
+    <app-projects (dataEmitter)="projectsExist($event)"></app-projects>
+  </div>
+  <div #highlights id="highlights">
+    <app-highlights (dataEmitter)="highlightsExist($event)"></app-highlights>
+  </div>
+  <div #careers id="careers">
+    <app-careers (dataEmitter)="careersExist($event)"></app-careers>
+  </div>
+  <div #contact id="contact">
+    <app-home-contact (dataEmitter)="contactsExist($event)"></app-home-contact>
+  </div>
+  <app-footer role="contentinfo"></app-footer>
+</div>
+<div class="bg-animation">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+</div>
+<div class="pagesGuide">
+  <div *ngIf="slidesdata?.length" class="circle" (click)="scroll(banner, 'banner')" (click)="onButtonGroupClick()">
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <p class="pageName">{{ "HomePage.MainBanner" | translate }}</p>
+  </div>
+  <!-- End Row -->
+  <div *ngIf="projectsdata?.length" class="circle" (click)="scroll(projects, 'projects')"
+    (click)="onButtonGroupClick()">
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <p class="pageName">{{ "HomePage.aicProjects" | translate }}</p>
+  </div>
+  <!-- End Row -->
+  <div *ngIf="highlightsdata?.length" class="circle" (click)="scroll(highlights, 'highlights')"
+    (click)="onButtonGroupClick()">
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <p class="pageName">{{ "HomePage.AICHighlights" | translate }}</p>
+  </div>
+  <!-- End Row -->
+  <div *ngIf="careersdata?.length" class="circle" (click)="scroll(careers, 'careers')" (click)="onButtonGroupClick()">
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <p class="pageName">{{ "HomePage.FeaturedCareers" | translate }}</p>
+  </div>
+  <!-- End Row -->
+  <div *ngIf="contactsdata?.length" class="circle" (click)="scroll(contact, 'contact')" (click)="onButtonGroupClick()">
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+    <p class="pageName">{{ "HomePage.ContactUs" | translate }}</p>
+  </div>
+  <!-- End Row -->
+</div>
+
+<div class="socialIcons">
+  <a [title]="link.name" [href]="[link.url]" *ngFor="let link of socData" target="_blank">
+    <img [src]="link.img" [alt]="link.name">
+  </a>
+</div>

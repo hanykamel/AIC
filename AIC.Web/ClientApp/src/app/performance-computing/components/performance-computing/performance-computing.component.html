@@ -1,0 +1,19 @@
+<div class="TitleCont">
+  <h4>{{'PagesTitle.HighPreformanceComputing'|translate}}</h4>
+</div>
+<div class="sectionPadding NewsContainer" *ngIf="highPCData">
+  <img src="{{highPCData.img}}" />
+  <div [innerHTML]="highPCData.desc  | safeHtml" class="innerText"></div>
+</div>
+<div class="TitleCont" *ngIf="projectsFound">
+  <h4>{{'HPC.HPCProjects'|translate}}</h4>
+</div>
+<div class="PerfComputing">
+  <app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [sortingField]="sortingField"
+                             [isSortingAscending]="isSortingAscending" [pagination]="pagination" [Filters]="Filters">
+    <ng-template let-Data="Data">
+      <app-generic-list [cards]="ParsingDataToGenericList(Data)"></app-generic-list>
+    </ng-template>
+  </app-sharepoint-pagination>
+</div>
+

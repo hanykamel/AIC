@@ -1,0 +1,38 @@
+<h2 class="title">{{'PagesTitle.Faqs'|translate}}</h2>
+
+<div class="FaqsCont">
+
+  <div class="d-sm-none p-w-100">
+    <p-tabView>
+      <p-tabPanel *ngFor="let item of faqs; let i = index" rendered="#{not empty param['i']}" [selected]="i == 0">
+        <ng-template pTemplate="header">
+          <span (click)="activeTabDetails()">{{item.TopicTitle}}</span>
+        </ng-template>
+        <p-accordion [activeIndex]="index">
+          <p-accordionTab [header]="topic.Title" [selected]="j == 0" *ngFor="let topic of item.children; let j = index">
+            <div [innerHTML]="topic.Answer | safeHtml" class="innerText"></div>
+          </p-accordionTab>
+        </p-accordion>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+
+
+
+  <div class="d-lg-none p-w-100 p-mt-4">
+    <p-tabView>
+      <p-tabPanel>
+        <p-accordion>
+          <p-accordionTab [header]="item.TopicTitle" *ngFor="let item of faqs">
+            <div class="p-mb-3" *ngFor="let topic of item.children">
+              <p class="blueColor text-16 font-bold p-mb-2">{{topic.Title}}</p>
+              <p class="text-16 innerText" [innerHTML]="topic.Answer" ></p>
+            </div>
+
+          </p-accordionTab>
+        </p-accordion>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
+

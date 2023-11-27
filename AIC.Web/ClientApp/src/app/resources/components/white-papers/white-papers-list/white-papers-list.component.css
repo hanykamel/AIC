@@ -1,0 +1,12 @@
+::ng-deep .NewsCard span:nth-child(2) {
+  position: absolute;
+  bottom: 15px;
+}
+::ng-deep .NewsCard{
+  padding-bottom: 45px !important;
+}
+/* .whitePaperCont ::ng-deep .NewsContainer{
+   background:transparent;
+   box-shadow:none
+
+} */

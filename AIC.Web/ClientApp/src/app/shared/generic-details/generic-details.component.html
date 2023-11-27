@@ -1,0 +1,48 @@
+<div class="DetCont" *ngFor="let detail of details">
+  <div class="DetHeader">
+    <div class="twoPara">
+      <h2>{{detail.title}}</h2>
+      <h5 *ngIf="newsView || eventView || whitePapersView">{{detail.subTitle}}</h5>
+    </div>
+    <div class="font-italic font-bold" *ngIf="newsView || whitePapersView">{{detail.date | formatDate}}</div>
+    <div class="font-italic font-bold" *ngIf="eventView">{{detail.eventDate | formatDate}}  <span *ngIf="detail.endDate">-</span> {{detail.endDate | formatDate}}</div>
+  </div>
+  <img *ngIf="newsView || eventView " [src]="detail.img" />
+  <div class="InfoCont">
+    <div class="LinksCont">
+      <!-- <span>{{detail.url}}</span> -->
+      <div class="flexCont" *ngIf="newsView && detail.url">
+        <i class=" blueColor material-icons-outlined ">
+          open_in_new
+        </i>
+        <a class="p-mb-0" href="{{detail.url}}" target="_blank">{{detail.source}}</a>
+
+      </div>
+      
+      <div class="flexCont" *ngIf="whitePapersView">
+        <i class=" blueColor material-icons-outlined ">
+          open_in_new
+        </i>
+        <a href="{{detail.url}}" target="_blank" class="p-mb-0">{{'WhitePapers.ResourceURL' | translate}}</a>
+
+      </div>
+
+      <span class="locUrl" *ngIf="eventView">{{detail.locurl}}</span>
+    </div>
+    <div class="eventLocCont" *ngIf="eventView ">
+      <div class="eventAdd" *ngIf="detail.Address ">
+        <i class="material-icons blueColor">
+          location_on
+        </i>
+        <span class="locUrl">{{detail.Address}}</span>
+      </div>
+      <div class="eventLoc" *ngIf="detail.Latitude ">
+        <img src="../../../assets/images/Share.svg" />
+        <a class="locUrl" target="_blank" href="https://www.google.com/maps/?q={{detail.Latitude}},{{detail.Longitude}}">{{'Events.Location' | translate}}</a>
+
+      </div>
+    </div>
+      <div [innerHTML]="detail.desc | safeHtml" class="innerText" ></div>
+      <button (click)="onClickRealtedLinks(detail.RelatedLinksIds)" *ngIf="newsView && detail.RelatedLinksIds" class="aboutImg">{{'News.RelatedMediaLinks' | translate}}</button>
+    </div>
+  </div>

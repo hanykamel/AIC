@@ -1,0 +1,8 @@
+.emailDialog ::ng-deep p-captcha {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 304px;
+    height: 78px;
+  }

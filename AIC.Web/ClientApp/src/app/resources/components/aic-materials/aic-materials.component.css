@@ -1,0 +1,92 @@
+.materials .whiteCard {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.materials ::ng-deep .p-tabview .p-tabview-nav-btn.p-link {
+  display: none
+}
+.materials ::ng-deep .p-tabview-scrollable {
+  position: relative
+}
+.arrowBtn {
+  background: #ffffff;
+  color: #3B82F6;
+  width: 3rem;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  border-radius: 0;
+  border: none;
+  height: 61px;
+  width: 45px;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index:99
+}
+.arrowBtn i{
+  font-size: 22px;
+}
+.nextBtn {
+  right: 0;
+}
+.prevBtn {
+  left: 0;
+}
+.materials .whiteCard a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+  .materials .whiteCard .title {
+    height: 60px;
+    overflow: hidden;
+    line-height: 30px;
+  }
+.materials .whiteCard a i {
+ margin-right:5px
+}
+.ar :host ::ng-deep .materials .whiteCard a i {
+  transform: rotateY(180deg);
+  margin-right: 0 !important;
+  margin-left:5px
+}
+.materials .whiteCard .customP {
+  background: #FEFEFE 0% 0% no-repeat padding-box;
+  border: 1px solid #7070702D;
+  border-radius: 8px;
+  padding: 3px;
+  height: 45px;
+  line-height: 15px;
+}
+.ar :host ::ng-deep .materials ::ng-deep .p-tabview-nav-next {
+  right: unset !important;
+  left: 0 ;
+  transform: rotate(180deg);
+}
+.videoModal iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+.videoModal video {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: unset;
+}
+.showAr{
+    display:none
+}
+.ar :host ::ng-deep .hideAr {
+  display: none
+}
+.ar :host ::ng-deep .showAr {
+  display: flex
+}
+@media only screen and (min-width:768px) {
+  .hideTabBtn .arrowBtn {
+    display: none
+  }
+}

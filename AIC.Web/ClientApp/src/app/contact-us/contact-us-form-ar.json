@@ -1,0 +1,118 @@
+{
+  "logoPosition": "right",
+  "locale": "ar",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FullName",
+              "title": "الإسم بالكامل",
+              "placeHolder": "ادخل الإسم بالكامل",
+              "isRequired": true,
+              "startWithNewLine": true
+            },
+            {
+              "type": "text",
+              "name": "Email",
+              "title": "البريد الالكتروني",
+              "placeHolder": "ادخل البريد الالكتروني",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "inputType": "email"
+            },
+            {
+              "type": "text",
+              "name": "PhoneNumber",
+              "title": "رقم التليفون",
+              "placeHolder": "ادخل رقم التليفون",
+              "maxLength": "15",
+              "startWithNewLine": true,
+              "isRequired": true,
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "غير مسموح بالاحرف",
+                  "regex": "^[ 0-9 ]+$"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "title": "النوع",
+              "name": "Type",
+              "optionsCaption": "اختر النوع",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "choices": [
+                "الوظائف",
+                "الشكاوي",
+                "التقييمات",
+                "الحوسبة فائقة القدرة",
+                "الموارد البشرية",
+                "الاستعلامات",
+                "البحث والتطوير",
+                "الاقتراحات"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "CountryId",
+              "title": "الدولة",
+              "startWithNewLine": true,
+              "minWidth": "auto",
+              "isRequired": true,
+              "optionsCaption": "اختر الدولة",
+              "choicesByUrl": {
+                "url": "/api/Lookup/Countries",
+                "valueName": "Id",
+                "titleName": "TitleAr"
+              }
+            },
+            {
+              "type": "dropdown",
+              "name": "CityId",
+              "title": "المدينة",
+              "startWithNewLine": false,
+              "minWidth": "auto",
+              "isRequired": true,
+              "visibleIf": "ShowCities('CountryId')",
+              "optionsCaption": "اختر المدينة",
+              "choicesByUrl": {
+                "url": "/api/Lookup/Cities",
+                "valueName": "Id",
+                "titleName": "TitleAr"
+              }
+            },
+            {
+              "type": "text",
+              "name": "WorkEducationalOrganization",
+              "title": "العمل / المنظمة التعليمية",
+              "placeHolder": "ادخل العمل / المنظمة التعليمية",
+              "maxLength": "80",
+              "startWithNewLine": true
+            },
+            {
+              "type": "comment",
+              "name": "Message",
+              "title": "الرسالة",
+              "placeHolder": "ادخل الرسالة",
+              "maxLength": "400",
+              "isRequired": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "questionErrorLocation": "bottom",
+  "focusFirstQuestionAutomatic": false,
+  "completeText": "ارسال",
+  "widthMode": "responsive"
+}

@@ -1,0 +1,19 @@
+::ng-deep .DetHeader span:last-child {
+  display: none !important;
+}
+
+::ng-deep span.locUrl {
+  margin-left: 25px !important;
+  display: initial;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* float: right; */
+  position: relative;
+  display: flex;
+  margin-right: auto !important;
+  text-align: left;
+  font: normal normal normal 20px/24px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  float: unset!important;
+}

@@ -1,0 +1,19 @@
+
+<p-accordion>
+  <div *ngFor="let domain of applicationsDomain">
+    <p-accordionTab *ngIf="domain.Children && domain.Children.length > 0" header="{{domain | translateobj}}">
+      <div class="cardCont">
+        <div class="p-grid">
+          <div *ngFor="let item of domain.Children" class="p-col-12 p-lg-4 p-md-6">
+            <div (click)="onClickDetails(item.Id)" class="whiteCard careersCard">
+              <img class="projectImg" src="{{item.ThumbnailImage}}" alt="">
+              <p class="title text-20 p-mb-3">{{item.Title}}</p>
+              <p class="desc greyColor text-14">{{item.ShortDescription}}</p>
+            </div>
+          </div>
+          <!--End Card-->
+        </div>
+      </div>
+    </p-accordionTab>
+  </div>
+</p-accordion>

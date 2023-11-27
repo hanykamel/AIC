@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" Id="80e0a58f-be50-4174-80ff-0c0563ebf8ad" Scope="Site" Title="AIC.Sharepoint.DelegateControl">
+  <ElementManifests>
+    <ElementManifest Location="AICFiles\Elements.xml" />
+    <ElementFile Location="AICFiles\seattle.master" />
+    <ElementFile Location="AICFiles\jquery-3.5.1.min.js" />
+    <ElementFile Location="AICFiles\jquery-ui.min.js" />
+    <ElementFile Location="AICFiles\jquery.jtable.min.js" />
+    <ElementFile Location="AICFiles\bootstrap.min.css" />
+    <ElementFile Location="AICFiles\jquery-ui.css" />
+    <ElementFile Location="AICFiles\jtable_basic.min.css" />
+    <ElementFile Location="AICFiles\styles.css" />
+    <ElementFile Location="AICFiles\jquery.SPServices.min.js" />
+    <ElementFile Location="AICFiles\jquery.table2excel.min.js" />
+    <ElementManifest Location="DelegateControlModule\Elements.xml" />
+  </ElementManifests>
+</Feature>

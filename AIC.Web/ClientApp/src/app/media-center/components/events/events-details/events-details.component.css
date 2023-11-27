@@ -1,0 +1,59 @@
+.videoModal iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.imgCard img {
+  border-radius: 15px;
+}
+
+.videoModal video {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: unset;
+}
+.eventsDet ::ng-deep .owl-theme .owl-nav {
+  display: flex;
+  position: absolute;
+  top: -75px;
+  right: 10px;
+}
+
+.ar :host ::ng-deep .eventsDet ::ng-deep .owl-theme .owl-nav {
+  right: unset !important;
+  left: 10px;
+}
+
+.eventsDet ::ng-deep .owl-theme .owl-nav [class*="owl-"] {
+  box-shadow: 0px 3px 6px #00000012;
+  border: 1px solid #eeeeee;
+}
+.eventsDet ::ng-deep .owl-theme {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .eventsDet ::ng-deep .owl-theme .owl-nav {
+    top: -75px;
+    right: -10px;
+  }
+
+  .ar :host ::ng-deep .eventsDet ::ng-deep .owl-theme .owl-nav {
+    right: unset !important;
+    left: -10px;
+  }
+  .shadowCont p {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .eventsDet ::ng-deep .owl-theme .owl-nav {
+    top: -75px;
+    right: -10px;
+  }
+
+  .ar :host ::ng-deep .eventsDet ::ng-deep .owl-theme .owl-nav {
+    right: unset !important;
+    left: -10px;
+  }
+}

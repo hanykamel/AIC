@@ -1,0 +1,221 @@
+.FaqsCont ::ng-deep .p-tabview-nav {
+  display: block !important;
+  padding: 0 2px !important;
+}
+
+.FaqsCont ::ng-deep .p-tabview.p-component {
+  display: flex;
+}
+
+.FaqsCont {
+  position: relative;
+  display: flex;
+  padding: 0 70px;
+}
+
+  .FaqsCont .p-tabview .p-tabview-nav li {
+    display: flex;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #0000001c;
+    border-radius: 15px;
+    opacity: 1;
+    margin: 20px 0;
+    width: 270px;
+    width: 100%;
+  }
+
+  .FaqsCont ::ng-deep p-tabview.p-element {
+    min-width: 100%;
+  }
+
+  .FaqsCont ::ng-deep .p-tabview-nav-container {
+    position: relative;
+    min-width: 20%;
+    position: relative;
+  }
+
+  .FaqsCont ::ng-deep .p-tabview.p-component {
+    position: relative;
+    display: flex;
+    min-width: 100%;
+    /*background: black;*/
+  }
+
+.FaqsCont ::ng-deep  p-accordiontab.p-element .p-accordion-tab {
+  display: flex;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 5px #0000001c;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 20px;
+  margin: 20px;
+  min-height: 100px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+  .FaqsCont ::ng-deep .p-tabview .p-tabview-nav li {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 5px #0000001c;
+    border-radius: 15px;
+    opacity: 1;
+    margin: 20px 0;
+    height: 100px;
+    display: flex;
+    min-width: 100%
+  }
+
+    .FaqsCont ::ng-deep .p-tabview .p-tabview-nav li span {
+      white-space: unset;
+      word-break: break-all;
+      line-height: 20px;
+      width: 100%;
+      height: 100%;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .FaqsCont ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+      border: none;
+    }
+
+.FaqsCont ::ng-deep .p-accordion-header-text {
+  max-width: 90%;
+}
+
+  .FaqsCont ::ng-deep .p-tabview-panels {
+    min-width: 80%;
+  }
+
+  .FaqsCont ::ng-deep li.p-highlight {
+    border: 2px solid #3C57A1;
+  }
+
+  .FaqsCont ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    min-width: 100%;
+  }
+
+  .FaqsCont ::ng-deep p-accordiontab.p-element .p-accordion-tab.p-accordion-tab-active {
+    border: 1px solid #3c57a1;
+  }
+
+  .FaqsCont ::ng-deep a.p-accordion-header-link {
+    display: flex;
+    font: normal normal normal 20px/17px Roboto;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    position: relative;
+    font-weight: 700;
+  }
+
+  .FaqsCont ::ng-deep .p-accordion-tab-active a.p-accordion-header-link {
+    color: #3C57A1;
+  }
+
+  .FaqsCont ::ng-deep .p-accordion-tab-active span.p-accordion-toggle-icon {
+    background: #3C57A1;
+  }
+
+  .FaqsCont ::ng-deep span.p-accordion-toggle-icon {
+    background: black;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    position: relative;
+  }
+
+    .FaqsCont ::ng-deep span.p-accordion-toggle-icon::before {
+      position: absolute;
+      top: 1px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: fit-content;
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .FaqsCont ::ng-deep span.p-accordion-toggle-icon.pi.pi-fw.pi-chevron-right::before {
+      content: "+";
+      font: normal normal bold 20px/25px roboto;
+    }
+
+    .FaqsCont ::ng-deep span.p-accordion-toggle-icon.pi.pi-fw.pi-chevron-down::before {
+      content: "-";
+      font: normal normal normal 44px/26px roboto;
+      top: -1px;
+    }
+
+  .FaqsCont ::ng-deep span.p-accordion-toggle-icon {
+    margin-right: 20px;
+  }
+.ar :host ::ng-deep .FaqsCont ::ng-deep span.p-accordion-toggle-icon {
+  margin-left: 20px;
+  margin-right: 0 !important;
+}
+
+  .FaqsCont ::ng-deep .p-accordion-content {
+    margin: 15px 0 0 0;
+  }
+  .FaqsCont ::ng-deep .p-tabview .p-tabview-nav li a.p-ripple.p-element.p-tabview-nav-link {
+    width: 100%;
+    height: 100%;
+  }
+
+  .FaqsCont ::ng-deep .ar span.p-accordion-toggle-icon {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+
+h2.title {
+  padding: 0 70px;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  opacity: 1;
+}
+
+.FaqsCont ::ng-deep .p-tabview .p-tabview-nav li:last-child {
+  display: none;
+}
+.d-lg-none ::ng-deep .p-tabview-nav-container {
+  display: none
+}
+@media only screen and (max-width:768px) {
+  .FaqsCont ::ng-deep .p-tabview.p-component {
+    flex-direction: column
+  }
+
+  .FaqsCont {
+    padding: 30px;
+    padding-top:0
+  }
+
+    .FaqsCont ::ng-deep p-accordiontab.p-element .p-accordion-tab {
+      margin: 0;
+      margin-bottom: 15px
+    }
+  h2.title {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .FaqsCont ::ng-deep .p-tabview.p-component {
+    flex-direction: column
+  }
+  h2.title {
+    padding: 0 30px;
+  }
+  .FaqsCont {
+    padding: 30px;
+    padding-top:0
+  }
+
+    .FaqsCont ::ng-deep p-accordiontab.p-element .p-accordion-tab {
+      margin: 0;
+      margin-bottom: 15px
+    }
+}

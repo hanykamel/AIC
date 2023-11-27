@@ -1,0 +1,152 @@
+.projectLayout ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  border: none;
+  background: none;
+  color: #646464;
+  padding: 25px 20px;
+  margin-bottom: 26px;
+  font-weight: normal;
+}
+.projectLayout ::ng-deep .p-tabview-panels {
+  position: relative;
+  bottom: 8px;
+}
+.projectLayout
+  ::ng-deep
+  .p-tabview
+  .p-tabview-nav
+  li.p-highlight
+  .p-tabview-nav-link {
+  background: #3c57a1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+}
+.projectLayout ::ng-deep .p-tabview .p-tabview-nav li {
+  margin-right: 10px;
+}
+.ar :host ::ng-deep .projectLayout ::ng-deep .p-tabview .p-tabview-nav li {
+  margin-right: 0 !important;
+  margin-left: 10px;
+}
+
+.projectLayout ::ng-deep .whiteCard .title {
+  height: 65px;
+}
+.projectLayout ::ng-deep .cardCont {
+  padding: 25px;
+}
+.projectLayout ::ng-deep .p-tabview-nav-container {
+  margin-bottom: 0;
+}
+/*Panel Css*/
+.projectLayout ::ng-deep .p-accordion-tab {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+}
+.projectLayout ::ng-deep .p-accordion-header .p-accordion-header-text {
+  margin: 0 15px;
+  color: #3c57a1;
+  font-size: 20px;
+  font-weight: bold;
+}
+.projectLayout ::ng-deep .p-accordion-header .pi-chevron-right {
+  border: 1px solid #bdbdbd;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectLayout ::ng-deep .p-accordion-header .pi-chevron-right:before {
+  content: "\e145";
+  font-family: "Material Icons Outlined" !important;
+  color: #696b70;
+}
+.ar .projectLayout ::ng-deep .p-accordion-header .pi-chevron-right:before {
+  font-family: "Material Icons Outlined" !important;
+}
+.projectLayout ::ng-deep .p-accordion-header .pi-chevron-down {
+  background: #3c57a1 0% 0% no-repeat padding-box;
+  border: 1px solid #3c57a1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectLayout ::ng-deep .p-accordion-header .pi-chevron-down:before {
+  content: "\e15b";
+  font-family: "Material Icons Outlined" !important;
+  color: #fff;
+}
+.ar .projectLayout ::ng-deep .p-accordion-header .pi-chevron-down:before {
+  font-family: "Material Icons Outlined" !important;
+}
+@media only screen and (max-width: 768px) {
+  .projectLayout ::ng-deep .p-tabview-nav {
+    flex-direction: column;
+  }
+  .projectLayout ::ng-deep .p-tabview .p-tabview-nav li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .projectLayout ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    border-radius: 15px;
+    font-size: 12px;
+  }
+  .projectLayout ::ng-deep .p-accordion-header .p-accordion-header-text {
+    font-size: 14px;
+  }
+  .projectLayout ::ng-deep .p-accordion-header .pi-chevron-down,
+  .projectLayout ::ng-deep .p-accordion-header .pi-chevron-right {
+    font-size: 9px;
+    width: 15px;
+    height: 15px;
+  }
+  .projectLayout ::ng-deep .cardCont {
+    padding: 5px;
+    padding-top: 25px;
+  }
+  .projectLayout ::ng-deep .p-tabview-panels {
+    bottom: 0;
+  }
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .projectLayout ::ng-deep .p-tabview-nav {
+    flex-direction: column;
+  }
+
+  .projectLayout ::ng-deep .p-tabview .p-tabview-nav li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .projectLayout ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    border-radius: 15px;
+    font-size: 12px;
+  }
+
+  .projectLayout ::ng-deep .p-accordion-header .p-accordion-header-text {
+    font-size: 14px;
+  }
+
+  .projectLayout ::ng-deep .p-accordion-header .pi-chevron-down,
+  .projectLayout ::ng-deep .p-accordion-header .pi-chevron-right {
+    font-size: 9px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .projectLayout ::ng-deep .cardCont {
+    padding: 5px;
+    padding-top: 25px;
+  }
+  .projectLayout ::ng-deep .p-tabview-panels {
+    bottom: 0;
+  }
+}

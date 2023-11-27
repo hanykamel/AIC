@@ -1,0 +1,17 @@
+<div class="TitleCont">
+  <h4>{{'PagesTitle.ArchivedEvents'|translate}}</h4>
+  <button class="btn yellowBtn" (click)="onClickEvents()">
+    {{'Events.Events' | translate}}
+  </button>
+</div>
+<div class="cardCont">
+    <app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [sortingField]="sortingField"
+        [isSortingAscending]="isSortingAscending" [pagination]="pagination" [Filters]="Filters">
+        <ng-template let-Data="Data">
+            <app-generic-list [cards]="_mediaCenterService.ParsingEventsDataToSharedComponent(Data)"
+             [title]="title" [buttonTitle]="buttonTitle" 
+             [eventsView]=true [archivedEventsView]=true>
+            </app-generic-list>
+        </ng-template>
+    </app-sharepoint-pagination>
+</div>

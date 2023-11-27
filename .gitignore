@@ -1,0 +1,9 @@
+.vs
+*/obj
+*/bin
+Nedaa.Web/ClientApp/package-lock.json
+*.map
+Nedaa.Web/ClientApp/src/app/core/Enums/sector-types.js.map
+APA.Web/appsettings.json
+/AIC.Web/Properties/PublishProfiles
+/AIC.Web/wwwroot/image

@@ -1,0 +1,542 @@
+{
+  "logoPosition": "right",
+  "locale": "ar",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "Information",
+          "title": "المعلومات",
+          "icon": "material-icons-outlined",
+          "iconText": "description",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FullName",
+              "title": "الإسم بالكامل",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "validators": [
+                {
+                  "type": "text"
+                }
+              ],
+              "maxLength": 80,
+              "placeHolder": "الإسم بالكامل"
+            },
+            {
+              "type": "text",
+              "name": "Email",
+              "title": "الإيميل",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "inputType": "email",
+              "readOnly": true,
+              "placeHolder": "الإيميل"
+            },
+            {
+              "type": "text",
+              "name": "MobileNumber",
+              "title": "رقم التليفون",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "غير مسموح بالاحرف ",
+                  "regex": "^[ 0-9 ]+$"
+                },
+                {
+                  "type": "text",
+                  "text": "الحد الأقصى هو 15 رقم والحد الأدنى هو 7 أرقام",
+                  "minLength": 7,
+                  "maxLength": 15
+                }
+              ],
+              "maxLength": 15,
+              "placeHolder": "رقم التليفون"
+            },
+            {
+              "type": "text",
+              "name": "Address",
+              "title": "العنوان",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "maxLength": 100,
+              "placeHolder": "العنوان"
+            },
+            {
+              "type": "datepicker",
+              "name": "BirthDate",
+              "startWithNewLine": false,
+              "title": "ناريخ الميلاد",
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "max": "+0d",
+              "maxErrorText": "عفوا، يجب ألا تكون القيمة أكبر من اليوم",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+100",
+                "showOn": "both"
+
+               
+              },
+              "placeHolder": "ناريخ الميلاد (dd/mm/yyyy)"
+
+            },
+            {
+              "type": "datepicker",
+              "name": "StartDate",
+              "startWithNewLine": false,
+              "title": "تاريخ البدء",
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "minErrorText": "عفوا، يجب ألا تكون القيمة أقل من اليوم",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+100",
+                "minDate": "+0d",
+                "showOn": "both"
+
+              },
+              "placeHolder": "تاريخ البدء (dd/mm/yyyy)"
+            }
+          ],
+          "state": "expanded"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "AcademicDegrees",
+          "title": "الدرجات الأكاديمية",
+          "icon": "material-icons-outlined",
+          "iconText": "school",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "dropdown",
+              "name": "DegreeLevelId",
+              "title": "مستوى الدرجة",
+              "minWidth": "240px",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "choicesByUrl": {
+                "url": "/api/Lookup/DegreeLevels",
+                "valueName": "Id",
+                "titleName": "TitleAr"
+              }
+            },
+            {
+              "name": "DegreeDate",
+              "type": "datepicker",
+              "inputType": "date",
+              "title": "تاريخ الدرجة",
+              "dateFormat": "dd/mm/yy",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "enableIf": "{panel.InProgress} empty",
+              "requiredIf": "{panel.InProgress} empty",
+              "startWithNewLine": false,
+              "minWidth": "240px",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+100",
+                "showOn": "both"
+
+              },
+              "placeHolder": "تاريخ الدرجة (dd/mm/yyyy)"
+            },
+            {
+              "type": "checkbox",
+              "startWithNewLine": false,
+              "minWidth": "150px",
+              "maxWidth": "150px",
+              "name": "InProgress",
+              "title": "الحالي",
+              "choices": [
+                {
+                  "value": " ",
+                  "text": "الحالي"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "University",
+              "title": "الجامعة",
+              "minWidth": "240px",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "maxLength": 80,
+              "placeHolder": "الجامعة"
+            },
+            {
+              "type": "text",
+              "name": "Specialization",
+              "title": "التخصص",
+              "minWidth": "240px",
+              "maxWidth": "240px",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "maxLength": 80,
+              "placeHolder": "التخصص"
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "هل تريد حذف المستوى؟",
+          "panelAddText": "اضافة الدرجات الأكاديمية ",
+          "panelRemoveText": "ازالة الدرجات الأكاديمية ",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Certificates",
+          "title": "الشهادات",
+          "icon": "material-icons-outlined",
+          "iconText": "workspace_premium",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "CertificateName",
+              "title": "اسم الشهادة",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "maxLength": 80,
+              "placeHolder": "اسم الشهادة",
+              "requiredIf": "{Certificates[0].CertificateName} notempty or {Certificates[0].CertifiedFrom} notempty or {Certificates[0].CertifiedDate} notempty "
+
+            },
+            {
+              "type": "text",
+              "name": "CertifiedFrom",
+              "title": "معتمد من",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "maxLength": 80,
+              "placeHolder": "معتمد من",
+              "requiredIf": "{Certificates[0].CertificateName} notempty or {Certificates[0].CertifiedFrom} notempty or {Certificates[0].CertifiedDate} notempty "
+
+            },
+            {
+              "type": "datepicker",
+              "name": "CertifiedDate",
+              "title": "التاريخ المعتمد",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "isRequired": true,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+100",
+                "showOn": "both"
+              },
+              "placeHolder": " التاريخ المعتمد (dd/mm/yyyy)" ,
+              "requiredIf": "{Certificates[0].CertificateName} notempty or {Certificates[0].CertifiedFrom} notempty or {Certificates[0].CertifiedDate} notempty "
+
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "هل تريد حذف المستوى؟",
+          "panelAddText": "اضافة االشهادات ",
+          "panelRemoveText": "ازالة الشهادات ",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "WorkExperiences",
+          "icon": "material-icons-outlined",
+          "iconText": "work_outline",
+          "state": "expanded",
+          "title": "الخبرات السابقة",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "Job",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "الوظيفة",
+              "maxLength": 80,
+              "placeHolder": "الوظيفة",
+              "requiredErrorText": "You can't leave this field blank.",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or {WorkExperiences[0].StartDate} notempty or{WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+              
+            },
+            {
+              "type": "text",
+              "name": "Company",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "الشركة",
+              "maxLength": 80,
+              "placeHolder": "الشركة",
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or {WorkExperiences[0].StartDate} notempty or{WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+
+            },
+            {
+              "type": "datepicker",
+              "name": "StartDate",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "تاريخ البدء",
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+100",
+                "showOn": "both"
+              },
+              "placeHolder": "تاريخ البدء (dd/mm/yyyy)" ,
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or{WorkExperiences[0].StartDate} notempty or {WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+
+            },
+            {
+              "type": "datepicker",
+              "name": "EndDate",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "تاريخ الإنتهاء",
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "visibleIf":"{panel.CurrentJob} empty",
+              "enableIf": "{panel.CurrentJob} empty and {WorkExperiences[0].StartDate} notempty",
+              "validators": [
+                {
+                  "type": "expression",
+                  "text": "يجب أن يكون تاريخ الانتهاء بعد تاريخ البداية",
+                  "expression": "{WorkExperiences[0].EndDate}>\n{WorkExperiences[0].StartDate} "
+                }
+              ],
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+100",
+                "showOn": "both"
+              },
+              "placeHolder": "تاريخ الإنتهاء (dd/mm/yyyy)" ,
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or{WorkExperiences[0].StartDate} notempty or {WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].JobTypeId} notempty and {WorkExperiences[0].CurrentJob} empty"
+
+            },
+            {
+              "type": "checkbox",
+              "startWithNewLine": false,
+              "minWidth": "150px",
+              "maxWidth": "150px",
+              "name": "CurrentJob",
+              "title": "وظيفة حالية",
+              "choices": [
+                {
+                  "value": " ",
+                  "text": "وظيفة حالية"
+                }
+              ]
+            },
+            {
+              "startWithNewLine": true,
+              "minWidth": "240px",
+              "maxWidth": "240px",
+              "title": "نوع الوظيفة",
+              "type": "dropdown",
+              "name": "JobTypeId",
+              "choicesByUrl": {
+                "url": "/api/Lookup/JobTypes",
+                "valueName": "Id",
+                "titleName": "TitleAr"
+              },
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or {WorkExperiences[0].StartDate} notempty or {WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "هل تريد حذف المستوى؟",
+          "panelAddText": " اضافة الخبرات السابقة " ,
+          "panelRemoveText": "ازالة الخبرات السابقة",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "TechnicalSkills",
+          "title": "مهارات تقنية",
+          "icon": "material-icons-outlined",
+          "iconText": "laptop",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "SkillName",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "اسم المهارة",
+              "maxLength": 80,
+              "placeHolder": "اسم المهارة",
+              "requiredIf": "{TechnicalSkills[0].SkillName} notempty or {TechnicalSkills[0].YearsOfExperience} notempty ",
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ"
+            },
+            {
+              "type": "text",
+              "name": "YearsOfExperience",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "سنوات الخبرة",
+              "requiredErrorText": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ",
+              "requiredIf": "{TechnicalSkills[0].SkillName} notempty or {TechnicalSkills[0].YearsOfExperience} notempty ",
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "غير مسموح بالاحرف",
+                  "regex": "^[ 0-9 ]+$"
+                },
+                {
+                  "type": "text",
+                  "text": "الحد الأقصى هو رقمين",
+                  "maxLength": 2
+                }
+              ],
+              "placeHolder": "سنوات الخبرة"
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "هل تريد حذف المستوى؟",
+          "panelAddText": "اضافة مهارات تقنية ",
+          "panelRemoveText": "ازالة مهارات تقنية ",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "panel",
+          "name": "Attachments",
+          "title": "المرفقات",
+          "icon": "material-icons-outlined",
+          "iconText": "attach_file",
+          "isfile": "true",
+          "elements": [
+            {
+              "type": "text",
+              "name": "LinkToPortfolio",
+              "title": "عنوان الملف",
+              "inputType": "url",
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "please enter valid Link",
+                  "regex": "/((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)"
+                }
+              ],
+              "placeHolder": "عنوان الملف"
+            },
+            {
+              "type": "radiogroup",
+              "name": "JoinedUsAsLst",
+              "startWithNewLine": false,
+              "title": "هل سبق لك العمل مع AIC أو أي من مشاريعها من قبل؟",
+              "choices": [
+                 {
+                  "value": "وظيفة", 
+                  "text": "وظيفة" 
+                }
+
+                , {
+                  "value": "دورة تدريبية", 
+                  "text": "دورة تدريبية" 
+
+                } , {
+                  "value": "اخري", 
+                  "text": "اخري" 
+
+                }
+             
+              ],
+              "maxSelectedChoices": 1
+            },
+            {
+              "type": "text",
+              "name": "JoinedIn",
+              "startWithNewLine": false,
+              "title": "أدخل ما عملت فيه",
+              "requiredIf": "{JoinedUsAsLst} notempty",
+              "enableIf": "{JoinedUsAsLst} notempty",
+              "maxLength": 50,
+              "placeHolder": "أدخل ما عملت فيه"
+            },
+            {
+              "type": "file",
+              "name": "UploadedCV",
+              "isfile": "true",
+              "iconBtn": "material-icons-outlined",
+              "label": "إرفاق السيره الذاتيه",
+              "desc": "الملفات المسموح بها هي Word و PDF فقط",
+              "desc2": "حجم الملف 5 ميغا",
+              "iconTextBtn": "file_upload",
+              "title":" ",
+              "allowImagesPreview": false,
+              "needConfirmRemoveFile": true,
+              "showTitle": false,
+              "acceptedTypes": ".docx,.doc,.pdf",
+               "isRequired": true,
+               "requiredErrorText": "عفوا،يجب ارفاق السيره الذاتيه الخاصه بك"
+            },
+            {
+              "type": "file",
+              "name": "OtherDocuments",
+              "isfile": "true",
+              "iconBtn": "material-icons-outlined",
+              "iconTextBtn": "file_upload",
+              "desc": "الملفات المسموح بها هي Word و PDF فقط",
+              "desc2": "حجم الملف 5 ميغا",
+              "label": "مرفقات أخرى",
+              "startWithNewLine": false,
+              "allowMultiple": true,
+              "needConfirmRemoveFile": true,
+              "allowShowHideTitle": false,
+              "allowImagesPreview": false,
+              "acceptedTypes": ".docx,.doc,.pdf"
+            }
+          ],
+          "state": "expanded"
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "questionErrorLocation": "bottom",
+  "completeText": "حفظ",
+  "widthMode": "responsive",
+  "checkErrorsMode": "onValueChanged"
+}

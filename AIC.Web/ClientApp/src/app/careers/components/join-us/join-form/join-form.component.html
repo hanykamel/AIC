@@ -1,0 +1,57 @@
+<div class="sectionPadding formErrorPosition surveyCont thirdSection">
+  <div id="surveyElement"></div>
+    <p-captcha
+    #cap
+    class="captcha"
+    siteKey="{{ siteKey }}"
+    [language]="lang ? lang : 'en'"
+    (onResponse)="showResponse($event)"
+    style="
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  " *ngIf="!success"
+  ></p-captcha>
+
+  <div class="flex">
+    <button 
+    (click)="Complete()"
+    class="complete">
+    {{ "submit" | translate }}
+    </button>
+  </div>
+  
+  <p class="errorLenText errorText err-captcha" *ngIf="recaptchaErrorMsg"  role="alert">
+    {{ "shared.RecaptchaErrorMsg" | translate }}
+  </p>
+  <p class="errorText" *ngIf="extensionErrorMsg">
+    {{ "shared.AttachmentErrorMsg" | translate }}
+  </p>
+  <br />
+  <p class="errorLenText errorText" *ngIf="lengthErrorMsg">
+    {{ "shared.lengthErrorMsg" | translate }}
+  </p>
+  <p class="errorLenText errorText cvError" *ngIf="uploadCvErrorMsg">
+    {{ "shared.UploadYourCV" | translate }}
+  </p>
+
+</div>
+
+<p-dialog
+  [(visible)]="success"
+  (onHide)="closeModal()"
+  [modal]="true"
+  [style]="{ width: '35vw' }"
+  [breakpoints]="{ '960px': '90vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  role="alert"
+>
+  <div class="success">
+    <i class="material-icons-outlined"> done </i>
+    <p class="text-28 p-text-center">
+      {{ "shared.SubmittedForm" | translate }}
+    </p>
+  </div>
+</p-dialog>

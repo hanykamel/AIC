@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control Id="AICDelegateControl" Sequence="98" ControlSrc="/_controltemplates/15/AIC/AICCtrlAdditionalPageHead.ascx" />
+</Elements>

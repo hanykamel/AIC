@@ -1,0 +1,56 @@
+<section class="homeSectionPadding careersHomeCont" *ngIf="careers && careers.length >= 1">
+  <div class="p-grid p-mt-3">
+    <div class="p-col-12">
+      <div class="titleBtnFlex p-mb-4">
+        <h2 class="text-60 whiteColor">
+          {{ "HomePage.FeaturedCareers" | translate }}
+        </h2>
+      
+      </div>
+
+      <div
+        class="p-mb-2 careersMainDec"
+      >
+      <p class=" whiteColor ">
+        {{careersSections}}
+      </p>
+    </div>
+    </div>
+    <div class="p-md-4 p-col-12" *ngFor="let career of careers">
+      <div class="whiteCard careersCard cursorPointer"
+           (click)="getCareerById(career.Id)">
+        <p class="greyColor text-12 p-mb-1">
+          {{ career.PublishingDate | formatDate }} -
+          {{ career.VacancyExpiryDate | formatDate }}
+        </p>
+        <p class="title text-24 p-mb-2" *ngIf="lang == 'en'">
+          {{
+            career.Title.length > 60
+              ? (career.Title | slice : 0 : 60) + ".."
+              : career.Title
+          }}
+        </p>
+        <p class="title text-24 p-mb-2" *ngIf="lang == 'ar'">
+          {{
+            career.Title.length > 60
+              ? (career.TitleAr | slice : 0 : 60) + ".."
+              : career.TitleAr
+          }}
+        </p>
+        <p class="descText carDesc text-14 p-mb-1">
+          {{ career.ReferenceNumber }}
+        </p>
+        <p class="descText text-14 carType">{{ career.JobType }}</p>
+      </div>
+    </div>
+    <!-- End Card -->
+      <div class="p-col-12 p-text-center p-mt-3">
+        <button
+          [routerLink]="['/careers-Opportunities/careers-list']"
+          class="btn yellowBtn"
+        >
+          {{ "HomePage.ShowAllCareers" | translate }}
+        </button>
+      </div>
+  </div>
+</section>

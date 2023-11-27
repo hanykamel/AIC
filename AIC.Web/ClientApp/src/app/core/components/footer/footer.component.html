@@ -1,0 +1,52 @@
+<footer class="sectionPadding" (mouseleave)="leave()" >
+  <div class="homeFooterLayout"></div>
+  <div class="p-grid p-relative" id="footer">
+    <div class="p-lg-2 p-md-6 p-col-12 ">
+      <img class="footerLogo" src="../../../assets/images/coloredLogo.png" alt="">
+    </div>
+    <div *ngFor="let item of footerElements" class="p-lg-2 p-md-6 p-col-12">
+      <a *ngIf="item.Url" class="blackColor text-14 p-mb-1" [href]="item.Url">{{item | translateobj}}</a>
+      <h5 *ngIf="!item.Url" class="blackColor text-14 p-mb-1">{{item | translateobj}}</h5>
+      <!--<a *ngFor="let child of item.Children" class="greyColor text-14 p-mb-1" href="{{child.Url}}">{{child | translateobj}}</a>-->
+      <a *ngFor="let child of item.Children" class="greyColor text-14 p-mb-1" href="{{child.Url && !child.OtherUrl ? child.Url : child.OtherUrl ? child.OtherUrl : null}}">
+        {{child | translateobj}}</a>
+
+
+    </div>
+    <div class="p-lg-2 p-md-6 p-col-12">
+      <a class="blackColor text-14 p-mb-1" [routerLink]="['/contact-us']">{{'Footer.Contactus' | translate}}</a>
+      <a class="blackColor text-14 p-mb-1" [routerLink]="['/faqs']">{{'Footer.Faqs' | translate}}</a>
+      <a class="blackColor text-14 p-mb-1" [routerLink]="['/site-map']">{{'Footer.Sitemap' | translate}}</a>
+    </div>
+    <div class="p-lg-2 p-md-6 p-col-12" [formGroup]="userForm">
+      <h5 class="blackColor text-14 p-mb-1">{{'Footer.MailingList' | translate}}</h5>
+      <div class="footerInput">
+        <generic-email-input class="genericEmail" formControlName="Email" placeholder="{{'Footer.Email' |translate}}"></generic-email-input>
+        <button (click)="add()" title="sumbit email button">
+          <i class="material-icons-outlined">
+            chevron_right
+          </i>
+        </button>
+      </div>
+      <div class="footerSocial">
+        <app-generic-social-icons [sharingSocialVisible]="showSocialMediaContent" [sharingContentVisible]="showSocialMediaShare" [links]="socData"></app-generic-social-icons>
+      </div>
+      <!--<div class="p-mt-3 copyRight">
+        <span>©{{year}} - Implemented By <a href="https://asset-technology.com/" target="_blank">Asset</a></span>
+      </div>-->
+    </div>
+  </div>
+</footer>
+
+<p-dialog [(visible)]="displaySubscribe" [modal]="true" [style]="{width: '40vw'}" role="alert"
+          [breakpoints]="{'960px': '90vw'}" [draggable]="false" [resizable]="false" (onHide)="reset()">
+  <div class="subDialog">
+    <i class="material-icons-outlined">
+      email
+    </i>
+    <p class="text-28">{{'Footer.SubscriberSuccess' |translate}}</p>
+  </div>
+</p-dialog>
+<!-- End Word Dialog -->
+
+

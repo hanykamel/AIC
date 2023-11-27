@@ -1,0 +1,117 @@
+{
+  "logoPosition": "right",
+  "locale": "en",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FullName",
+              "title": "Full Name",
+              "placeHolder": "Enter Full Name",
+              "isRequired": true,
+              "startWithNewLine": true
+            },
+            {
+              "type": "text",
+              "name": "Email",
+              "title": "Email",
+              "placeHolder": "Enter Email",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "inputType": "email"
+            },
+            {
+              "type": "text",
+              "name": "PhoneNumber",
+              "title": "Phone Number",
+              "placeHolder": "Enter Phone Number",
+              "maxLength": "15",
+              "startWithNewLine": true,
+              "isRequired": true,
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "No Characters allowed",
+                  "regex": "^[ 0-9 ]+$"
+                }
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "Type",
+              "title": "Type",
+              "optionsCaption": "Select Type",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "choices": [
+                "Careers",
+                "Complaints",
+                "Feedbacks",
+                "HPC",
+                "Human Resources",
+                "Inquiries",
+                "R&D",
+                "Suggestions"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "CountryId",
+              "title": "Country",
+              "startWithNewLine": true,
+              "isRequired": true,
+              "minWidth": "auto",
+              "optionsCaption": "Select Country",
+              "choicesByUrl": {
+                "url": "/api/Lookup/Countries",
+                "valueName": "Id",
+                "titleName": "Title"
+              }
+            },
+            {
+              "type": "dropdown",
+              "name": "CityId",
+              "title": "City",
+              "startWithNewLine": false,
+              "minWidth": "auto",
+              "visibleIf": "ShowCities('CountryId')",
+              "optionsCaption": "Select City",
+              "choicesByUrl": {
+                "url": "/api/Lookup/Cities",
+                "valueName": "Id",
+                "titleName": "Title"
+              }
+            },
+            {
+              "type": "text",
+              "name": "WorkEducationalOrganization",
+              "title": "Work/Educational Organization",
+              "placeHolder": "Enter Work/Educational Organization",
+              "maxLength": "80",
+              "startWithNewLine": true
+            },
+            {
+              "type": "comment",
+              "name": "Message",
+              "title": "Message",
+              "placeHolder": "Enter Message",
+              "maxLength": "400",
+              "isRequired": true
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "questionErrorLocation": "bottom",
+  "focusFirstQuestionAutomatic": false,
+  "completeText": "Submit",
+  "widthMode": "responsive"
+}

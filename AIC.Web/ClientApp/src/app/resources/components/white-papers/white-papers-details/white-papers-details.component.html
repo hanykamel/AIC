@@ -1,0 +1,2 @@
+<app-generic-details *ngIf="detailsData && detailsData.length > 0" [details]="detailsData" [whitePapersView]="true"></app-generic-details>
+<app-no-data-found *ngIf="!detailsData || detailsData?.length == 0"></app-no-data-found>

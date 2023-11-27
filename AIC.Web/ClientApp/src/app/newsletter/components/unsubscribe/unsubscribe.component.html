@@ -1,0 +1,14 @@
+<div class="sectionPadding">
+  <div class="subDialog">
+    <i *ngIf="success" class="material-icons-outlined">
+      unsubscribe
+    </i>
+    <i *ngIf="!success" class="material-icons-outlined close">
+      close
+    </i>
+    <!--if success-->
+    <p *ngIf="success" class="text-28">{{  'Newsletter.UnsubscribeSuccessMsg' |translate}}</p>
+    <p *ngIf="!success" class="text-28">{{  errorMsg | translate}}</p>
+    <!--<p *ngIf="!success" class="text-28">{{  errorMsg}}</p>-->
+  </div>
+</div>

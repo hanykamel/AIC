@@ -1,0 +1,39 @@
+<div class="sectionPadding vidDetails">
+  <div class="shadowCont">
+    <p *ngIf="videoAlbumDetails" class="blackColor text-20 font-bold p-mb-3">{{videoAlbumDetails.Title}}</p>
+    <p *ngIf="videoAlbumDetails" class="lighGreyColor text-16 font-med p-mb-3">{{videoAlbumDetails.Brief}}</p>
+    <div class="navBtns" >
+      <button [disabled]="prev < 0" (click)="previousSlide()">
+        <i class="material-icons-outlined">east</i></button>
+      <button [disabled]="next > slides.length - 1" (click)="nextSlide()">
+        <i class="material-icons-outlined">west</i></button>
+    </div>
+    
+    <div class="vidCont">
+      <video *ngIf="activeSlide?.URL" [src]="activeSlide.URL" type="video/mp4" controls>
+        Your browser does not support the video tag.
+      </video>
+      <iframe *ngIf="activeSlide?.EmbedCode" [src]="activeSlide.EmbedCode | safeUrl"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+      <app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [sortingField]="sortingField"
+                                 [isSortingAscending]="isSortingAscending" [pagination]="pagination" [Filters]="Filters">
+        <ng-template let-Data="Data">
+          <div class="p-grid p-mt-5">
+            <!--add pager-->
+            <div class="p-col-12 p-md-6 p-lg-4" *ngFor="let slide of setData(Data); let i=index">
+              <a class="imgCont" (click)="activateSlider(slide, i)">
+                <img class="mainImg" [src]="slide.ThumbURL" />
+                <div class="layout cursorPointer" (click)="activateSlider(slide, i)">
+                  <img class="play" src="../../../../../assets/images/play.svg" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </ng-template>
+      </app-sharepoint-pagination>
+  </div>
+</div>

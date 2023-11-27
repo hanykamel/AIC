@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" Id="d43b00d2-9cef-4d15-844a-a01c90eaae9e" ReceiverAssembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" ReceiverClass="AIC.Sharepoint.Features.Newsletter.Timerjob.NewsletterEventReceiver" Scope="WebApplication" Title="Newsletter.Timerjob"></Feature>

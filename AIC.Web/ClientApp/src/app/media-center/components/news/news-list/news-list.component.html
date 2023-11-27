@@ -1,0 +1,15 @@
+<div class="TitleCont">
+  <h1 class="text-30">{{'PagesTitle.News'|translate}}</h1>
+  <button class="btn yellowBtn" (click)="onClickArchived() ">
+    {{'News.ArchivedNews' | translate}}
+  </button>
+</div>
+<div class="cardCont">
+    <app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [sortingField]="sortingField"
+        [isSortingAscending]="isSortingAscending" [pagination]="pagination" [Filters]="Filters">
+        <ng-template let-Data="Data">
+            <app-generic-list [cards]="_mediaCenterService.ParsingNewsDataToSharedComponent(Data)" [title]="title" [buttonTitle]="buttonTitle" [newsView]=true>
+            </app-generic-list>
+        </ng-template>
+    </app-sharepoint-pagination>
+</div>

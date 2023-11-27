@@ -1,0 +1,106 @@
+<div class="sectionPadding contactUsSection">
+  <h1 class="blueColor text-28 p-mb-4 font-bold">
+    {{ "PagesTitle.ContactUs" | translate }}
+  </h1>
+
+  <div class="p-grid shadowCont">
+    <div class="p-col-12 p-lg-6">
+      <h2 class="text-18 font-bold blueColor" tabindex="0">
+        <i class="material-icons">list</i>
+        <span>{{ "PagesTitle.ContactUsForm" | translate }}</span>
+      </h2>
+      <div class="thirdSection">
+        <div id="surveyElement" style="position: relative"></div>
+        <div>
+          <p-captcha #cap siteKey="{{ siteKey }}" [language]="lang ? lang : 'en'" (onResponse)="showResponse($event)"
+            (onExpire)="onExpire()"></p-captcha>
+            <p class="errorLenText errorText err-captcha" *ngIf="recaptchaErrorMsg" role="alert">
+              {{ "shared.RecaptchaErrorMsg" | translate }}
+            </p>
+        </div>
+
+        <button (click)="Complete()" class="complete">
+          {{ "submit" | translate }}
+        </button>
+      </div>
+    </div>
+    <div class="p-col-12 p-lg-6">
+      <div class="p-mb-3">
+        <div class="p-grid firstSection">
+          <div class="p-col-12">
+            <h2 class="text-18 font-bold blueColor" tabindex="0">
+              <i class="material-icons">list</i>
+              <span>{{ "PagesTitle.ReachUsThrough" | translate }}</span>
+            </h2>
+            <p class="text-16 blackColor font-bold" id="searchterms" #searchterms>
+              <i class="material-icons">location_on</i>
+              <span>{{ "ContactUs.HeadAddress" | translate }}</span>
+            </p>
+            <p *ngIf="headOffice && lang == 'en'" class="blueColor text-14" id="searchterms" #searchterms>
+              {{ headOffice.Address }}
+            </p>
+            <p *ngIf="headOffice && lang == 'ar'" class="blueColor text-14" id="searchterms" #searchterms>
+              {{ headOffice.AddressAr }}
+            </p>
+            <p class="text-16 blackColor font-bold" id="searchterms" #searchterms>
+              <i class="material-icons">call</i>
+              <span>{{ "ContactUs.HeadPhone" | translate }}</span>
+            </p>
+            <a href="tel:{{ headOffice.PhoneNumber }}" *ngIf="headOffice" class="blueColor text-14 p-mb-3"
+              id="searchterms" #searchterms>
+              {{ headOffice.PhoneNumber }}
+            </a>
+            <p class="text-16 blackColor font-bold" id="searchterms" #searchterms>
+              <i class="material-icons">my_location</i>
+              <span>{{ "ContactUs.Locations" | translate }}</span>
+            </p>
+            <a class="blueColor text-14 location" (click)="locationsDialog = true" id="searchterms" #searchterms>
+              {{ "ContactUs.GetLocations" | translate }}
+            </a>
+          </div>
+          <!--End Col-->
+          <div class="p-col-12 mapCont">
+            <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1OlzZDpyR3GBrHDBGh78aotdrm45ugOE&ehbc=2E312F"
+              width="100%" height="480"></iframe>
+          </div>
+        </div>
+      </div>
+      <!--End Section-->
+    </div>
+  </div>
+</div>
+
+<p-dialog [(visible)]="locationsDialog" class="" [modal]="true" [breakpoints]="{ '960px': '75vw', '640px': '90vw' }"
+  [style]="{ width: '40vw' }" [draggable]="false" [resizable]="false" role="alert">
+  <div class="locationsDialog">
+    <p class="text-18 font-bold blackColor p-mb-5">
+      {{ "ContactUs.GetLocations" | translate }}
+    </p>
+
+    <div *ngFor="let office of offices; let i = index" class="locationCard">
+      <div class="locationBtn">
+        <div class="code">
+          <qrcode [qrdata]="office.Location" [width]="80" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+        <span>{{ office | translateobj }}</span>
+        <i (click)="CopyText(office.Location, i)" ngxClipboard [cbContent]="office.Location"
+          class="material-icons-outlined blueColor copy">content_copy</i>
+        <div *ngIf="showMsg && index === i" class="copiedPopup">
+          {{ "shared.LinkCopied" | translate }}
+        </div>
+      </div>
+    </div>
+
+    <!--End Card-->
+  </div>
+</p-dialog>
+
+<p-dialog [(visible)]="showComplete" [modal]="true" [style]="{ width: '35vw' }" [breakpoints]="{ '960px': '90vw' }"
+  [draggable]="false" [resizable]="false" role="alert">
+  <div class="success">
+    <i class="material-icons-outlined"> done </i>
+    <p class="text-28 p-text-center">
+      {{ "shared.SubmittedForm" | translate }}
+    </p>
+  </div>
+</p-dialog>

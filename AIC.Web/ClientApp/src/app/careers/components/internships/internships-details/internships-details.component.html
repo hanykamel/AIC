@@ -1,0 +1,135 @@
+<div class="sectionPadding careersDetails">
+
+  <div class="p-grid" *ngIf="detailsData">
+    <div class="p-col-12 p-lg-8">
+      <div class="shadowCont">
+        <h2 class="title text-18 font-bold blueColor" *ngIf="detailsData.InternshipOverview || detailsData.InternshipOverviewAr">{{'Intern.Overview' | translate}}</h2>
+        <p class="desc text-16 blackColor" *ngIf="detailsData.InternshipOverview && lang == 'en'">{{detailsData.InternshipOverview}}</p>
+        <p class="desc text-16 blackColor" *ngIf="detailsData.InternshipOverviewAr && lang == 'ar'">{{detailsData.InternshipOverviewAr}}</p>
+        <!--End Row-->
+        <h2 class="title text-18 font-bold blueColor" *ngIf="detailsData.Description || detailsData.DescriptionAr">{{'Intern.Description' | translate}}</h2>
+        <div *ngIf="detailsData.Description && lang == 'en'"  class="innerText">
+          <p [innerHTML]="detailsData.Description | safeHtml" ></p>
+        </div>
+        <div *ngIf="detailsData.DescriptionAr && lang == 'ar'" class="innerText" >
+          <p [innerHTML]="detailsData.DescriptionAr | safeHtml">
+
+          </p>
+        </div>
+        <!--End Row-->
+        <h2 class="title text-18 font-bold blueColor p-mt-3" *ngIf="detailsData.InternshipQualifications || detailsData.InternshipQualificationsAr">{{'Intern.Qualifications' | translate}}</h2>
+        <div *ngIf="detailsData.InternshipQualifications && lang == 'en'" class="innerText" >
+          <p [innerHTML]="detailsData.InternshipQualifications | safeHtml"> </p>
+        </div>
+        <div *ngIf="detailsData.InternshipQualificationsAr && lang == 'ar'" class="innerText" >
+          <p [innerHTML]="detailsData.InternshipQualificationsAr | safeHtml" ></p>
+        </div>
+        <!--End Row-->
+        <h2 class="title text-18 font-bold blueColor p-mt-3" *ngIf="detailsData.InternshipRequirements || detailsData.InternshipRequirementsAr">{{'Intern.Requirements' | translate}}</h2>
+        <div *ngIf="detailsData.InternshipRequirements && lang == 'en'" class="innerText">
+          <p  [innerHTML]="detailsData.InternshipRequirements | safeHtml"></p>
+        </div>
+        <div *ngIf="detailsData.InternshipRequirementsAr && lang == 'ar'" class="innerText" >
+          <p [innerHTML]="detailsData.InternshipRequirementsAr | safeHtml">
+
+          </p>
+        </div>
+        <!--End Row-->
+      </div>
+      <!--End Col-->
+    </div>
+    <div class="p-col-12 p-lg-4">
+      <div class="shadowCont  p-mb-3">
+        <div class="jobTitle" *ngIf="detailsData.Title || detailsData.TitleAr">
+          <i class="material-icons-outlined">business_center</i>
+          <div class="titleCont">
+            <h2 class="text-20 font-bold p-mb-1 blackColor" *ngIf="lang == 'en'">{{detailsData.Title}}</h2>
+            <h2 class="text-20 font-bold p-mb-1 blackColor" *ngIf="lang == 'ar'">{{detailsData.TitleAr}}</h2>
+            <p class=" text-12 ">{{detailsData.PublishingDate | formatDate}}</p>
+          </div>
+        </div>
+        <!--End Row-->
+        <div class="jobDetails">
+          <div class="detailsWidth" *ngIf="detailsData.ReferenceNumber">
+            <p class="detailsTitle">{{'Intern.RefrenceNum' | translate}}</p>
+            <p class="detailsDesc">{{detailsData.ReferenceNumber}} </p>
+          </div>
+          <div class="detailsWidth" *ngIf="detailsData.Location || detailsData.LocationAr">
+            <p class="detailsTitle">{{'Intern.Location' | translate}}</p>
+            <p *ngIf="detailsData.Location && lang == 'en'" class="detailsDesc">{{detailsData.Location}}</p>
+            <p *ngIf="detailsData.LocationAr && lang == 'ar'" class="detailsDesc">{{detailsData.LocationAr}}</p>
+          </div>
+
+        </div>
+        <!--End Row-->
+        <div class="jobDetails">
+          <div class="detailsWidth" *ngIf="detailsData.ProjectDepartment || detailsData.ProjectDepartmentAr">
+            <p class="detailsTitle">{{'Intern.Department' | translate}}</p>
+            <p *ngIf="detailsData.ProjectDepartment && lang == 'en'" class="detailsDesc">{{detailsData.ProjectDepartment}}</p>
+            <p *ngIf="detailsData.ProjectDepartmentAr && lang == 'ar'" class="detailsDesc">{{detailsData.ProjectDepartmentAr}}</p>
+          </div>
+          <div class="detailsWidth" *ngIf="detailsData.ExpiryDate">
+            <p class="detailsTitle">{{'Intern.ExpDate' | translate}}</p>
+            <p class="detailsDesc">{{detailsData.ExpiryDate | formatDate}}</p>
+          </div>
+        </div>
+        <!--End Row-->
+      </div>
+      <!--End Row-->
+      <div class="shadowCont">
+        <button class="btn yellowBtn" (click)="emailDialog = true" [disabled]="dateExpired">
+          <i class="material-icons-outlined">description</i>
+          <span>{{'Intern.Apply' | translate}}</span>
+        </button>
+      </div>
+      <!--End Col-->
+    </div>
+  </div>
+</div>
+
+<p-dialog [(visible)]="emailDialog" class="" [modal]="true" (onHide)="closeModal()" role="alert"
+          [breakpoints]="{'960px': '75vw', '640px': '90vw'}" [style]="{width: '40vw'}"
+          [draggable]="false" [resizable]="false">
+  <div class="emailDialog" [formGroup]="applyForm">
+    <p class="blackColor text-18 font-bold">{{'JoinUs.EnterEMail' |translate}}</p>
+    <generic-email-input class="genericEmail" formControlName="Email" placeholder="{{'JoinUs.Email' |translate}}"></generic-email-input>
+    <p-captcha #cap
+               siteKey="{{ siteKey }}"
+               [language]="lang ? lang : 'en'"
+               (onResponse)="showResponse($event)"
+               (onExpire)="onExpire()"  tabindex="0">
+
+    </p-captcha>
+    <p class="errorLenText errorText cvError" *ngIf="recaptchaErrorMsg"  role="alert">
+      {{ "shared.RecaptchaErrorMsg" | translate }}
+    </p>
+    <button class="blueBtn btn" (click)="onClick()">
+      <i class="material-icons-outlined">send</i>
+      <span>{{'JoinUs.send' |translate}}</span>
+    </button>
+  </div>
+
+</p-dialog>
+
+
+<div class="loaderLayout" *ngIf="loading">
+  <div class="middle">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+    <div class="bar bar4"></div>
+    <div class="bar bar5"></div>
+    <div class="bar bar6"></div>
+    <div class="bar bar7"></div>
+    <div class="bar bar8"></div>
+  </div>
+</div>
+<p-dialog [(visible)]="success" (onHide)="closeModal()" [modal]="true" [style]="{width: '35vw'}" role="alert"
+          [breakpoints]="{'960px': '90vw'}" [draggable]="false" [resizable]="false">
+  <div class="success">
+    <i class="material-icons-outlined">
+      done
+    </i>
+    <p class="text-20 blackColor font-bold p-text-center">{{'shared.CheckMailBox' | translate}}</p>
+  </div>
+</p-dialog>

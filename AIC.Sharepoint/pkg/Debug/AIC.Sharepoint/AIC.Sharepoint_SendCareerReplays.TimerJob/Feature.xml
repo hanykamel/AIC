@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" Id="fae70d12-34d1-452b-a86f-c786ab1746f1" ReceiverAssembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" ReceiverClass="AIC.Sharepoint.Features.SendCareerReplays.TimerJob.SendCareerReplaysEventReceiver" Scope="WebApplication" Title="SendCareerReplays.TimerJob"></Feature>

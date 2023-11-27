@@ -1,0 +1,34 @@
+<section class="homeSectionPadding" *ngIf="data && data.length >= 1">
+  <div class="p-grid p-mt-3">
+    <div class="p-col-12">
+      <h2 class="text-60 whiteColor p-mb-3">
+        {{ "HomePage.aicProjects" | translate }}
+      </h2>
+    </div>
+    <div class="p-md-12 p-lg-4 p-col-12" *ngFor="let project of data">
+      <div
+        class="whiteCard careersCard cursorPointer"
+        (click)="onClick(project)"
+      >
+        <img class="projectImg" src="{{ project.ThumbnailImage }}" alt="" />
+        <p class="title text-20 p-mb-2">
+          {{
+            project.Title.length > 60
+              ? (project.Title | slice : 0 : 60) + ".."
+              : project.Title
+          }}
+        </p>
+        <p class="desc greyColor text-14">{{ project.ShortDescription }}</p>
+      </div>
+    </div>
+    <!-- End Card -->
+    <div class="p-col-12 p-text-center p-mt-3" *ngIf="data.length != 0">
+      <button
+        class="btn yellowBtn"
+        [routerLink]="['/projects/list/application']"
+      >
+        {{ "HomePage.ShowAllProjects" | translate }}
+      </button>
+    </div>
+  </div>
+</section>

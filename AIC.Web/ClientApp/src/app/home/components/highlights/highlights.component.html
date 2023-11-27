@@ -1,0 +1,36 @@
+<div class="homeSectionPadding highlightcarSection" *ngIf="data && data.length >= 1">
+  <h2 class="text-60 whiteColor p-mb-5 p-mt-3">
+    {{ "HomePage.AICHighlights" | translate }}
+  </h2>
+  <owl-carousel-o [options]="customOptions" (changed)="getData($event)" #owlCar>
+    <ng-container *ngFor="let slide of data; let i = index">
+      <ng-template carouselSlide [id]="slide.Id">
+        <div class="whiteCard careersCard">
+          <img
+            class="thumb p-mb-2"
+            src="{{ slide.ThumbnailImage }}"
+            alt="{{ slide.Title }}"
+          />
+          <p class="greyColor text-12 p-mb-2">
+            {{ slide.HighlightDate | formatDate }}
+          </p>
+          <p class="title text-20 p-mb-2">
+            {{
+              slide.Title.length > 60
+                ? (slide.Title | slice : 0 : 60) + ".."
+                : slide.Title
+            }}
+          </p>
+          <p class="desc greyColor text-14 p-mb-2">{{ slide.Brief }}</p>
+          <a class="linkMore blackColor">
+            <i class="material-icons-outlined">east</i>
+            <p class="" (click)="onClick(slide)">
+              {{ "HomePage.DiscoverMore" | translate }}
+            </p>
+          </a>
+        </div>
+        <!-- End Card -->
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>

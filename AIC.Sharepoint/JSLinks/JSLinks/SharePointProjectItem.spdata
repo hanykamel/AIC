@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="JSLinks\" Type="ElementManifest" />
+    <ProjectItemFile Source="PhotoGalleryJSLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="VideoGalleryJSLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="ProjectsJsLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="MainMenuJSLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="MailingListJsLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="GenericContentJSLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="EventsJsLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="EmailsJSLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="ContactUsJSLink.js" Target="JSLinks\" Type="ElementFile" />
+    <ProjectItemFile Source="AICMaterialsJSLink.js" Target="JSLinks\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

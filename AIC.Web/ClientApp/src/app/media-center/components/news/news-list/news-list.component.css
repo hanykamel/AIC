@@ -1,0 +1,103 @@
+.NewsContainer {
+  position: relative;
+  display: block;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  opacity: 1;
+  width: 90%;
+  height: fit-content;
+  margin: 0 auto 50px;
+  padding: 20px;
+}
+.NewsCard {
+  position: relative;
+  display: inline-block;
+  width: calc(94% / 3);
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #00000012;
+  border-radius: 18px;
+  opacity: 1;
+  overflow: hidden;
+  padding: 10px;
+  margin: 1%;
+  cursor: pointer;
+}
+  .NewsCard img {
+    border-radius: 16px;
+    height: 184px;
+    width: 100%;
+  }
+span.DateLabel {
+  position: relative;
+  display: flex;
+  text-align: left;
+  font: italic normal medium 18px/28px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+  opacity: 1;
+  margin: 10px 0;
+}
+p.Title {
+  position: relative;
+  display: block;
+  text-align: left;
+  font: normal normal bold 19px/28px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+p.Discription {
+  position: relative;
+  display: block;
+  text-align: left;
+  font: normal normal medium 16px/28px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+}
+
+
+
+.TitleCont {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 2% auto;
+  text-align: left;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .TitleCont button {
+    border-radius: 12px;
+    max-width: 150px;
+  }
+
+@media only screen and (max-width:768px) {
+ 
+  .NewsCard {
+    width: 100%;
+  }
+  .TitleCont {
+    width: unset;
+    margin: 2% 20px;
+  }
+  .TitleCont button {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  
+  .NewsCard {
+    width: 100%;
+  }
+  .TitleCont button {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}

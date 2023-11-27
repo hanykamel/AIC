@@ -1,0 +1,19 @@
+
+  <div class="shadowCont genericContent">
+    <div class="p-grid">
+      <div class="p-col-12 p-lg-7">
+        <div  [innerHTML]="data?.desc | safeHtml" class="innerText"></div>
+      </div>
+      <!--End Col-->
+      <div class="p-col-12 p-lg-5">
+        <img class="aboutImg" [src]="data?.img" />
+      </div>
+      <!--End Col-->
+    </div>
+    <!--End Row-->
+    <app-no-data-found *ngIf="noDataAvailable" [showHomeBtn]="showHomeBtn"></app-no-data-found>
+  </div>
+  <!--End Section-->
+
+
+

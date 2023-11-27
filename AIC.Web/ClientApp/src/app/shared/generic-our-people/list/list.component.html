@@ -1,0 +1,17 @@
+<div class=" genericList">
+
+  <div class="shadowCont">
+    <div class="p-grid">
+      <div class="p-col-12 p-lg-3 p-mb-3" (click)="onClick(item.id)" *ngFor="let item of items">
+        <div class="whiteCard cursorPointer">
+          <img class="p-mb-3" [src]="item.img" />
+          <p class="text-16 font-bold p-mb-3">{{item.name}}</p>
+          <p class="btnTitle">{{item.title}}</p>
+        </div>
+      </div>
+      <!--End Col-->
+    </div>
+    <!--End Row-->
+  </div>
+  <!--End Section-->
+</div>

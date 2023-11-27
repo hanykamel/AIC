@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ArrayToPdf" Version="2.0.4" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="NPOI" Version="2.5.5" />
+    <PackageReference Include="Npoi.Mapper" Version="3.5.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AIC.CrossCutting\AIC.CrossCutting.csproj" />
+    <ProjectReference Include="..\AIC.Data\AIC.Data.csproj" />
+    <ProjectReference Include="..\AIC.Repository\AIC.Repository.csproj" />
+    <ProjectReference Include="..\AIC.SP.Middleware\AIC.SP.Middleware.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\Lookups\" />
+  </ItemGroup>
+
+</Project>

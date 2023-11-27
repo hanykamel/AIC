@@ -1,0 +1,17 @@
+<div *ngIf="relatedLinks" class="sectionPadding">
+  <div class="shadowCont">
+    <h2 class="text-24 blueColor p-mb-4 font-bold">{{'PagesTitle.RelatedNews' | translate}}</h2>
+    <div *ngFor="let link of relatedLinks" class="newsUrl">
+      <p class="text-16 blackColor">
+        {{link | translateobj }}
+      </p>
+      <a class="url" href="{{link.Url}}" target="_blank">
+        <span class="font-bold">{{'RelatedNews.Link' | translate}}</span>
+        <i class="material-icons-outlined">
+          open_in_new
+        </i>
+      </a>
+    </div>
+    <!--End Row-->
+  </div>
+</div>

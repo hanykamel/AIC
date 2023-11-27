@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="dca062a5-7c72-4073-a72e-3169110fbff5" Scope="Site" Title="Web Parts">
+  <ElementManifests>
+    <ElementManifest Location="JoinUsUserDetails\Elements.xml" />
+    <ElementFile Location="JoinUsUserDetails\JoinUsUserDetails.webpart" />
+    <ElementManifest Location="UserAppliedToCareerDetails\Elements.xml" />
+    <ElementFile Location="UserAppliedToCareerDetails\UserAppliedToCareerDetails.webpart" />
+    <ElementManifest Location="UserAppliedToInternshipDetails\Elements.xml" />
+    <ElementFile Location="UserAppliedToInternshipDetails\UserAppliedToInternshipDetails.webpart" />
+    <ElementManifest Location="SubscribersList\Elements.xml" />
+    <ElementFile Location="SubscribersList\SubscribersList.webpart" />
+    <ElementManifest Location="JoinUsUsersList\Elements.xml" />
+    <ElementFile Location="JoinUsUsersList\JoinUsUsersList.webpart" />
+    <ElementManifest Location="AppliedToCareersList\Elements.xml" />
+    <ElementFile Location="AppliedToCareersList\AppliedToCareersList.webpart" />
+    <ElementManifest Location="AppliedToInternshipsList\Elements.xml" />
+    <ElementFile Location="AppliedToInternshipsList\AppliedToInternshipsList.webpart" />
+  </ElementManifests>
+</Feature>

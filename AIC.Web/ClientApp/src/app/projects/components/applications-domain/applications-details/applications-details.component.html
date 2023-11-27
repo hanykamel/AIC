@@ -1,0 +1,12 @@
+<div *ngIf="projectDetails" class="sectionPadding projDet">
+  <div class="shadowCont">
+    <div class="headerTitle p-mb-4">
+      <p class="blueColor text-24">{{projectDetails.Title}}</p>
+      <button (click)="onClickDemo()" *ngIf="ShowProjectDemo()" class="btn yellowBtn blackColor">{{'PagesTitle.ProjectDemo' | translate}}</button>
+    </div>
+    <img class="p-mb-4" [src]="projectDetails.MainImage" />
+    <div [innerHTML]="projectDetails.Description | safeHtml" class="innerText">
+    </div>
+    <button (click)="onClickRelatedLinks()" *ngIf="ShowRelatedLinks()" class="btn yellowBtn blackColor p-mt-4">{{'PagesTitle.RelatedNews' | translate}}</button>
+  </div>
+</div>

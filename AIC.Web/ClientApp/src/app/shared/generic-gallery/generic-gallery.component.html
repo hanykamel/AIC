@@ -1,0 +1,11 @@
+
+<div class="NewsContainer">
+    <div (click)="onClickForDetails(icard)" class="ImgCard" *ngFor="let icard of icards">
+      <div class="imgHead">
+        <p class="Title">{{icard.title}}</p>
+        <span class="DateLabel">{{icard.date | formatDate}}</span>
+      </div>
+      <img [src]="icard.img" />
+      <p class="Discription">{{icard.desc}}</p>
+    </div>
+</div>

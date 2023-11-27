@@ -1,0 +1,27 @@
+.careersCard .greyColor {
+  font: italic normal medium 12px/20px Roboto;
+}
+.homeSectionPadding {
+  position: relative;
+  z-index: 9;
+}
+.careersHomeCont .carDesc {
+  height: 40px;
+  overflow: hidden;
+}
+
+::ng-deep .careersMainDec span {
+  white-space: unset !important;
+  word-break: break-word !important;
+}
+
+@media only screen and (max-width: 1180px) and (min-width: 784px) {
+  .careersCard .greyColor {
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .titleBtnFlex {
+    flex-direction: inherit;
+  }
+}

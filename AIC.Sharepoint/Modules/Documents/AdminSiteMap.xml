@@ -1,0 +1,373 @@
+<element>
+  <element>
+    <Title>Root</Title>
+    <Url></Url>
+    <element>
+      <Title>Subscribers</Title>
+      <Url>Pages/Subscribers/Subscribers.aspx</Url>
+    </element>
+    <element>
+      <Title>Documents</Title>
+      <Url>Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Refresh Cache Service</Title>
+      <Url>Pages/Cache/Service.aspx</Url>
+    </element>
+    <element>
+      <Title>Pictures</Title>
+      <Url>PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>Configurations</Title>
+      <Url>Lists/Configurations/AllItems.aspx</Url>
+    </element>
+    
+    <element>
+      <Title>Contact Us</Title>
+      <Url>Lists/ContactUs/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Countries</Title>
+      <Url>Lists/Countries/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Course's Type</Title>
+      <Url>Lists/CourseType/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Entity</Title>
+      <Url>Lists/Entity/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>FAQ Topics</Title>
+      <Url>Lists/FAQTopics/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>News Categories</Title>
+      <Url>Lists/NewsCategories/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Reports Type</Title>
+      <Url>Lists/Reports Type/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Sources</Title>
+      <Url>Lists/Sources/AllItems.aspx</Url>
+    </element>
+  </element>
+ 
+  <element>
+    <Title>AR</Title>
+    <Url>ar/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>الصفحة الرئيسية</Title>
+      <Url>ar/Lists/Home Page/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الهيكل الوظيفي</Title>
+      <Url>ar/Lists/AdministrativeStructure/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>سياسة الاستخدام - الشروط والأحكام</Title>
+      <Url>ar/Lists/UsagePolicy/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>شركاء النجاح</Title>
+      <Url>ar/Lists/Partners/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>وزارات الدولة</Title>
+      <Url>ar/Lists/Countrys Ministries/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الأسئلة المتكررة</Title>
+      <Url>ar/Lists/FAQ/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>السيرة الذاتيه للوزير</Title>
+      <Url>ar/Lists/MinisterBiography/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>المرفقات</Title>
+      <Url>ar/Attachments/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>المستندات</Title>
+      <Url>ar/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الصور</Title>
+      <Url>ar/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>الأخبار</Title>
+      <Url>ar/Lists/News/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الأنشطة</Title>
+      <Url>ar/Lists/Activities/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الفعاليات</Title>
+      <Url>ar/Lists/Events/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>مبادارات الوزارة</Title>
+      <Url>ar/Lists/Initiatives/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>مرصد</Title>
+      <Url>ar/Lists/Observatory/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>التقارير والأبحاث</Title>
+      <Url>ar/Reports and Researches/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>مكتبة الصور</Title>
+      <Url>ar/PhotoGallery/Forms/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>مكتبة الفيديوهات</Title>
+      <Url>ar/VideoAlbums/Forms/CurrentItems.aspx</Url>
+    </element>
+    
+  </element>
+  <element>
+    <Title>الدورات التدريبية</Title>
+    <Url>ar/Training/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>الصور</Title>
+      <Url>ar/Training/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>المستندات</Title>
+      <Url>ar/Training/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>المستخدمون المسجلون</Title>
+      <Url>ar/Training/Lists/Registered/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>معرض صور الدورة</Title>
+      <Url>ar/Training/PhotoGallery/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>ألبومات فيديو الدورة</Title>
+      <Url>ar/Training/VideoAlbums/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>الدورات</Title>
+      <Url>ar/Training/Lists/Courses/CurrentItems.aspx</Url>
+    </element>
+  </element>
+  <element>
+    <Title>عن الوزارة</Title>
+    <Url>ar/About/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>المستندات</Title>
+      <Url>ar/About/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الصور</Title>
+      <Url>ar/About/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>رسالة الوزارة</Title>
+      <Url>ar/About/Lists/Ministry Mission/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الأهداف الإستراتيجية للوزارة</Title>
+      <Url>ar/About/Lists/Ministry Stratigic Goals/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>قيم الوزارة</Title>
+      <Url>ar/About/Lists/Ministry Values/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الاهداف الفرعية</Title>
+      <Url>ar/About/Lists/Sub Goals/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>الرؤية والأهداف</Title>
+      <Url>ar/About/Lists/Vision and Goals/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>تاريخ الوزارة</Title>
+      <Url>ar/About/Lists/MinistryHistory/AllItems.aspx</Url>
+    </element>
+  </element>
+  <element>
+    <Title>استطلاعات الرأي</Title>
+    <Url>ar/Survey/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>الصور</Title>
+      <Url>ar/Survey/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>المستندات</Title>
+      <Url>ar/Survey/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>تكوينات الاستطلاعات و الدراسات</Title>
+      <Url>ar/Survey/Lists/Configuration/AllItems.aspx</Url>
+    </element>
+  </element>
+  <element>
+    <Title>EN</Title>
+    <Url>en/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>Home Page</Title>
+      <Url>en/Lists/Home Page/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Administrative Structure</Title>
+      <Url>en/Lists/AdministrativeStructure/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Usage Policy - Terms and Conditions</Title>
+      <Url>en/Lists/UsagePolicy/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Success Partners</Title>
+      <Url>en/Lists/Partners/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Country Ministries</Title>
+      <Url>en/Lists/Countrys Ministries/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Frequently Asked Questions</Title>
+      <Url>en/Lists/FAQ/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Minister Biography</Title>
+      <Url>en/Lists/MinisterBiography/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Attachments</Title>
+      <Url>en/Attachments/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Documents</Title>
+      <Url>en/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Pictures</Title>
+      <Url>en/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>News</Title>
+      <Url>en/Lists/News/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Activities</Title>
+      <Url>en/Lists/Activities/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Events</Title>
+      <Url>en/Lists/Events/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Ministry initiatives</Title>
+      <Url>en/Lists/Initiatives/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Observatory</Title>
+      <Url>en/Lists/Observatory/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Reports and Research</Title>
+      <Url>en/Reports and Researches/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Photo Library</Title>
+      <Url>en/PhotoGallery/Forms/CurrentItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Video Library</Title>
+      <Url>en/VideoAlbums/Forms/CurrentItems.aspx</Url>
+    </element>
+  </element>
+  <element>
+    <Title>Training Courses</Title>
+    <Url>en/Training/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>Pictures</Title>
+      <Url>en/Training/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>Documents</Title>
+      <Url>en/Training/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Registered Users</Title>
+      <Url>en/Training/Lists/Registered/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Course Photo Gallery</Title>
+      <Url>en/Training/PhotoGallery/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Course Video Albums</Title>
+      <Url>en/Training/VideoAlbums/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>Courses</Title>
+      <Url>en/Training/Lists/Courses/CurrentItems.aspx</Url>
+    </element>
+  </element>
+  <element>
+    <Title>About the Ministry</Title>
+    <Url>en/About/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>Documents</Title>
+      <Url>en/About/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Pictures</Title>
+      <Url>en/About/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>Ministry Mission</Title>
+      <Url>en/About/Lists/Ministry Mission/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>The Ministry's Strategic Goals</Title>
+      <Url>en/About/Lists/Ministry Stratigic Goals/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Ministry Values​​</Title>
+      <Url>en/About/Lists/Ministry Values/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Sub-Goals</Title>
+      <Url>en/About/Lists/Sub Goals/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Vision and Goals</Title>
+      <Url>ar/About/Lists/Vision and Goals/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>History of the Ministry</Title>
+      <Url>en/About/Lists/MinistryHistory/AllItems.aspx</Url>
+    </element>
+  </element>
+  <element>
+    <Title>Surveys</Title>
+    <Url>en/Survey/_layouts/15/viewlsts.aspx</Url>
+    <element>
+      <Title>Pictures</Title>
+      <Url>en/Survey/PublishingImages/Forms/Thumbnails.aspx</Url>
+    </element>
+    <element>
+      <Title>Documents</Title>
+      <Url>en/Survey/Documents/Forms/AllItems.aspx</Url>
+    </element>
+    <element>
+      <Title>Polls and Surveys configurations</Title>
+      <Url>en/Survey/Lists/Configuration/AllItems.aspx</Url>
+    </element>
+  </element>
+</element>

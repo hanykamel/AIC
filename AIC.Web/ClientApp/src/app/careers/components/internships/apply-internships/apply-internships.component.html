@@ -1,0 +1,92 @@
+<div class="sectionPadding thirdSection applyIntern">
+  <div class="shadowCont">
+    <div class="p-grid">
+      <div class="p-lg-5 p-col-12">
+        <div class="jobTitle">
+          <i class="material-icons-outlined">work_outline</i>
+          <div class="titleCont">
+            <h2 class="text-20 font-bold p-mb-1 blackColor" *ngIf="lang == 'en'">
+              {{ internship.Title }}
+            </h2>
+            <h2 class="text-20 font-bold p-mb-1 blackColor" *ngIf="lang == 'ar'">
+              {{ internship.TitleAr }}
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!--End Col-->
+      <div class="p-lg-7 p-col-12">
+        <div class="jobDetails">
+          <div class="detailsWidth">
+            <p class="detailsTitle">{{ "Intern.RefrenceNum" | translate }}</p>
+            <p class="detailsDesc">{{ internship.ReferenceNumber }}</p>
+          </div>
+          <div class="detailsWidth">
+            <p class="detailsTitle">{{ "Intern.Location" | translate }}</p>
+            <p *ngIf="internship.Location && lang == 'en'" class="detailsDesc">{{ internship.Location }}</p>
+            <p *ngIf="internship.LocationAr && lang == 'ar'" class="detailsDesc">{{ internship.LocationAr }}</p>
+          </div>
+          <div class="detailsWidth">
+            <p class="detailsTitle">{{ "Intern.ExpDate" | translate }}</p>
+            <p class="detailsDesc">{{ internship.ExpiryDate | formatDate }}</p>
+          </div>
+        </div>
+      </div>
+      <!--End Col-->
+    </div>
+  </div>
+
+  <div id="surveyElement"></div>
+  <p-captcha #cap
+             class="captcha"
+             siteKey="{{ siteKey }}"
+             [language]="lang ? lang : 'en'"
+             (onResponse)="showResponse($event)"
+             (onExpire)="onExpire()"
+             style="
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    " *ngIf="!success"></p-captcha>
+  <div class="flex">
+    <button 
+    (click)="Complete()"
+    class="complete">
+    {{ "submit" | translate }}
+    </button>
+  </div>
+  <p class="errorLenText errorText cvError err-captcha" *ngIf="recaptchaErrorMsg" role="alert">
+    {{ "shared.RecaptchaErrorMsg" | translate }}
+  </p>
+</div>
+<div class="sectionPadding formErrorPosition surveyCont">
+  <div id="surveyElement"></div>
+  <p class="errorText" *ngIf="extensionErrorMsg">
+    {{ "shared.AttachmentErrorMsg" | translate }}
+  </p>
+  <br />
+  <p class="errorText errorLenText" *ngIf="lengthErrorMsg">
+    {{ "shared.lengthErrorMsg" | translate }}
+  </p>
+  <p class="errorLenText errorText cvError" *ngIf="uploadCvErrorMsg">
+    {{ "shared.UploadYourCV" | translate }}
+  </p>
+</div>
+<p-dialog
+  [(visible)]="success"
+  (onHide)="closeModal()"
+  [modal]="true"
+  [style]="{ width: '35vw' }"
+  [breakpoints]="{ '960px': '90vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  role="alert"
+>
+  <div class="success">
+    <i class="material-icons-outlined"> done </i>
+    <p class="text-28 p-text-center">
+      {{ "shared.SubmittedForm" | translate }}
+    </p>
+  </div>
+</p-dialog>

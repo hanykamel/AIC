@@ -1,0 +1,22 @@
+<div class="pRelative">
+  <input #text
+         type="email"
+         [disabled]="disabled"
+         (change)="onchange(text.value)"
+         (blur)="ontouched()"
+         [(ngModel)]="value"
+         [placeholder]="placeholder?placeholder:''"
+         class="form-control" [readonly]="readonly">
+
+
+
+  <div *ngIf="ngControl.invalid&&(ngControl.touched||ngControl.dirty)" class="validationColor errorText">
+    <span class="form-text error mt-1" *ngIf="ngControl.errors['required']">{{"validation.required"|translate}}</span>
+    <span class="form-text error mt-1" *ngIf="ngControl.errors['pattern']||ngControl.errors['email']">{{"validation.email"|translate}}</span>
+    <span class="form-text error mt-1" *ngIf="ngControl.errors['check']"> {{"validation.emailExists"|translate}}</span>
+    <span class="form-text error mt-1" *ngIf="ngControl.errors['emailExists']">{{"validation.emailExists"|translate}}</span>
+
+
+
+  </div>
+</div>

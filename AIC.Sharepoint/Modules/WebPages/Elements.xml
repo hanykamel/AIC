@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages" Url="Pages">
+    <File Path="WebPages\AddAttendees.aspx" Url="AddAttendees.aspx"
+           Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE">
+      <Property Name="Title" Value="InviteAttendees"/>
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/APA/Pageslayouts/AddAttendeesLayout.aspx, AddAttendeesLayout" />
+      <AllUsersWebPart WebPartOrder="0" WebPartZoneID="AddAttendees">
+        <![CDATA[
+
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="AIC.Sharepoint.AddAttendees.AddAttendees, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">AIC.Sharepoint - AddAttendees</property>
+        <property name="Description" type="string">My Visual Web Part</property>
+        <property name="ChromeType" type="chrometype">None</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="WebPages\ViewAttendees.aspx" Url="ViewAttendees.aspx" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE">
+      <Property Name="Title" Value="ViewAttendees"/>
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/APA/Pageslayouts/AddAttendeesLayout.aspx, AddAttendeesLayout" />
+      <AllUsersWebPart WebPartOrder="0" WebPartZoneID="AddAttendees">
+        <![CDATA[
+
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="AIC.Sharepoint.Webparts.ViewAttendees.ViewAttendees, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">AIC.Sharepoint - ViewAttendees</property>
+        <property name="Description" type="string">My Visual Web Part</property>
+        <property name="ChromeType" type="chrometype">None</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+
+        ]]>
+      </AllUsersWebPart>
+    </File>
+  </Module>
+</Elements>

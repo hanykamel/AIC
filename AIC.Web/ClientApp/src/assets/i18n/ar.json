@@ -1,0 +1,264 @@
+{
+  "Home": "الرئيسية",
+  "ReturnToHome": "العودة إلى الصفحة الرئيسية!",
+  "NoDataFound": "عفوا لا يوجد بيانات",
+  "submit":"ارسال",
+  "HomePage": {
+    "aicProjects": "مشروعات",
+    "Search": "بحث",
+    "ShowMore": "أظهر المزيد",
+    "ShowAllProjects": "أظهر جميع المشروعات",
+    "ShowAllCareers": "أظهر جميع الوظائف",
+    "ContactUs": "تواصل معنا",
+    "ContactUsBtn": "تواصل معنا",
+    "FeaturedCareers": "وظائف مميزة",
+    "DiscoverMore": "اكتشف المزيد",
+    "Video": "الفيديو",
+    "MainBanner": "البانر الرئيسي",
+    "AICHighlights": "أبرز الابتكارات"
+  },
+  "AboutUs": {
+    "Working": "العمل مع مركز الابتكار التطبيقي",
+    "Roadmap": "خارطة الطريق الاستراتيجية",
+    "Mission": "مهمة AIC",
+    "Objectives": "أهداف AIC",
+    "Values": "قيم AIC",
+    "Partnership": "نموذج شراكة AIC"
+  },
+  "shared": {
+    "noData": "لا توجد بيانات",
+    "ShowAll": "عرض الكل",
+    "ShareContentOn": "مشاركة المحتوى على",
+    "ShareOnFacebook": "شارك محتوى الصفحة على Facebook",
+    "ShareOnTwitter": "شارك محتوى الصفحة على Twitter",
+    "ShareOnLinkedIn": "شارك محتوى الصفحة على LinkedIn",
+    "ShareAnywhere": " نسخ رابط المشاركة ",
+    "LinkCopied": "تم نسخ الرابط",
+    "ShareContentOnSocial": "مشاركة محتوى الصفحة على",
+    "LinkSent": "تم إرسال الرابط إلى بريدك الإلكتروني",
+    "DataAddeddSuccessfully": "تم إضافة البيانات بنجاح",
+    "AppliedBefore": "لقد قمت بالتسجيل مسبقا",
+    "CheckMailBox": "يرجي التحقق من صندوق البريد الخاص بك للتقديم",
+    "GeneralErrMsg": "حدث خطأ أثناء تنفيذ طلبك",
+    "SubmittedForm": "تم استلام النموذج المقدم الخاص بك بنجاح",
+    "AttachmentErrorMsg": "الملفات المسموح بها هي Word و PDF فقط",
+    "lengthErrorMsg": "الحد الأقصى ملفين",
+    "UploadYourCV": "من فضلك يجب عليك تحميل سيرتك الذاتية",
+    "RecaptchaErrorMsg": "يجب عليك الضغط على Recaptcha للتحقق من أنك لست روبوتًا"
+
+  },
+  "PagesTitle": {
+    "AIC": "مركز الابتكار التطبيقي",
+    "Partners": "قائمة الشركاء",
+    "AboutUs": "معلومات عنا",
+    "MediaCenter": "مركز الوسائط",
+    "PhotoGallery": "مكتبة الصور",
+    "VideoGallery": "مكتبة الفيديوهات",
+    "Resources": "المصادر",
+    "AICMaterials": "مواد مركز الابتكار التطبيقي",
+    "Projects": "المشروعات",
+    "ProjectDetails": "تفاصيل المشروع",
+    "ProjectDemo": "عرض المشروع",
+    "HighPreformanceComputing": "الحوسبة فائقة الجودة",
+    "AICMission": "مهمة مركز الابتكار التطبيقي",
+    "AICObjectives": "أهداف مركز الابتكار التطبيقي",
+    "CommitteeList": "أعضاء مجلس الإدارة والمجلس العلمي",
+    "RelatedNews": "أخبار ذات صلة",
+    "BestPractices": "أفضل الممارسات",
+    "BestPracticesDetails": "تفاصيل أفضل الممارسات",
+    "AICValues": "قيم مركز الابتكار التطبيقي",
+    "AICPartnership": "نموذج شراكة مركز الابتكار التطبيقي",
+    "StrategicRoadmap": "خريطة الطريق الاستراتيجية",
+    "OurPeople": "فريق العمل",
+    "Sitemap": "خريطة الموقع",
+    "CommitteeDetais": "تفاصيل عضو مجلس الإدارة والمجلس العلمي",
+    "OurPeopleDetails": "تفاصيل فريق العمل",
+    "News": "الاخبار",
+    "Events": "الفعاليات",
+    "EventsDetails": "تفاصيل الفاعلية",
+    "NewsDetails": "تفاصيل الخبر",
+    "WhitePapers": "الصحف البيضاء",
+    "WhitePapersDetails": "تفاصيل الصحف البيضاء",
+    "SocialMedia": "مشاركات التواصل الاجتماعي",
+    "VideoAlbum": "البوم الفيديوهات",
+    "Faqs": "الأسئلة الشائعة",
+    "PhotoAlbum": "البوم الصور",
+    "ArchivedNews": "ارشيف الأخبار ",
+    "ArchivedEvents": "ارشيف الفعاليات ",
+    "HPCProjectDetails": "تفاصيل مشروع الحوسبة فائقة الجودة",
+    "Careers": "الوظائف",
+    "CareersDetails": "تفاصيل الوظيفة",
+    "Internships": "الدورات التدريبية",
+    "InternshipsDetails": "تفاصيل الدورة التدريبية",
+    "ContactUs": "تواصل معنا",
+    "AdvancedSearch": "بحث متقدم",
+    "Unsubscribe": "إلغاء الاشتراك",
+    "ContactUsForm": "نموذج التواصل معنا",
+    "ReachUsThrough": "تواصل معنا من خلال"
+
+  },
+  "PartnerShips": {
+    "Partners": "شركائنا",
+    "National": "محلي",
+    "International": "دولي"
+  },
+  "BodAndScientific": {
+    "BODAndScientificCommittee": "مجلس الإدارة واللجنة العلمية"
+  },
+  "AICMaterials": {
+    "Title": "مواد مركز الابتكار التطبيقي",
+    "MaterialDocument": "ملف المادة",
+    "ResourcesUrl": "رابط المصدر"
+  },
+  "Projects": {
+    "TechnologyDomain": "مجال التكنولوجيا",
+    "ApplicationsDomain": "مجال التطبيقات",
+    "DemoUrl": "رابط العرض"
+  },
+  "AccessbilityFunctions": {
+    "ReadPage": " إمكانية سماع النص",
+    "ResetAll": "إعادة تعيين",
+    "Contrast": "إمكانية تغيير الألوان",
+    "BiggerText": "إمكانية تغيير حجم النص",
+    "Highlightlinks": "إمكانية تمييز الروابط",
+    "BiggerCurser": "إمكانية تغيير حجم المؤشر",
+    "KeyboardUse": "إستخدام لوحة المفاتيح",
+    "textSpacing": "إمكانية تباعد النص",
+    "tooltips": "أداة التلميح",
+    "stopAnimation": "إيقاف المؤثرات",
+    "readingGuide": "مرشد النصوص",
+    "pageStructureLinks": "روابط هيكل الصفحة",
+    "legibleFonts": "الخطوط واضحة",
+    "dyslexiaFont": "خطوط تسهل قراءتها",
+    "lineHeight": "ارتفاع الخط"
+
+  },
+  "News": {
+    "ArchivedNews": "ارشيف الأخبار",
+    "News": "الاخبار",
+    "RelatedMediaLinks": "روابط ذات صلة"
+  },
+  "Events": {
+    "ArchivedEvents": "ارشيف الفعاليات",
+    "Events": "الفعاليات",
+    "Location": "موقع الفعالية"
+  },
+  "Footer": {
+    "Contactus": "تواصل معنا",
+    "Faqs": "الأسئلة الشائعة",
+    "Sitemap": "خريطة الموقع",
+    "MailingList": "الاشتراك في القائمة البريدية",
+    "Email": "بريدك الالكتروني",
+    "SubscriberSuccess": "شكرا للاشتراك في نشرتنا الإخبارية"
+  },
+  "SocialMediaFeeds": {
+    "Title": "مشاركات التواصل الاجتماعي"
+  },
+
+  "WhitePapers": {
+    "ResourceURL": "رابط المصدر"
+  },
+  "RelatedNews": {
+    "Link": "رابط الخبر"
+  },
+  "HPC": {
+    "HPCProjects": "مشروعات الحوسبة فائقة الجودة"
+  },
+  "validation": {
+    "required": "عفوا، لايمكنك ترك هذا الحقل فارغاٌ.",
+    "email": "الرجاء إدخال البريد الإلكتروني بطريقة صحيحة",
+    "emailExists": "تم استخدام هذا البريد الإلكتروني من قبل"
+  },
+  "Newsletter": {
+    "UnsubscribeSuccessMsg": "تم إلغاء اشتراكك من النشرة الإخبارية بنجاح",
+    "UnsubscribeAlreadyErrMsg": "لقد تم الغاء اشتراكك من النشرة الإخبارية من قبل",
+    "UnsubscribeErrMsg": "حدث خطأ أثناء تنفيذ طلبك",
+    "SubscribersList": "قائمة المشتركين في النشرة الإخبارية",
+    "SubscriberEmail": "البريد الإلكتروني",
+    "IsValid": ""
+  },
+  "backEndValidation": {
+    "AlreadySubscribed": "تم استخدام هذا البريد الإلكتروني من قبل",
+    "AlreadyUnSubscribed": "تم إلغاء إشتراك هذا البريد الإلكتروني من قبل",
+    "NotSubscribedBefore": "هذا البريد الإلكتروني لم يتم إضافته للمشتركين في النشرة الإخبارة من قبل",
+    "FormValidationError": "تم انتهاء صلاحية الاستماره, نرجو اعاده التقديم مره اخري",
+    "VacancyExpired": "تم وصول تلك الوظيفة الى انتهاء الصلاحية",
+    "ProfileEntityNotFound": "عذرا , لا يوجد اى صفحة لك لدينا",
+    "VacancyAppliedBefore": "عذرا , لقد قمت بالتقديم علي هذه الوظيفة مسبقا",
+    "NullModel": "برجاء التأكد من صحة البيانات المدخلة",
+    "InternshipAppliedBefore": "عذرا , لقد قمت بالتقديم علي تلك الدورة التدريبية مسبقا",
+    "InternShipExpired": "تم وصول تلك الدورة التدريبية الى انتهاء الصلاحية",
+    "ItemNotExist": "تعذر العثور على العنصر. ربما تم حذفه."
+
+  },
+  "summary": {
+    "Error": "خطأ",
+    "Warning": "تنبيه",
+    "Notification": "إشعار"
+  },
+  "JoinUs": {
+    "EnterEMail": "ادخل البريد الالكتروني",
+    "send": "ارسال",
+    "ApplyNow": "اشترك الان",
+    "Email": "البريد الالكتروني",
+    "GeneralApplication": "الإنضمام إلينا",
+    "Description": "إذا لم يتطابق أي من الوظائف الشاغرة الحالية مع مهاراتك أو خبرتك ، فيرجى التقدم هنا للحصول على فرص وظيفية مستقبلية مع AIC"
+  },
+  "Search": {
+    "Projects": "المشروعات",
+    "HPCProjects": "مشروعات الحوسبة فائقة الجودة",
+    "News": "الاخبار",
+    "Events": "الفعاليات",
+    "Careers": "الوظائف",
+    "Internships": "الدورات التدريبية",
+    "WhitePapers": "الأوراق البيضاء",
+    "SelectCategory": "أختر تصنيف",
+    "AdvancedSearch": "بحث متقدم",
+    "TypeHereAnything": "اكتب هنا النص المراد البحث عنه",
+    "EnterKeyword": "ادخل النص المراد البحث عنه",
+    "StartDate": "تاريخ البدء",
+    "EndDate": "تاريخ الانتهاء",
+    "Search": "بحث",
+    "Reset": "اعادة ضبط",
+    "SearchError": "برجاء ادخال خيارات بحث صحيحة",
+    "SearchResult": "نتائج البحث",
+    "MinLength": "أقل عدد من الحروف مسموح به 3 حروف",
+    "BestPractices": "أفضل الممارسات",
+    "AICMaterials": "مواد مركز الابتكار التطبيقي",
+    "AboutUs": "معلومات عنا",
+    "WorkingWithAIC":"العمل معنا",
+    "BODAndScientificCommittee": "مجلس الإدارة واللجنة العلمية",
+    "OurPeople": "فريق العمل",
+    "PhotoGallery": "مكتبة الصور",
+    "VideoGallery": "مكتبة الفيديوهات"
+  },
+  "Careers": {
+    "Overview": "نظرة عامة على الوظيفة",
+    "Description": "وصف الوظيفة",
+    "Qualifications": "المؤهلات",
+    "Requirements": "متطلبات الوظيفة",
+    "RefrenceNum": "الرقم المرجعي للوظيفة",
+    "ExpDate": "تاريخ انتهاء التقديم",
+    "Type": "نوع الوظيفة",
+    "Location": "مكان العمل",
+    "Apply": "التقديم في الوظيفة"
+  },
+  "Intern": {
+    "Overview": "نظرة عامة على الدورة التدريبية ",
+    "Description": "وصف الدورة التدريبية ",
+    "Qualifications": "المؤهلات",
+    "Requirements": "متطلبات الدورة التدريبية ",
+    "RefrenceNum": "الرقم المرجعي للدورة",
+    "ExpDate": "تاريخ انتهاء التقديم",
+    "Department": "القسم",
+    "Location": "مكان الدورة التدريبية",
+    "Apply": "التقديم في الدورة التدريبية"
+  },
+  "ContactUs": {
+    "HeadAddress": "عنوان المقر الرئيسي",
+    "HeadPhone": "هاتف المقر الرئيسي",
+    "Locations": "المواقع",
+    "GetLocations": "احصل علي المواقع",
+    "SocialMedial": "وسائل التواصل الاجتماعي"
+  }
+}

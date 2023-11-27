@@ -1,0 +1,518 @@
+.contactUsSection .shadowCont {
+  padding: 15px 10px;
+}
+.contactUsSection .thirdSection {
+  border: 1px solid #7070702d;
+  border-radius: 20px;
+  padding: 15px 8px;
+}
+::ng-deep .contactUsSection #surveyElement .sv-body__page {
+  margin-top: 0;
+}
+
+.firstSection .text-16 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+.firstSection .text-16 i {
+  margin-right: 5px;
+}
+.ar :host ::ng-deep .firstSection .text-16 i {
+  margin-right: 0 !important;
+  margin-left: 5px;
+}
+.firstSection .text-14 {
+  margin-left: 23px;
+  margin-bottom: 40px !important;
+  font-size: 16px;
+}
+.firstSection .text-14:last-child {
+  margin-bottom: 0;
+}
+.ar :host ::ng-deep .firstSection .text-14 {
+  margin-right: 23px;
+  margin-left: 0 !important;
+}
+.firstSection a.text-14 {
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+}
+.firstSection a.location {
+  text-decoration: underline;
+  font-weight: 600;
+  margin-bottom: 20px !important;
+}
+.secondSection .text-18 {
+  display: flex;
+  align-items: center;
+}
+.secondSection .text-18 i {
+  margin-right: 5px;
+  transform: rotate(135deg);
+}
+.ar :host ::ng-deep .secondSection .text-18 i {
+  margin-right: 0 !important;
+  margin-left: 5px;
+  transform: rotate(45deg) !important;
+}
+.secondSection .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.thirdSection .err-captcha {
+  text-align: center;
+}
+.secondSection .social img {
+  transform: scale(1.3);
+}
+.shadowCont .text-18,
+.firstSection .text-18 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.firstSection .text-18 {
+  margin-bottom: 25px;
+}
+.shadowCont .text-18 i,
+.firstSection .text-18 i {
+  margin-right: 5px;
+  font-size: 27px;
+}
+.ar :host ::ng-deep .shadowCont .text-18 i,
+.ar :host ::ng-deep .firstSection .text-18 i {
+  margin-right: 0 !important;
+  margin-left: 5px;
+}
+.shadowCont h2 span {
+  font-size: 22px;
+  font-weight: bolder;
+}
+.thirdSection ::ng-deep .sv-page > .sv-row {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+.thirdSection ::ng-deep .sv-footer {
+  display: none;
+}
+.locationsDialog {
+  text-align: center;
+}
+.locationsDialog .code {
+  color: #3c57a1;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 20px #0000001a;
+  border-radius: 16px;
+  width: 95px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -60px;
+}
+.ar :host ::ng-deep .locationsDialog .code {
+  left: unset !important;
+  right: -60px;
+}
+.locationCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.locationBtn {
+  padding: 0 20px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000a;
+  border: 0.5px solid #3c57a1;
+  border-radius: 14px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 65px;
+  position: relative;
+  left: 20px;
+  min-width: 295px;
+}
+.locationBtn span {
+  display: block;
+  width: 170px;
+  text-align: center;
+}
+.locationBtn:hover .code ::ng-deep .qrcode canvas {
+  width: 60px;
+  height: 60px;
+}
+.locationBtn:hover .code {
+  transition: ease 0.2s;
+}
+.ar :host ::ng-deep .locationBtn {
+  padding-right: 65px;
+  padding-left: 20px !important;
+  left: unset !important;
+  right: 20px;
+}
+
+.locationBtn .copy {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.ar :host ::ng-deep .locationBtn .copy {
+  margin-right: 10px;
+  margin-left: 0 !important;
+}
+
+.thirdSection ::ng-deep p-captcha div {
+  display: flex;
+  justify-content: center;
+  transform: scale(1);
+}
+.thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-question__content {
+  margin-left: 0;
+}
+.ar
+  :host
+  .thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-question__content {
+  margin-right: 0;
+}
+
+.thirdSection ::ng-deep .sv-panel__content .sv-clearfix {
+  padding-bottom: 20px;
+}
+.thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div {
+  width: 49% !important;
+  flex: 1 1 49% !important;
+  min-width: 49% !important;
+  max-width: 100% !important;
+}
+.thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix:nth-child(5)
+  .sv-comment {
+  min-height: 200px !important;
+  resize: none !important;
+}
+::ng-deep
+  .contactUsSection
+  .thirdSection
+  .sv-panel__content
+  .sv-clearfix
+  > div:nth-child(1) {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.ar
+  :host
+  ::ng-deep
+  .contactUsSection
+  .thirdSection
+  .sv-panel__content
+  .sv-clearfix
+  > div:nth-child(1) {
+  margin-left: 10px !important;
+  margin-right: 0 !important;
+}
+.thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-question__header--location--top {
+  margin-bottom: 10px !important;
+}
+.thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-question__header--location--top
+  h5 {
+  padding-left: 30px !important;
+  font-size: 18px;
+  font-family: "Roboto" !important;
+  font-weight: bolder;
+}
+.ar
+  :host
+  .thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-question__header--location--top
+  h5 {
+  padding-left: 0 !important;
+  padding-right: 30px !important;
+}
+.thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div .sv-text,
+.thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div .sv-dropdown {
+  padding: 0 30px !important;
+  font: normal normal normal 16px/21px Roboto !important;
+}
+.thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div .sv-comment {
+  font: normal normal normal 16px/21px Roboto !important;
+  padding: 10px 30px;
+}
+.thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-text::placeholder,
+.thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-comment::placeholder {
+  font: normal normal normal 16px/21px Roboto !important;
+}
+.thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div .sv-dropdown {
+  background-position: right 20px top 50%, 0 0 !important;
+}
+.ar
+  :host
+  .thirdSection
+  ::ng-deep
+  .sv-panel__content
+  .sv-clearfix
+  > div
+  .sv-dropdown {
+  background-position: left 20px top 50%, 0 0 !important;
+}
+
+.firstSection {
+  padding-left: 15px;
+}
+.ar :host .firstSection {
+  padding-left: 0 !important;
+  padding-right: 15px;
+}
+.copiedPopup {
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  background: #000000d1;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: ease 0.3s;
+  min-width: 100px;
+  text-align: center;
+}
+
+.ar :host ::ng-deep .copiedPopup {
+  right: unset !important;
+  left: -20px;
+}
+.mapCont iframe {
+  width: 100%;
+  height: 420px;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+}
+
+/*----------------------*/
+
+.complete {
+  border: none;
+  border-radius: 34px;
+  background-color: transparent;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 300px;
+  height: 50px;
+  background-color: #f6be00 !important;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+}
+::ng-deep .sv-footer__complete-btn {
+  display: none !important;
+}
+
+/*---------------------------*/
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .secondSection .social {
+    margin-top: 10px;
+  }
+  .mapCont {
+    min-height: 250px;
+    margin-top: 10px;
+  }
+  .thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+  ::ng-deep
+    .contactUsSection
+    .thirdSection
+    .sv-panel__content
+    .sv-clearfix
+    > div:nth-child(1) {
+    margin-right: 0;
+  }
+  .ar
+    :host
+    ::ng-deep
+    .contactUsSection
+    .thirdSection
+    .sv-panel__content
+    .sv-clearfix
+    > div:nth-child(1) {
+    margin-left: 0 !important;
+  }
+
+  .locationBtn {
+    max-width: 100%;
+    min-height: 70px;
+    left: 0;
+    padding: 10px 20px;
+  }
+
+  .locationBtn {
+    max-width: 100%;
+    min-height: 100px;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .locationsDialog .code {
+    position: static;
+    width: 85px;
+    height: 85px;
+  }
+  .copiedPopup {
+    right: -10px;
+  }
+
+  .ar :host ::ng-deep .copiedPopup {
+    right: unset !important;
+    left: -10px;
+  }
+  .firstSection {
+    padding-left: 0;
+  }
+  .ar :host .firstSection {
+    padding-right: 0;
+  }
+  .thirdSection {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .secondSection .social {
+    margin-top: 10px;
+  }
+  .mapCont {
+    min-height: 250px;
+    margin-top: 10px;
+  }
+  .thirdSection ::ng-deep .sv-panel__content .sv-clearfix > div {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+  ::ng-deep
+    .contactUsSection
+    .thirdSection
+    .sv-panel__content
+    .sv-clearfix
+    > div:nth-child(1) {
+    margin-right: 0;
+  }
+  .ar
+    :host
+    ::ng-deep
+    .contactUsSection
+    .thirdSection
+    .sv-panel__content
+    .sv-clearfix
+    > div:nth-child(1) {
+    margin-left: 0 !important;
+  }
+  ::ng-deep
+    .contactUsSection
+    .thirdSection
+    .sv-panel__content
+    .sv-clearfix
+    > div:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .locationBtn {
+    max-width: 100%;
+    min-height: 100px;
+    left: 0;
+    padding: 10px 10px;
+    width: 100%;
+    height: auto;
+  }
+  .locationsDialog .code {
+    position: static;
+    width: 85px;
+    height: 85px;
+  }
+  .copiedPopup {
+    right: -10px;
+  }
+
+  .ar :host ::ng-deep .copiedPopup {
+    right: unset !important;
+    left: -10px;
+  }
+  ::ng-deep .thirdSection .sv-page > .sv-row {
+    margin-bottom: 0;
+  }
+  .complete {
+    min-width: 250px;
+  }
+  .firstSection {
+    padding-left: 0;
+  }
+  .ar :host .firstSection {
+    padding-right: 0;
+  }
+  .thirdSection {
+    margin-bottom: 30px;
+  }
+  .thirdSection ::ng-deep p-captcha div {
+    transform: scale(.9);
+  }
+}
+@media only screen and (max-width: 280px) {
+  .complete {
+    min-width: 170px;
+  }
+  .thirdSection ::ng-deep p-captcha div {
+    transform: scale(.8);
+  }
+}

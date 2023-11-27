@@ -1,0 +1,269 @@
+.DetCont {
+  position: relative;
+  display: block;
+  width: 92%;
+  margin: 30px 70px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  opacity: 1;
+  padding:30px;
+  padding-top: 40px;
+}
+.flexCont{
+    display:flex;
+    align-items:center;
+    margin-bottom:15px
+}
+  .flexCont i {
+      margin:0 5px
+  }
+.ar :host ::ng-deep .flexCont i {
+  transform: rotateY(180deg);
+}
+.twoPara {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75%;
+}
+.DetHeader {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+   justify-content: space-between;
+}
+
+.InfoCont {
+
+  font: normal normal normal 17px/30px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  display: block
+}
+
+.ar button.aboutImg {
+    margin-left: auto;
+}
+button.aboutImg {
+  background: #F6BE00 0% 0% no-repeat padding-box;
+  border-radius: 17px;
+  opacity: 1;
+  padding: 15px 20px;
+  margin: 20px 0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.DetHeader span {
+  position: relative;
+  /* display: flex; */
+  margin-left: auto;
+}
+
+.InfoCont span {
+
+  font: normal normal normal 17px/22px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  opacity: 1;
+}
+
+.DetHeader h2 {
+  margin-right: 10px;
+
+  font: normal normal bold 26px/32px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+}
+
+span.locUrl {
+  margin-left: auto;
+  display: initial;
+  width: fit-content;
+  float: right;
+}
+
+/*p ::ng-deep div p {
+  display: flex;
+  padding: 0 30px;
+}*/
+  .InfoCont ::ng-deep p div p {
+  display: flex;
+  padding: 0;
+  flex-direction:column;
+}
+::ng-deep .ar .InfoCont ::ng-deep p div {
+  text-align: right;
+}
+.DetCont img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  border-radius: 50px;
+  margin-bottom:15px
+}
+::ng-deep body.ar .DetHeader span {
+  margin-left: 0 !important;
+  margin-right: auto;
+}
+.DetHeader h5 {
+  margin-left: 10px;
+  display: flex;
+  height: fit-content;
+  margin-top: auto;
+  font: normal normal bold 14px/22px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+  opacity: 1;
+}
+::ng-deep body.ar .DetHeader h5{
+  margin-right: 10px;
+}
+/*::ng-deep .DetHeader div {
+  margin-left: auto;
+}*/
+/*::ng-deep body.ar .DetHeader div {
+  margin-right: auto;
+  margin-left:0;
+}*/
+.InfoCont a {
+  font: normal normal normal 17px/28px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+  text-decoration: none;
+  margin-bottom: 10px;
+  /* text-transform: uppercase; */
+}
+/*  .InfoCont a:nth-child(2)::after {
+    content: url("../../../assets/images/Share.svg");
+    position: absolute;
+  }
+*/
+.LinksCont {
+  position: relative;
+  display: flex;
+  max-height: 50px;
+  max-width: fit-content;
+}
+  .LinksCont img {
+    max-width: 17px;
+    max-height: 17px;
+    margin: 0;
+    padding: 0 !important;
+    position: absolute !important;
+    right: -20px;
+    top: 5px;
+  }
+::ng-deep .ar .LinksCont img {
+  /*left: -25px;*/
+  right: 105% !important;
+}
+.eventLocCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:15px
+}
+.eventAdd{
+    width:80%
+}
+.eventAdd, .eventLoc {
+  display: flex;
+  align-items: center;
+}
+  .eventAdd span, .eventLoc a {
+    margin: 0 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  .eventLoc img {
+    width: 18px;
+    height: 18px !important;
+    margin: 0;
+  }
+  @media (min-width:769px) and (max-width: 1024px){
+    .DetCont{
+      padding:20px;
+      width: unset;
+      margin: 30px 40px;
+    }
+  }
+  @media only screen and (max-width:768px) {
+    .DetCont{
+      padding:20px;
+      width: unset;
+      margin: 30px 20px;
+  }
+    .DetCont img{
+        height:250px
+    }
+  .twoPara{
+      flex-direction:column
+  }
+  .DetHeader {
+    flex-direction: column
+  }
+    .DetHeader h5, .DetHeader h2 {
+      margin: 0;
+      margin-bottom: 5px
+    }
+    .DetHeader h2 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+      .DetHeader h5 {
+        font-size: 14px;
+        line-height:18px
+      }
+    .eventLocCont {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .eventAdd {
+      margin-bottom: 20px;
+      width:100%
+    }
+    .twoPara{
+       max-width:100%
+    }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .DetCont {
+    padding: 20px
+  }
+  .twoPara {
+    max-width: 100%
+  }
+    .DetCont img {
+      height: 250px
+    }
+
+  .twoPara {
+    flex-direction: column
+  }
+
+  .DetHeader {
+    flex-direction: column
+  }
+
+    .DetHeader h5, .DetHeader h2 {
+      margin: 0;
+      margin-bottom: 5px
+    }
+
+    .DetHeader h2 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .DetHeader h5 {
+      font-size: 14px;
+      line-height: 18px
+    }
+}

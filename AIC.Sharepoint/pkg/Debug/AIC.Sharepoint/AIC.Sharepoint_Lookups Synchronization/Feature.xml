@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" Id="f6a5c8c1-2fb9-4706-8dfd-ef6ab02b86fd" Scope="Web" Title="Lookups Synchronization">
+  <ElementManifests>
+    <ElementManifest Location="LookupsSynchronization\Elements.xml" />
+  </ElementManifests>
+</Feature>

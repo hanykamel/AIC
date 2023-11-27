@@ -1,0 +1,47 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.12);
+    background-color: rgb(206, 206, 206);
+    outline: 1px solid slategrey;
+}
+
+.page-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jtable td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.jtable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.jtable tr:hover {
+    background-color: #ddd;
+}
+
+.jtable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #004bb3b3;
+    color: white;
+}
+
+.filtering {
+    margin-top: 20px;
+}
+
+div.jtable-main-container table.jtable thead th.jtable-column-header-sortable {
+    padding: 8px;
+}

@@ -1,0 +1,39 @@
+<div class="socialIcons">
+  <ng-container *ngIf="sharingSocialVisible">
+    <a [title]="link.name" [href]="[link.url]" *ngFor="let link of socData" target="_blank">
+      <img [src]="link.img" [alt]="link.name">
+      <!-- <p>{{'shared.ShareContentOnSocial' | translate}}</p><span>{{link.name}}</span> -->
+    </a>
+  </ng-container>
+  <!-- <a  (click)="openPop()">
+    <p>Share link anywhere</p>
+  </a> -->
+  <a class="SharedIcon cursorPointer" *ngIf="sharingContentVisible">
+    <i class="material-icons-outlined sharedImg" (click)="showDialog()">
+      share
+    </i>
+  </a>
+</div>
+<p-dialog [(visible)]="displayDialog" [modal]="true" [draggable]="false" [resizable]="false" role="alert"
+          [style]="{width: '55vw'}"  [breakpoints]="{'960px': '90vw'}">
+  <div class="PopCont">
+    <h1> {{'shared.ShareContentOn' | translate}} </h1>
+    <div class="shareCont" (click)="shareFacebook()">
+      <img src="../../assets/images/f.svg">
+      <span>{{'shared.ShareOnFacebook' | translate}}</span>
+    </div>
+    <div class="shareCont"  (click)="shareTwitter()">
+      <img src="../../assets/images/t.svg">
+      <span>{{'shared.ShareOnTwitter' | translate}}</span>
+    </div>
+    <div class="shareCont"  (click)="shareLinkedIn()">
+      <img src="../../assets/images/l.svg">
+      <span>{{'shared.ShareOnLinkedIn' | translate}}</span>
+    </div>
+    <div class="shareCont" (click)="copyUrl()">
+      <img src="../../assets/images/sh.svg" >
+      <span>{{'shared.ShareAnywhere' | translate}}</span>
+      <div *ngIf="showMsg" class="copiedPopup">{{'shared.LinkCopied' | translate}}</div>
+    </div>
+  </div>
+</p-dialog>

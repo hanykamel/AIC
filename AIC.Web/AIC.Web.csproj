@@ -1,0 +1,236 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\dist\**" />
+    <Compile Remove="ClientApp\src\app\core\**" />
+    <Compile Remove="ClientApp\src\app\guards\**" />
+    <Compile Remove="ClientApp\src\app\login\**" />
+    <Compile Remove="ClientApp\src\app\media-albums\**" />
+    <Compile Remove="ClientApp\src\app\shared\**" />
+    <Compile Remove="ClientApp\src\assets\i18n\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\dist\**" />
+    <Content Remove="ClientApp\src\app\core\**" />
+    <Content Remove="ClientApp\src\app\guards\**" />
+    <Content Remove="ClientApp\src\app\login\**" />
+    <Content Remove="ClientApp\src\app\media-albums\**" />
+    <Content Remove="ClientApp\src\app\shared\**" />
+    <Content Remove="ClientApp\src\assets\i18n\**" />
+    <EmbeddedResource Remove="ClientApp\dist\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\core\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\guards\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\login\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\media-albums\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\shared\**" />
+    <EmbeddedResource Remove="ClientApp\src\assets\i18n\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\dist\**" />
+    <None Remove="ClientApp\src\app\core\**" />
+    <None Remove="ClientApp\src\app\guards\**" />
+    <None Remove="ClientApp\src\app\login\**" />
+    <None Remove="ClientApp\src\app\media-albums\**" />
+    <None Remove="ClientApp\src\app\shared\**" />
+    <None Remove="ClientApp\src\assets\i18n\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\dist\3rdpartylicenses.txt" />
+    <None Remove="ClientApp\dist\assets\fonts\icons.woff2" />
+    <None Remove="ClientApp\dist\assets\fonts\iconsOutline.woff2" />
+    <None Remove="ClientApp\dist\assets\fonts\NeoSansArabicBlack.ttf" />
+    <None Remove="ClientApp\dist\assets\fonts\NeoSansArabicBold.ttf" />
+    <None Remove="ClientApp\dist\assets\fonts\NeoSansArabicLight.ttf" />
+    <None Remove="ClientApp\dist\assets\fonts\NeoSansArabicRegular.ttf" />
+    <None Remove="ClientApp\dist\assets\fonts\NeoSansArabicUltra.ttf" />
+    <None Remove="ClientApp\dist\assets\i18n\ar.json" />
+    <None Remove="ClientApp\dist\assets\i18n\en.json" />
+    <None Remove="ClientApp\dist\assets\images\activities\mp3.svg" />
+    <None Remove="ClientApp\dist\assets\images\activities\test.mp3" />
+    <None Remove="ClientApp\dist\assets\images\album\image.svg" />
+    <None Remove="ClientApp\dist\assets\images\APAlogo.png" />
+    <None Remove="ClientApp\dist\assets\images\citizenlogin.svg" />
+    <None Remove="ClientApp\dist\assets\images\fav\android-icon-144x144.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\android-icon-192x192.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\android-icon-36x36.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\android-icon-48x48.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\android-icon-72x72.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\android-icon-96x96.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-114x114.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-120x120.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-144x144.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-152x152.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-180x180.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-57x57.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-60x60.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-72x72.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-76x76.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon-precomposed.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\apple-icon.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\browserconfig.xml" />
+    <None Remove="ClientApp\dist\assets\images\fav\favicon-16x16.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\favicon-32x32.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\favicon-96x96.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\favicon.ico" />
+    <None Remove="ClientApp\dist\assets\images\fav\manifest.json" />
+    <None Remove="ClientApp\dist\assets\images\fav\ms-icon-144x144.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\ms-icon-150x150.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\ms-icon-310x310.png" />
+    <None Remove="ClientApp\dist\assets\images\fav\ms-icon-70x70.png" />
+    <None Remove="ClientApp\dist\assets\images\footer\facebook.svg" />
+    <None Remove="ClientApp\dist\assets\images\footer\FOOTER1.svg" />
+    <None Remove="ClientApp\dist\assets\images\footer\goTop.svg" />
+    <None Remove="ClientApp\dist\assets\images\footer\instagram.svg" />
+    <None Remove="ClientApp\dist\assets\images\footer\linked.svg" />
+    <None Remove="ClientApp\dist\assets\images\footer\twitter.svg" />
+    <None Remove="ClientApp\dist\assets\images\header\book.svg" />
+    <None Remove="ClientApp\dist\assets\images\header\logo.svg" />
+    <None Remove="ClientApp\dist\assets\images\header\not.svg" />
+    <None Remove="ClientApp\dist\assets\images\header\user.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\citizen.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\employee.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\employeeBlue.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\fbBlue.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\image.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\infoBook.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\infoEye.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\instagram.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\linkBlue.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\mail.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\member.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\news.png" />
+    <None Remove="ClientApp\dist\assets\images\home\pinterest.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\play.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\servBlue.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\slider.png" />
+    <None Remove="ClientApp\dist\assets\images\home\twitterBlue.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\visitor.svg" />
+    <None Remove="ClientApp\dist\assets\images\home\whatsapp.svg" />
+    <None Remove="ClientApp\dist\assets\images\logo.png" />
+    <None Remove="ClientApp\dist\assets\images\map\marker-shadow.png" />
+    <None Remove="ClientApp\dist\assets\images\map\marker.png" />
+    <None Remove="ClientApp\dist\assets\images\map\red-marker.png" />
+    <None Remove="ClientApp\dist\assets\images\news\image.svg" />
+    <None Remove="ClientApp\dist\assets\images\news\news1.png" />
+    <None Remove="ClientApp\dist\assets\images\news\news2.png" />
+    <None Remove="ClientApp\dist\assets\images\news\news3.png" />
+    <None Remove="ClientApp\dist\assets\images\news\video.png" />
+    <None Remove="ClientApp\dist\assets\images\news\watched1.png" />
+    <None Remove="ClientApp\dist\assets\images\news\watched2.png" />
+    <None Remove="ClientApp\dist\assets\images\news\watched3.png" />
+    <None Remove="ClientApp\dist\assets\images\news\watched4.png" />
+    <None Remove="ClientApp\dist\assets\images\services\servBlue1.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBlue2.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBlue3.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBlue4.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBrown1.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBrown2.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBrown3.svg" />
+    <None Remove="ClientApp\dist\assets\images\services\servBrown4.svg" />
+    <None Remove="ClientApp\dist\color.6441e63a57ccc5105bad.png" />
+    <None Remove="ClientApp\dist\favicon.ico" />
+    <None Remove="ClientApp\dist\FOOTER1.c3ecf7f10d43da16c7d9.svg" />
+    <None Remove="ClientApp\dist\hue.f8505bd4d6f3e3aa435b.png" />
+    <None Remove="ClientApp\dist\icons.5cb45a0d0bfc20ef2024.woff2" />
+    <None Remove="ClientApp\dist\iconsOutline.1c8bbab5f93802bf0f5d.woff2" />
+    <None Remove="ClientApp\dist\index.html" />
+    <None Remove="ClientApp\dist\layers-2x.8f2c4d11474275fbc161.png" />
+    <None Remove="ClientApp\dist\layers.416d91365b44e4b4f477.png" />
+    <None Remove="ClientApp\dist\main.414f8cf45d7e3666ec5b.js" />
+    <None Remove="ClientApp\dist\marker-icon.2b3e1faf89f94a483539.png" />
+    <None Remove="ClientApp\dist\NeoSansArabicBlack.43c267d6b6e91c2b2d5f.ttf" />
+    <None Remove="ClientApp\dist\NeoSansArabicBold.b5419189b5c42a8cb6ef.ttf" />
+    <None Remove="ClientApp\dist\NeoSansArabicLight.d5611fa1e955f2cd71bf.ttf" />
+    <None Remove="ClientApp\dist\NeoSansArabicRegular.2dc2e012fbafcf39c6fc.ttf" />
+    <None Remove="ClientApp\dist\NeoSansArabicUltra.7a6ed2228c1b72b099da.ttf" />
+    <None Remove="ClientApp\dist\owl.video.play.7f01b07148f205f6e825.png" />
+    <None Remove="ClientApp\dist\polyfills.2f58792c3887447ce9ad.js" />
+    <None Remove="ClientApp\dist\primeicons.3a0d4a58da62cf7c55bb.ttf" />
+    <None Remove="ClientApp\dist\primeicons.c55d94a248721abbd220.svg" />
+    <None Remove="ClientApp\dist\primeicons.dfbfef2de4bfb34e9722.eot" />
+    <None Remove="ClientApp\dist\primeicons.e61f3495a7ecd3d571a4.woff" />
+    <None Remove="ClientApp\dist\runtime.f7db501305637935a488.js" />
+    <None Remove="ClientApp\dist\scripts.3fea52cc604057636c70.js" />
+    <None Remove="ClientApp\dist\styles.a6673f9aa7768d55b6d4.css" />
+    <None Remove="ClientApp\src\assets\Keys.ts" />
+    <None Remove="ClientApp\src\index.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AnalyticsReferences\" />
+    <Folder Include="ClientApp\src\app\core\services\" />
+    <Folder Include="ClientApp\src\app\newsletter\services\" />
+    <Folder Include="ClientApp\src\app\services\" />
+    <Folder Include="ClientApp\src\assets\images\footer\" />
+    <Folder Include="ClientApp\src\assets\images\header\" />
+    <Folder Include="ClientApp\src\assets\images\home\" />
+    <Folder Include="wwwroot\AuthorizationLetter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AIC.CrossCutting\AIC.CrossCutting.csproj" />
+    <ProjectReference Include="..\AIC.Data\AIC.Data.csproj" />
+    <ProjectReference Include="..\AIC.Repository\AIC.Repository.csproj" />
+    <ProjectReference Include="..\AIC.Service\AIC.Service.csproj" />
+    <ProjectReference Include="..\AIC.SP.Middleware\AIC.SP.Middleware.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\assets\Keys.ts" />
+    <TypeScriptCompile Include="ClientApp\src\index.d.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

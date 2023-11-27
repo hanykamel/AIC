@@ -1,0 +1,22 @@
+<ng-content></ng-content>
+
+<div
+  infinite-scroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScrollDown()"
+>
+  <ng-template *ngTemplateOutlet="templateRef; context: this"> </ng-template>
+</div>
+
+<div *ngIf="loader" class="row mt-4">
+  <div class="col-12 text-center">
+    <!--<p-progressSpinner></p-progressSpinner>-->
+    <app-data-loader></app-data-loader>
+  </div>
+</div>
+<div *ngIf="NoDataAvailable && IsShowNoData">
+  <div class="card pb-5">
+    <app-no-data-found [NoDataFoundMsg]="NoDataFoundMsg"></app-no-data-found>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+body {
+    background-color: #FBFCFD;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin:0
+}
+.secPad{
+    padding:60px
+}
+.arDirection{
+    direction:rtl;
+    text-align:right
+}
+.enDirection {
+    direction: ltr;
+    text-align: left
+}
+.cardBox {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 30px #0000000d;
+    border-radius: 15px;
+    padding: 40px;
+}
+    .cardBox p{
+        margin-bottom:15px
+    }
+    header {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        padding: 12px 60px;
+        box-shadow: 0px 3px 6px #0000000D;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+footer {
+    background: #31326F;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    footer p {
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+    .logoCont {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+.logoTitle {
+    margin: 0 10px;
+}
+
+    .logoTitle .title {
+        color: #31326F;
+        font-size: 18px;
+        font-family: neoBold;
+        margin-bottom: 2px;
+    }
+
+    .logoTitle .sub {
+        color: #31326F;
+        font-size: 7px;
+    }
+.blueColor {
+    color: #31326F;
+}
+
+.brownColor {
+    color: #744E2E;
+}
+
+.text-28 {
+    font-size: 26px;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+.text-12 {
+    font-size: 12px;
+}

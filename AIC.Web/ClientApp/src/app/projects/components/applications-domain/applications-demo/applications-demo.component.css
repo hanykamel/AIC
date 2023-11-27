@@ -1,0 +1,72 @@
+.projDemo .url {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.projDemo .url:hover {
+  color: #f6be00;
+}
+.projDemo .url i {
+  margin-left: 5px;
+}
+.ar :host ::ng-deep .projDemo .url i {
+  margin-left: 0 !important;
+  margin-right: 5px;
+}
+.videoModal iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.imgCard img {
+  border-radius: 15px;
+}
+
+.videoModal video {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: unset;
+}
+.projDemo ::ng-deep .owl-theme .owl-nav [class*="owl-"] {
+  box-shadow: 0px 3px 6px #00000012;
+  border: 1px solid #eeeeee;
+}
+.projDemo ::ng-deep .owl-theme .owl-nav {
+  display: flex;
+  position: absolute;
+  top: -75px;
+  right: 10px;
+}
+
+.ar :host ::ng-deep .projDemo ::ng-deep .owl-theme .owl-nav {
+  right: unset !important;
+  left: 10px;
+}
+.projDemo ::ng-deep .owl-theme {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .projDemo ::ng-deep .owl-theme .owl-nav {
+    top: -75px;
+    right: -10px;
+  }
+
+  .ar :host ::ng-deep .projDemo ::ng-deep .owl-theme .owl-nav {
+    right: unset !important;
+    left: -10px;
+  }
+  .shadowCont p {
+    width: 65%;
+  }
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .projDemo ::ng-deep .owl-theme .owl-nav {
+    top: -75px;
+    right: -10px;
+  }
+
+  .ar :host ::ng-deep .projDemo ::ng-deep .owl-theme .owl-nav {
+    right: unset !important;
+    left: -10px;
+  }
+}

@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" Id="9132a47d-b2b5-403b-809b-c74bb8d96f60" ReceiverAssembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" ReceiverClass="AIC.Sharepoint.Features.SendHPCReplays.TimerJob.SendHPCReplaysEventReceiver" Scope="WebApplication" Title="SendHPCReplays.TimerJob"></Feature>

@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" ActivateOnDefault="FALSE" AlwaysForceInstall="TRUE" Id="92b1f0eb-1701-4372-a4ff-a863ce7eeeda" ReceiverAssembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" ReceiverClass="AIC.Sharepoint.Features.SendFeedbackReplays.TimerJob.SendFeedbackReplaysEventReceiver" Scope="WebApplication" Title="SendFeedbackReplays.TimerJob"></Feature>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="JsLinks" Url="Style Library/JSlink">
+    <File Path="JsLinks\VideoGalleryJSLink.js" Url="VideoGalleryJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\PhotoGalleryJSLink.Js" Url="PhotoGalleryJSLink.Js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\MainMenuJSLink.js" Url="MainMenuJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\MailingListJsLink.js" Url="MailingListJsLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\GenericContentJSLink.js" Url="GenericContentJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\EventsJsLink.js" Url="EventsJsLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\EmailsJSLink.js" Url="EmailsJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\ContactUsJSLink.js" Url="ContactUsJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+    <File Path="JsLinks\AICMaterialsJSLink.js" Url="AICMaterialsJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

@@ -1,0 +1,137 @@
+.breadcrumb {
+  padding: 0px 70px;
+  padding-top: 20px;
+}
+  .breadcrumb ::ng-deep .xng-breadcrumb-trail {
+    color: #3C57A1;
+    font-size:13px
+  }
+  .breadcrumb ::ng-deep .xng-breadcrumb-separator {
+    color: #F6BE00;
+    margin-bottom: 5px;
+  }
+  .breadcrumb ::ng-deep  .xng-breadcrumb-link {
+    font-size: 13px;
+    color: #3C57A1
+  }
+  .breadcrumb ::ng-deep  .xng-breadcrumb-list li:nth-child(2) {
+    display: none
+  }
+
+  .breadcrumb ::ng-deep .xng-breadcrumb-list .xng-breadcrumb-item {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 15px #0000000d;
+    border-radius: 15px;
+    padding: 5px 10px !important;
+    margin-bottom: 5px;
+  }
+
+.breadcrumb ::ng-deep .xng-breadcrumb-list .xng-breadcrumb-item:first-child {
+  pointer-events: none;
+  display:none
+}
+
+.socialMedia ::ng-deep .socialIcons{
+  left: 0;
+}
+.ar :host .socialMedia ::ng-deep .socialIcons{
+  right: 0;
+}
+.socialMedia ::ng-deep .socialIcons a{
+  align-items: center;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px;
+  background: #F6BE00 0% 0% no-repeat padding-box;
+  border-radius: 0 54px 54px 0;
+}
+.ar :host .socialMedia ::ng-deep .socialIcons a{
+  align-items: center;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px;
+  background: #F6BE00 0% 0% no-repeat padding-box;
+  border-radius: 54px 0 0 54px;
+}
+.socialMedia ::ng-deep .socialIcons .sharedImg{
+  margin-right: 10px;
+  color: white;
+  font-size: 25px;
+  display: block;
+}
+.ar :host .socialMedia ::ng-deep .socialIcons .sharedImg{
+  margin-right: 0 !important;
+  margin-left: 15px;
+  transform: rotate(180deg);
+}
+
+@media (min-width:768px) and (max-width: 1024px){
+  .breadcrumb {
+    padding: 0px 40px;
+    padding-top: 15px;
+  }
+}
+  @media only screen and (max-width:768px) {
+  .breadcrumb {
+    padding: 0px 20px;
+    padding-top: 15px;
+  }
+  .socialMedia ::ng-deep .socialIcons a{
+    width: 35px !important;
+    height: 40px;
+  }
+  .socialMedia ::ng-deep .socialIcons .sharedImg{
+    font-size: 22px;
+  }
+  .ar :host .socialMedia ::ng-deep .socialIcons a{
+    width: 35px !important;
+    height: 40px;
+  }
+  .ar :host .socialMedia ::ng-deep .socialIcons .sharedImg{
+    font-size: 22px;
+  }
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.layout .mainLayout {
+  flex-grow: 1;
+}
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .breadcrumb {
+    padding: 0px 10px;
+    padding-top: 15px;
+  }
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  z-index: 999;
+  padding: 1em;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  top: 2px;
+}
+.skip-en{
+  left: -9999px;
+right: unset;
+}
+.skip-ar{
+  right: -9999px;
+  left: unset;
+}
+.skip-en:focus {
+  left: 7%;
+  right: unset;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+.skip-ar:focus {
+  right: 3%;
+  left: unset;
+  transform: translateX(-50%);
+  opacity: 1;
+}

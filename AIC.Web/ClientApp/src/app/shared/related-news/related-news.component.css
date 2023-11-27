@@ -1,0 +1,39 @@
+.newsUrl {
+  background: #FDFDFD 0% 0% no-repeat padding-box;
+  border: 1px solid #70707026;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom:20px
+}
+  .newsUrl p {
+    margin: 0 15px;
+  }
+  .newsUrl .url {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #70707026;
+    border-radius: 12px;
+    color: #3C57A1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+    .newsUrl .url:hover {
+      background: #F6BE00 0% 0% no-repeat padding-box;
+      color: #FFF;
+      border: 1px solid #F6BE00;
+    }
+    .newsUrl .url i {
+      margin-left: 5px;
+    }
+.ar :host ::ng-deep .newsUrl .url i {
+  margin-right: 5px;
+  margin-left: 0 !important;
+}
+.fontWeight{
+font-weight: bold;
+}

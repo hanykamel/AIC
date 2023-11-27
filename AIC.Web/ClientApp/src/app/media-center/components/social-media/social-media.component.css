@@ -1,0 +1,84 @@
+.faceCont ::ng-deep .genericSlider .imgCard iframe {
+  min-height: 270px;
+  max-height: 310px;
+}
+.linkedCont ::ng-deep .genericSlider .imgCard iframe {
+  height: 400px !important;
+}
+.socialMed ::ng-deep .text-20 {
+  display: flex;
+  align-items: center;
+}
+.socialMed .faceCont ::ng-deep .text-20:before {
+  content: url("../../../../assets/images/f.svg");
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #0800ff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+}
+.ar :host ::ng-deep .socialMed .faceCont ::ng-deep .text-20:before {
+  margin-right: 0 !important;
+  margin-left: 7px;
+}
+
+.socialMed .linkedCont ::ng-deep .text-20:before {
+  content: url("../../../../assets/images/l.svg");
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #4082f2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+}
+
+.ar :host ::ng-deep .socialMed .linkedCont ::ng-deep .text-20:before {
+  margin-right: 0 !important;
+  margin-left: 7px;
+}
+
+.socialMed .youtubeCont ::ng-deep .text-20:before {
+  content: url("../../../../assets/images/y.svg");
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #ff0000;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+}
+
+.ar :host ::ng-deep .socialMed .youtubeCont ::ng-deep .text-20:before {
+  margin-right: 0 !important;
+  margin-left: 7px;
+}
+
+@media only screen and (max-width: 768px) {
+  .socialMed .faceCont ::ng-deep .text-20:before,
+  .socialMed .linkedCont ::ng-deep .text-20:before,
+  .socialMed .youtubeCont ::ng-deep .text-20:before {
+    height: 29px;
+    padding-top: 5px;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .socialMed .faceCont ::ng-deep .text-20:before,
+  .socialMed .linkedCont ::ng-deep .text-20:before,
+  .socialMed .youtubeCont ::ng-deep .text-20:before {
+    height: 29px;
+    padding-top: 5px;
+  }
+}

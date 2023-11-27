@@ -1,0 +1,62 @@
+.contactHome {
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+.contactHome::before {
+  content: "";
+  box-shadow: 0px 3px 15px #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: -20px;
+  left: -50px;
+  height: 280px;
+}
+.contactHome::after {
+  content: "";
+  box-shadow: 0px 3px 15px #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  height: 280px;
+}
+.contactHome img {
+  height: 350px;
+  position: relative;
+  bottom: 20px;
+  width: 100%;
+}
+.contactHome .imageLayout {
+  width: fit-content;
+  margin: auto;
+  height: 330px;
+  background: #ffffff42 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #00000029;
+  border-radius: 10px;
+}
+
+.contactUsSection {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contactHome {
+    width: 100%;
+  }
+  .contactHome::before,
+  .contactHome::after {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .contactHome {
+    width: 100%;
+  }
+  .contactHome::before,
+  .contactHome::after {
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+<div *ngIf="projectDetails" class="sectionPadding projDemo">
+  <div class="headerTitle p-mb-4">
+    <p class="blueColor font-bold text-24">{{ projectDetails.Title }}</p>
+    <a
+      *ngIf="projectDetails.URL"
+      class="blueColor font-bold text-18 url"
+      href="{{ projectDetails.URL }}"
+      target="_blank"
+    >
+      <span>{{ "Projects.DemoUrl" | translate }}</span>
+      <i class="material-icons-outlined"> open_in_new </i>
+    </a>
+  </div>
+  <div *ngIf="projectDetails.DemoBrief" class="shadowCont p-mb-4">
+    <div [innerHTML]="projectDetails.DemoBrief | safeHtml" class="innerText"></div>
+  </div>
+
+  <app-generic-slider
+    *ngIf="projectDetails.DemoPhotosList?.length > 0"
+    [slides]="projectDetails.DemoPhotosList"
+    [title]="projectDetails.ImagesTitle"
+  ></app-generic-slider>
+
+  <div
+    class="shadowCont genericSlider"
+    *ngIf="projectDetails.DemoVideosList?.length > 0"
+  >
+    <p class="text-20 blackColor font-bold">{{ projectDetails.VideosTitle }}</p>
+    <owl-carousel-o
+      [options]="customOptions"
+      #carousel
+      [ngClass]="{
+        hideBtns: !checkConditionalArrow(),
+        flexItems: !checkConditionalArrow()
+      }"
+    >
+      <ng-container *ngFor="let slide of projectDetails.DemoVideosList">
+        <ng-template carouselSlide [id]="slide.id">
+          <div class="imgCard">
+            <img
+              *ngIf="slide.FileRef"
+              class="thumb p-mb-2"
+              [src]="slide.FileRef"
+              [alt]="slide.Title"
+            />
+            <img [src]="slide.ThumbURL" />
+
+            <div class="layout cursorPointer" (click)="updateVideoData(slide)">
+              <img class="play" src="../../../../../assets/images/play.svg" />
+            </div>
+          </div>
+          <p class="title text-16 p-mt-2 blueColor">{{ slide.Title }}</p>
+          <!-- End Card -->
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  <!--<app-generic-slider *ngIf="projectDetails.DemoVideos" [slides]="projectDetails.DemoVideosList" [title]="projectDetails.VideosTitle"></app-generic-slider>-->
+</div>
+
+<p-dialog
+  [(visible)]="displayVideo"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '95vw' }"
+  [style]="{ width: '65vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  role="alert"
+>
+  <div class="videoModal">
+    <iframe
+      height="315"
+      *ngIf="videoEmbeded"
+      [src]="videoEmbeded | safeUrl"
+      title="videoTitle"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+    <video
+      height="315"
+      *ngIf="!videoEmbeded"
+      [src]="videoURL"
+      [title]="videoTitle"
+      autoplay
+    ></video>
+    <p class="title text-20 p-mt-2">
+      {{ videoTitle }}
+    </p>
+  </div>
+</p-dialog>

@@ -1,0 +1,10 @@
+<div class="secPad noDataCont">
+  <div class="noData">
+    <i class="material-icons-outlined text-28 blueColor">
+      warning
+    </i>
+    <p class="text-28 blueColor">{{'shared.noData' |translate}}</p>
+  </div>
+  <button *ngIf="showHomeBtn" class="btn blueBtn" (click)="navigatToHomePage()">{{'ReturnToHome' |translate}}</button>
+</div>
+

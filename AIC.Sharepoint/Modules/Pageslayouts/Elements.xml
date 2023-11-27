@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pageslayouts" Url="_catalogs/masterpage/APA" RootWebOnly="FALSE">
+    <File Path="Pageslayouts\SubscribersLayout.aspx" Url="SubscribersLayout.aspx"
+          Level="Published"
+      Type="GhostableInLibrary" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE">
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" />
+    </File>
+    <File Path="Pageslayouts\SiteMapLayout.aspx" Url="SiteMapLayout.aspx"  Level="Published"
+      Type="GhostableInLibrary" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE" >
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" />
+    </File>
+    <File Path="Pageslayouts\AddAttendeesLayout.aspx" Url="Pageslayouts/AddAttendeesLayout.aspx" Level="Published"
+     Type="GhostableInLibrary" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE" >
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" />
+    </File>
+  </Module>
+</Elements>

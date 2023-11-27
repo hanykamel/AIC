@@ -1,0 +1,11 @@
+<div class="sectionPadding projectLayout">
+  <h1 class="blueColor text-24 font-bold p-mb-4">{{'PagesTitle.Projects' | translate}}</h1>
+  <p-tabView (onChange)="changeRoute($event)" [activeIndex]="selectedIndex">
+    <p-tabPanel header="{{'Projects.ApplicationsDomain' | translate}}">
+      <app-applications-list *ngIf="projects" [Projects]="projects"></app-applications-list>
+    </p-tabPanel>
+    <p-tabPanel header="{{'Projects.TechnologyDomain' | translate}}">
+      <app-technology-list *ngIf="projects" [Projects]="projects"></app-technology-list>
+    </p-tabPanel>
+  </p-tabView>
+</div>

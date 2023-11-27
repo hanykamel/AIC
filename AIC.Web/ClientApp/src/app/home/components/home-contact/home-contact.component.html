@@ -1,0 +1,19 @@
+<section class="homeSectionPadding contactSection">
+  <div class="contactHome p-text-center contactUsSection">
+    <h2 class="text-60 whiteColor p-mb-4">
+      {{ "HomePage.ContactUs" | translate }}
+    </h2>
+    <div class="p-mb-2 p-mb-4" >
+
+      <p class="whiteColor" >
+        {{aboutUs}}
+      </p>
+    </div>
+    <button class="btn yellowBtn p-mb-5" [routerLink]="'/contact-us'">
+      {{ "HomePage.ContactUsBtn" | translate }}
+    </button>
+    <div class="imageLayout">
+      <img src="../../../assets/images/home/contact.png" alt="" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages" Url="Pages">
+    <File Path="Pages\Subscribers.aspx"
+          Url="Subscribers/Subscribers.aspx"
+          Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE">
+      <Property Name="Title" Value="Subscribers"/>
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/APA/SubscribersLayout.aspx, SubscribersLayout" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+    </File>
+	  <File Path="Pages\SPSiteMap.aspx" Url="SPSiteMap.aspx"  Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" IgnoreIfAlreadyExists="FALSE">
+		  <Property Name="Title" Value="APA Portal"/>
+		  <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/APA/SiteMapLayout.aspx, SiteMapLayout" />
+		  <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+	  </File>
+  </Module>
+</Elements>

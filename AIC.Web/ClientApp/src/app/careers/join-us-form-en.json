@@ -1,0 +1,542 @@
+{
+  "logoPosition": "right",
+  "locale": "en",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "Information",
+          "icon": "material-icons-outlined",
+          "iconText": "description",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FullName",
+              "title": "Full Name",
+              "isRequired": true,
+              "requiredErrorText": "You can't leave this field blank.",
+              "validators": [
+                {
+                  "type": "text"
+                }
+              ],
+              "maxLength": 80,
+              "placeHolder": "Full Name"
+            },
+            {
+              "type": "text",
+              "name": "Email",
+              "title": "Email",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "inputType": "email",
+              "readOnly": true,
+              "placeHolder": "Email"
+            },
+            {
+              "type": "text",
+              "name": "MobileNumber",
+              "title": "Mobile Number",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "You can't leave this field blank.",
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "No Characters allowed",
+                  "regex": "^[ 0-9 ]+$"
+                },
+                {
+                  "type": "text",
+                  "text": "The maximum length is 15 numbers and minimum will be 7 numbers",
+                  "minLength": 7,
+                  "maxLength": 15
+                }
+              ],
+              "maxLength": 15,
+              "placeHolder": "Mobile Number"
+            },
+            {
+              "type": "text",
+              "name": "Address",
+              "title": "Address",
+              "isRequired": true,
+              "requiredErrorText": "You can't leave this field blank.",
+              "maxLength": 100,
+              "placeHolder": "Address"
+            },
+            {
+              "type": "datepicker",
+              "name": "BirthDate",
+              "startWithNewLine": false,
+              "title": "Birth Date",
+              "inputType": "date",
+              "isRequired": true,
+              "dateFormat": "dd/mm/yy", 
+              "max": "+0d",
+              "requiredErrorText": "You can't leave this field blank.",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c",
+                "showOn": "both"
+                
+              },
+              "placeHolder": "Birth Date (dd/mm/yyyy)"
+
+            },
+            {
+              "type": "datepicker",
+              "name": "StartDate",
+              "startWithNewLine": false,
+              "title": "Available For Joining",
+              "inputType": "date",
+              "isRequired": true,
+              "dateFormat": "dd/mm/yy",
+              "requiredErrorText": "You can't leave this field blank.",
+              "minErrorText": "The value should not be less than today",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c:c+10",
+                "minDate": "+0d",
+                "showOn": "both"
+              },
+              "placeHolder": "Available For Joining (dd/mm/yyyy)"
+            }
+          ],
+          "title": "Information",
+          "state": "expanded"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "AcademicDegrees",
+          "title": "Academic Degrees",
+          "icon": "material-icons-outlined",
+          "iconText": "school",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "dropdown",
+              "name": "DegreeLevelId",
+              "title": "Degree Level",
+              "minWidth": "auto",
+              "isRequired": true,
+              "requiredErrorText": "You can't leave this field blank.",
+              "choicesByUrl": {
+                "url": "/api/Lookup/DegreeLevels",
+                "valueName": "Id",
+                "titleName": "TitleEn"
+              },
+              "placeHolder": "Degree Level"
+            },
+            {
+              "type": "datepicker",
+              "name": "DegreeDate",
+              "title": "Degree Date",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "requiredErrorText": "You can't leave this field blank.",
+              "enableIf": "{panel.InProgress} empty",
+              "requiredIf": "{panel.InProgress} empty",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+10",
+                "showOn": "both"
+              },
+              "placeHolder": "Degree Date (dd/mm/yyyy)"
+            },
+            {
+              "type": "checkbox",
+              "name": "InProgress",
+              "title": "In Progress",
+              "minWidth": "150px",
+              "maxWidth": "150px",
+              "isAllowTitleLeft" :false,
+              "startWithNewLine": false,
+              "choices": [
+                {
+                  "value": " ",
+                  "text": "In Progress"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "University",
+              "title": "University",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "You can't leave this field blank.",
+              "maxLength": 80,
+              "placeHolder": "University"
+            },
+            {
+              "type": "text",
+              "name": "Specialization",
+              "title": "Specialization",
+              "minWidth": "240px",
+              "maxWidth": "240px",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "requiredErrorText": "You can't leave this field blank.",
+              "placeHolder": "Specialization",
+              "maxLength": 80
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "Add Academic Degrees",
+          "panelRemoveText": "Remove Academic Degrees",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Certificates",
+          "title": "Certificates",
+          "icon": "material-icons-outlined",
+          "iconText": "workspace_premium",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "CertificateName",
+              "title": "Certificate Name",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "isRequired": false,
+              "requiredErrorText": "You can't leave this field blank.",
+              "maxLength": 80,
+              "placeHolder": "Certificate Name",
+              "requiredIf": "{Certificates[0].CertificateName} notempty or {Certificates[0].CertifiedFrom} notempty or {Certificates[0].CertifiedDate} notempty "
+            },
+            {
+              "type": "text",
+              "name": "CertifiedFrom",
+              "title": "Certified From",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "requiredIf": "{Certificates[0].CertificateName} notempty or {Certificates[0].CertifiedFrom} notempty or {Certificates[0].CertifiedDate} notempty ",
+              "requiredErrorText": "You can't leave this field blank.",
+              "maxLength": 80,
+              "placeHolder": "Certified From"
+            },
+            {
+              "type": "datepicker",
+              "name": "CertifiedDate",
+              "title": "Certified Date",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "requiredIf": "{Certificates[0].CertificateName} notempty or {Certificates[0].CertifiedFrom} notempty or {Certificates[0].CertifiedDate} notempty ",
+              "requiredErrorText": "You can't leave this field blank.",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+10",
+                "showOn": "both"
+              },
+              "placeHolder": "Certified Date (dd/mm/yyyy)"
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "Add Certificates",
+          "panelRemoveText": "Remove Certificates",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "WorkExperiences",
+          "icon": "material-icons-outlined",
+          "iconText": "work_outline",
+          "state": "expanded",
+          "title": "Work Experience",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "Job",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Occupation",
+              "maxLength": 80,
+              "placeHolder": "Occupation",
+              "requiredErrorText": "You can't leave this field blank.",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or {WorkExperiences[0].StartDate} notempty or{WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+              
+            },
+            {
+              "type": "text",
+              "name": "Company",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Employer",
+              "maxLength": 80,
+              "placeHolder": "Employer",
+              "requiredErrorText": "You can't leave this field blank.",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or {WorkExperiences[0].StartDate} notempty or{WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+            },
+            {
+              "type": "datepicker",
+              "name": "StartDate",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Start date",
+              "inputType": "date",
+              "requiredErrorText": "You can't leave this field blank.",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or{WorkExperiences[0].StartDate} notempty or {WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty",
+              "dateFormat": "dd/mm/yy",
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+10",
+                "showOn": "both"
+              },
+              "placeHolder": "Start date (dd/mm/yyyy)"
+            },
+            {
+              "type": "datepicker",
+              "name": "EndDate",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "End date",
+              "inputType": "date",
+              "dateFormat": "dd/mm/yy",
+              "visibleIf":"{panel.CurrentJob} empty",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or{WorkExperiences[0].StartDate} notempty or {WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].JobTypeId} notempty and {WorkExperiences[0].CurrentJob} empty",
+              "enableIf": "{panel.CurrentJob} empty and {WorkExperiences[0].StartDate} notempty",
+              "validators": [
+                {
+                  "type": "expression",
+                  "text": "End Date must be after the Start Date",
+                  "expression": "{WorkExperiences[0].EndDate}>\n{WorkExperiences[0].StartDate}"
+                }
+              ],
+              "config": {
+                "changeMonth": true,
+                "changeYear": true,
+                "yearRange": "c-200:c+10",
+                "showOn": "both"
+              },
+              "placeHolder": "End date (dd/mm/yyyy)"
+            },
+            {
+              "type": "checkbox",
+              "name": "CurrentJob",
+              "title": "Current Job",
+              "minWidth": "150px",
+              "maxWidth": "150px",
+              "startWithNewLine": false,
+              "choices": [
+                {
+                  "value": " ",
+                  "text": "Current Job"
+                }
+              ]
+
+            },
+            {
+              "startWithNewLine": true,
+              "title": "Job type",
+              "type": "dropdown",
+              "name": "JobTypeId",
+              "minWidth": "240px",
+              "maxWidth": "240px",
+              "choicesByUrl": {
+                "url": "/api/Lookup/JobTypes",
+                "valueName": "Id",
+                "titleName": "TitleEn"
+              },
+              "requiredErrorText": "You can't leave this field blank.",
+              "requiredIf": "{WorkExperiences[0].Job} notempty or {WorkExperiences[0].Company} notempty or {WorkExperiences[0].StartDate} notempty or {WorkExperiences[0].EndDate} notempty or {WorkExperiences[0].CurrentJob} notempty or {WorkExperiences[0].JobTypeId} notempty"
+
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "Add Work Experience",
+          "panelRemoveText": "Remove Work Experience",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "TechnicalSkills",
+          "title": "Technical Skills",
+          "icon": "material-icons-outlined",
+          "iconText": "laptop",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "SkillName",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Skill Name",
+              "maxLength": 80,
+              "placeHolder": "Skill Name",
+              "requiredIf": "{TechnicalSkills[0].SkillName} notempty or {TechnicalSkills[0].YearsOfExperience} notempty ",
+              "requiredErrorText": "You can't leave this field blank."
+
+
+            },
+            {
+              "type": "text",
+              "name": "YearsOfExperience",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Years of Experience",
+              "requiredErrorText": "You can't leave this field blank.",
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "No Characters allowed",
+                  "regex": "^[ 0-9 ]+$"
+                },
+                {
+                  "type": "text",
+                  "text": "The maximum length is two numbers",
+                  "maxLength": 2
+                }
+              ],
+              "placeHolder": "Years of Experience",
+              "requiredIf": "{TechnicalSkills[0].SkillName} notempty or {TechnicalSkills[0].YearsOfExperience} notempty "
+
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "Add Technical Skills",
+          "panelRemoveText": "Remove Technical Skills",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "panel",
+          "name": "Attachments",
+          "icon": "material-icons-outlined",
+          "iconText": "attach_file",
+          "isfile": "true",
+          "elements": [
+            {
+              "type": "text",
+              "name": "LinkToPortfolio",
+              "title": "Link to portfolio",
+              "startWithNewLine": false,
+              "inputType": "url",
+              "validators": [
+                {
+                  "type": "regex",
+                  "text": "please enter valid Link",
+                  "regex": "/((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)"
+                }
+              ],
+              "placeHolder": "Link to portfolio"
+            },
+            {
+              "type": "radiogroup",
+              "startWithNewLine": false,
+              "name": "JoinedUsAsLst",
+              "title": "Have you ever worked with AIC or any of its projects before?",
+              "choices": [
+                {
+                  "value": "Job", 
+                  "text": "Job" 
+                }, {
+                  "value": "Internship", 
+                  "text": "Internship" 
+
+                }
+                , {
+                  "value": "Other", 
+                  "text": "Other" 
+
+                }
+
+            
+              ],"separateSpecialChoices": true,
+              "maxSelectedChoices": 1
+            },
+        
+            {
+              "type": "text",
+              "name": "JoinedIn",
+              "startWithNewLine": false,
+              "title": "Enter what he worked in ",
+              "requiredIf": "{JoinedUsAsLst} notempty",
+              "enableIf": "{JoinedUsAsLst} notempty",
+              "maxLength": 50,
+              "placeHolder": "Enter what he worked in"
+            },
+            {
+              "type": "file",
+              "name": "UploadedCV",
+              "isfile": "true",
+              "iconBtn": "material-icons-outlined",
+              "label": "Upload CV",
+              "iconBtna": "material-icons-outlined",
+              "desc": "Allowed files are word and PDF only",
+              "desc2": "File size is 5 Mega",
+              "iconTextBtn": "file_upload",
+              "allowImagesPreview": false,
+              "needConfirmRemoveFile": true,
+              "showTitle": true,
+              "title":" ",
+              "acceptedTypes": ".docx,.doc,.pdf",
+              "maxSize": 5000000,
+              "isRequired": true,
+              "allowShowHideTitle": true,
+              "requiredErrorText": "You should upload your CV"
+            },
+            {
+              "type": "file",
+              "name": "OtherDocuments",
+              "isfile": "true",
+              "iconBtn": "material-icons-outlined",
+              "iconTextBtn": "file_upload",
+              "desc": "Allowed files are word and PDF only",
+              "desc2": "File size is 5 Mega",
+              "label": "Other Documents",
+              "title":"",
+              "startWithNewLine": false,
+              "allowMultiple": true,
+              "needConfirmRemoveFile": true,
+              "allowShowHideTitle": false,
+              "allowImagesPreview": false,
+              "acceptedTypes": ".docx,.doc,.pdf",
+              "maxSize": 5000000
+            }
+          ],
+          "title": "Attachments",
+          "state": "expanded"
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "questionErrorLocation": "bottom",
+  "completeText": "Submit",
+  "widthMode": "responsive",
+  "checkErrorsMode": "onValueChanged"
+}

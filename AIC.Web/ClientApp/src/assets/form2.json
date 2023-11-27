@@ -1,0 +1,208 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "Information",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FullName",
+              "title": "Full Name",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "Email",
+              "startWithNewLine": false,
+              "isRequired": true,
+              "inputType": "email"
+            },
+            {
+              "type": "text",
+              "name": "Mobile",
+              "startWithNewLine": false,
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "Address"
+            },
+            {
+              "type": "text",
+              "name": "BirthDate",
+              "startWithNewLine": false,
+              "title": "Birth Date",
+              "inputType": "date"
+            },
+            {
+              "type": "text",
+              "name": "StartDate",
+              "startWithNewLine": false,
+              "title": "Start Date",
+              "inputType": "date"
+            }
+          ],
+          "title": "Information",
+          "state": "expanded"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Degrees",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "dropdown",
+              "name": "question1",
+              "minWidth": "auto",
+              "choices": [
+                "item1",
+                "item2",
+                "item3"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "Date",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "inputType": "date"
+            },
+            {
+              "type": "text",
+              "name": "University",
+              "minWidth": "auto",
+              "startWithNewLine": false
+            },
+            {
+              "type": "text",
+              "name": "Specialization",
+              "minWidth": "auto",
+              "startWithNewLine": false
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "(+)",
+          "panelRemoveText": "(-)",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Certificates",
+          "state": "expanded",
+          "templateElements": [
+            {
+              "type": "dropdown",
+              "name": "question1",
+              "minWidth": "auto",
+              "choices": [
+                "item1",
+                "item2",
+                "item3"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "Date",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "inputType": "date"
+            },
+            {
+              "type": "text",
+              "name": "University",
+              "minWidth": "auto",
+              "startWithNewLine": false
+            },
+            {
+              "type": "text",
+              "name": "Specialization",
+              "minWidth": "auto",
+              "startWithNewLine": false
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "(+)",
+          "panelRemoveText": "(-)",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Employment",
+          "state": "expanded",
+          "title": "Current / Last employment",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "University",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Title"
+            },
+            {
+              "type": "text",
+              "name": "Specialization",
+              "minWidth": "auto",
+              "startWithNewLine": false,
+              "title": "Company"
+            }
+          ],
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "maxPanelCount": 5,
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the level?",
+          "panelAddText": "(+)",
+          "panelRemoveText": "(-)",
+          "showRangeInProgress": false,
+          "panelRemoveButtonLocation": "right"
+        },
+        {
+          "type": "panel",
+          "name": "Attachments",
+          "elements": [
+            {
+              "type": "text",
+              "name": "LinkToPortfolio",
+              "title": "Link to portfolio",
+              "inputType": "url"
+            },
+            {
+              "type": "file",
+              "name": "CV",
+              "allowImagesPreview": false,
+              "needConfirmRemoveFile": true
+            },
+            {
+              "type": "file",
+              "name": "question2",
+              "startWithNewLine": false,
+              "title": "Other Documents",
+              "allowMultiple": true,
+              "needConfirmRemoveFile": true
+            }
+          ],
+          "title": "Attachments",
+          "state": "expanded"
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off",
+  "questionErrorLocation": "bottom",
+  "completeText": "Submit",
+  "widthMode": "responsive"
+}

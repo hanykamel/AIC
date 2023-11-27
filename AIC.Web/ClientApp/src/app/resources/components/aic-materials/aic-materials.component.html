@@ -1,0 +1,106 @@
+<div class="sectionPadding materials">
+  <h1 class="blueColor font-bold text-28 p-mb-4">{{'AICMaterials.Title' | translate}}</h1>
+  <p-tabView [scrollable]="true" (onChange)="emitEventToChild($event)"
+             [class.hideTabBtn]="materialsList?.length < 13">
+    <button class="nextBtn arrowBtn hideAr" (click)="next()" *ngIf="!hideNext">
+      <i class="material-icons-outlined blueColor">chevron_right</i>
+    </button>
+    <button class="prevBtn arrowBtn hideAr" (click)="prev()" *ngIf="!hidePrev">
+      <i class="material-icons-outlined blueColor">chevron_left</i>
+    </button>
+    <button class="nextBtn arrowBtn showAr" (click)="prevAr()" *ngIf="!hidePrev">
+      <i class="material-icons-outlined blueColor">chevron_right</i>
+    </button>
+    <button class="prevBtn arrowBtn showAr" (click)="nextAr()" *ngIf="!hideNext">
+      <i class="material-icons-outlined blueColor">chevron_left</i>
+    </button>
+    
+    <p-tabPanel header="{{list.Title}}" *ngFor="let list of materialsList">
+
+      <ng-template pTemplate="content">
+
+
+        <div class="shadowCont genericSlider" *ngIf="list.VideosList">
+          <h2 class="text-20 blackColor ">{{title}}</h2>
+            <owl-carousel-o *ngIf="list.VideosList"
+                            [options]="customOptions" #carousel
+                            [ngClass]="{'hideBtns': list.VideosList.length <= 3 , 'flexItems' : list.VideosList.length <= 3}">
+
+              <ng-container *ngFor="let slide of list.VideosList">
+                <ng-template carouselSlide [id]="slide.id">
+                  <div class="imgCard">
+                    <img *ngIf="slide.FileRef" class="thumb p-mb-2" [src]="slide.FileRef" [alt]="slide.Title">
+                    <img [src]="slide.ThumbURL" />
+                    <div class="layout cursorPointer" (click)="updateVideoData(slide)">
+                      <img class="play" src="../../../../../assets/images/play.svg" />
+                    </div>
+                  </div>
+                  <p class="title text-16 p-mt-3 blueColor">{{slide.Title}}</p>
+                  <!-- End Card -->
+                </ng-template>
+              </ng-container>
+
+            </owl-carousel-o>
+
+        </div>
+        <app-sharepoint-pagination *ngIf="materialListUrl" [url]="materialListUrl" [pageSize]="pageSize" [Filters]="Filters">
+          <ng-template let-Data="Data">
+            <div class="p-grid">
+              <div *ngFor="let item of Data" class="p-lg-4 p-md-6 p-col-12 p-mb-3">
+                <div class="whiteCard">
+                  <div>
+                    <p class="title blackColor p-mb-2 text-16 font-bold">{{item.Title}}</p>
+                    <p class="greyColor p-mb-2 text-12">{{item.Date | formatDate}}</p>
+                    <a *ngIf="item.Url" class="blueColor p-mb-2 text-16 font-bold" href="{{item.Url}}" target="_blank">
+                      <i class="material-icons-outlined">
+                        open_in_new
+                      </i>
+                      {{'AICMaterials.ResourcesUrl' | translate}}
+
+                    </a>
+                    <a *ngIf="item.DocumentUrl" class="blueColor p-mb-2 text-16 font-bold" href="{{item.DocumentUrl}}" target="_blank">
+                      <i class="material-icons">
+                        assignment_returned
+                      </i>
+                      {{'AICMaterials.MaterialDocument' | translate}}
+
+                    </a>
+                    <p class="greyColor p-mb-2 text-12">
+                      {{item.Brief}}
+                    </p>
+                  </div>
+                  <div>
+                    <a (click)="updateVideoData(item.Video)" *ngIf="item.Video" class="blueColor text-12 customP">
+                      <i class="material-icons-outlined">
+                        video_call
+                      </i>
+                      {{item.Video.Title}}
+                    </a>
+                  </div>
+                 
+                </div>
+                <!--End Card-->
+              </div>
+            </div>
+          </ng-template>
+        </app-sharepoint-pagination>
+      </ng-template>
+    </p-tabPanel>
+
+  </p-tabView>
+</div>
+
+<p-dialog [(visible)]="displayVideo" [modal]="true" role="alert"
+          [breakpoints]="{'960px': '75vw', '640px': '95vw'}" [style]="{width: '65vw'}"
+           [draggable]="false" [resizable]="false">
+  <div class="videoModal">
+    <iframe height="315" *ngIf="videoEmbeded" [src]="videoEmbeded | safeUrl" title="videoTitle" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+    <video height="315" *ngIf="!videoEmbeded" [src]="videoURL" [title]="videoTitle" autoplay></video>
+    <p class="title text-20 p-mt-2">
+      {{videoTitle}}
+    </p>
+
+  </div>
+</p-dialog>

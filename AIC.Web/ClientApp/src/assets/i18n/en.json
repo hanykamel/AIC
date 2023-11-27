@@ -1,0 +1,261 @@
+{
+  "Home": "Home",
+  "ReturnToHome": "Back to home !",
+  "NoPhotosFound": "No Images Found",
+  "submit":"Submit",
+  "HomePage": {
+    "aicProjects": "AIC Projects",
+    "Search": "Search",
+    "ShowMore": "Show More",
+    "ShowAllProjects": "SHOW ALL PROJECTS",
+    "ShowAllCareers": "Show all careers",
+    "ContactUs": "Contact Us",
+    "ContactUsBtn": "CONTACT US",
+    "FeaturedCareers": "Featured Careers",
+    "DiscoverMore": "DISCOVER MORE",
+    "Video": "Video",
+    "MainBanner": "Main Banner",
+    "AICHighlights": "AIC Highlights"
+  },
+  "AboutUs": {
+    "Working": "Working With AIC",
+    "Roadmap": "Strategic Roadmap",
+    "Mission": "AIC Mission",
+    "Objectives": "AIC Objectives",
+    "Values": "AIC Values",
+    "Partnership": "AIC Partnership Model"
+  },
+  "shared": {
+    "noData": "No data available",
+    "ShowAll": "SHOW ALL",
+    "ShareContentOn": "Share Content On",
+    "ShareOnFacebook": "Share the page content on Facebook",
+    "ShareOnTwitter": "Share the page content on Twitter",
+    "ShareOnLinkedIn": "Share the page content on LinkedIn",
+    "ShareAnywhere": "Share Link anywhere",
+    "LinkCopied": "Link Copied",
+    "ShareContentOnSocial": "Share the page content on",
+    "LinkSent": "Link has been sent to your email",
+    "AppliedBefore": "You are already applied before",
+    "CheckMailBox": "Kindly check your mailbox to apply",
+    "GeneralErrMsg": "Error occured while processing your request",
+    "DataAddeddSuccessfully": "Data Addedd successfully",
+    "SubmittedForm": "Your submitted form has been recieved successfully",
+    "AttachmentErrorMsg": "Allowed files are word and PDF only",
+    "lengthErrorMsg": "Max two files",
+    "UploadYourCV": "You should upload your cv",
+    "RecaptchaErrorMsg": "you should check the Recaptcha to validate you are not a robot"
+  },
+  "PagesTitle": {
+    "AIC": "AIC",
+    "Partners": "Partners",
+    "AboutUs": "About us",
+    "MediaCenter": "Media Center",
+    "PhotoGallery": "Photo Gallery",
+    "VideoGallery": "Video Gallery",
+    "Resources": "Resources",
+    "AICMaterials": "AIC Materials",
+    "Projects": "Projects",
+    "ProjectDetails": "Project Details",
+    "ProjectDemo": "Project Demo",
+    "HighPreformanceComputing": "High preformance computing",
+    "AICMission": "AIC Mission",
+    "AICObjectives": "AIC Objectives",
+    "CommitteeList": "BOD and Scientific Committee",
+    "RelatedNews": "Related News",
+    "BestPractices": "Best Practices",
+    "BestPracticesDetails": "Best Practices Details",
+    "AICValues": "AIC Values",
+    "AICPartnership": "AIC Partnership Model",
+    "StrategicRoadmap": "Strategic Roadmap",
+    "OurPeople": "Our People",
+    "Sitemap": "Site Map",
+    "CommitteeDetais": "BOD and Scientific Committee Details",
+    "OurPeopleDetails": "Our People Details",
+    "News": "News",
+    "Events": "Events",
+    "EventsDetails": "Events Details",
+    "NewsDetails": "News Details",
+    "WhitePapers": "White Papers",
+    "WhitePapersDetails": "White Papers Details",
+    "SocialMedia": "Social Media Feeds",
+    "VideoAlbum": "Video Album",
+    "Faqs": "FAQs",
+    "PhotoAlbum": "Photo Album",
+    "ArchivedNews": "Archived News",
+    "ArchivedEvents": "Archived Events",
+    "HPCProjectDetails": "HPC Project Details",
+    "Careers": "Careers",
+    "CareersDetails": "Career Details",
+    "Internships": "Internships",
+    "InternshipsDetails": "Internship Details",
+    "ContactUs": "Contact Us",
+    "ContactUsForm": "Contact Us Form",
+    "ReachUsThrough": "Reach Us Through",
+    "AdvancedSearch": "Advanced Search",
+    "Unsubscribe": "Unsubscribe"
+  },
+  "PartnerShips": {
+    "Partners": "Partners",
+    "National": "National",
+    "International": "International"
+  },
+  "BodAndScientific": {
+    "BODAndScientificCommittee": "BODAndScientificCommittee"
+  },
+  "AICMaterials": {
+    "Title": "AIC Materials",
+    "MaterialDocument": "Material Document",
+    "ResourcesUrl": "Resources URL"
+  },
+  "Projects": {
+    "TechnologyDomain": "Technology Domain",
+    "ApplicationsDomain": "Applications Domain",
+    "DemoUrl": "Demo URL"
+  },
+  "AccessbilityFunctions": {
+    "ReadPage": "Read Page",
+    "ResetAll": "Reset All",
+    "Contrast": "Contrast",
+    "BiggerText": "Bigger Text",
+    "Highlightlinks": "Highlight Links",
+    "BiggerCurser": "Bigger Curser",
+    "KeyboardUse": "Keyboard Use",
+    "textSpacing": "Text Spacing",
+    "tooltips": "Tooltips",
+    "stopAnimation": "Stop Animation",
+    "readingGuide": "Text Guide",
+    "pageStructureLinks": "Page Structure Links",
+    "desaturate": "hide/show Icons",
+    "dyslexiaFont": "Easy Reading Fonts",
+    "legibleFonts": "Legible Fonts",
+    "lineHeight": "lineHeight"
+  },
+  "News": {
+    "ArchivedNews": "Archived News",
+    "News": "News",
+    "RelatedMediaLinks": "Related Media Links"
+  },
+  "Events": {
+    "ArchivedEvents": "Archived Events",
+    "Events": "Events",
+    "Location": "Event Location"
+  },
+  "Footer": {
+    "Contactus": "Contact Us",
+    "Faqs": "FAQs",
+    "Sitemap": "Sitemap",
+    "MailingList": "Mailing list subscription",
+    "Email": "Your Email",
+    "SubscriberSuccess": "Thanks for subscriping to our Mailing list"
+  },
+  "SocialMediaFeeds": {
+    "Title": "Social Media Feeds"
+  },
+  "WhitePapers": {
+    "ResourceURL": "Resource URL"
+  },
+  "RelatedNews": {
+    "Link": "News URL"
+  },
+  "HPC": {
+    "HPCProjects": "HPC Projects"
+  },
+  "validation": {
+    "required": "You can't leave this field blank.",
+    "email": "Please enter the Email address in a valid format",
+    "emailExists": "Email already Exists"
+  },
+  "Newsletter": {
+    "UnsubscribeSuccessMsg": "You have been successfully unsubscribed from our newsletter",
+    "UnsubscribeAlreadyErrMsg": "You have been unsubscribed from our newsletter before",
+    "UnsubscribeErrMsg": "Error occured while processing your request",
+    "SubscribersList": "Subscribers List",
+    "SubscriberEmail": "Email",
+    "IsValid": ""
+  },
+  "backEndValidation": {
+    "AlreadySubscribed": "This email has been used before",
+    "AlreadyUnSubscribed": "this email has been unsubscribed before",
+    "NotSubscribedBefore": "This email has not been subscribed in newsletter before",
+    "FormValidationError": "The form expiry date is reached, please apply again",
+    "VacancyExpired": "The vacancy expiry date is reached",
+    "ProfileEntityNotFound": "sorry , you didn't have any profile",
+    "VacancyAppliedBefore": "sorry , you applied to this vacancy before",
+    "NullModel": "please make sure to fill correct data",
+    "InternshipAppliedBefore": "sorry , you applied to this internship before",
+    "InternShipExpired": "The internship expiry date is reached",
+    "ItemNotExist": "Item does not exist. It may have been deleted."
+
+  },
+  "summary": {
+    "Error": "Error",
+    "Warning": "Warning",
+    "Notification": "Notification"
+  },
+  "JoinUs": {
+    "EnterEMail": "Enter Your Mail",
+    "send": "Send",
+    "ApplyNow": "Apply Now",
+    "Email": "Email",
+    "GeneralApplication": "General Application",
+    "Description": "If none of the current job openings match your skill set or experience, please apply here for future career opportunities with AIC"
+  },
+  "Search": {
+    "Projects": "Projects",
+    "HPCProjects": "HPC Projects",
+    "News": "News",
+    "Events": "Events",
+    "Careers": "Careers",
+    "Internships": "Internships",
+    "WhitePapers": "White Papers",
+    "SelectCategory": "Select a Category",
+    "AdvancedSearch": "Advanced Search",
+    "TypeHereAnything": "Type here anything",
+    "EnterKeyword": "Enter Keyword",
+    "StartDate": "Start Date",
+    "EndDate": "End Date",
+    "Search": "Search",
+    "Reset": "Reset",
+    "SearchError": "Please enter valid search options.",
+    "SearchResult": "Search Result",
+    "MinLength": "Minimum length should be at least 3 characters",
+    "BestPractices": "Best Practices",
+    "AICMaterials": "AIC Materials",
+    "AboutUs": "About us",
+    "WorkingWithAIC":"Working With AIC",
+    "BODAndScientificCommittee": "BODAndScientificCommittee",
+    "OurPeople": "Our People",
+    "PhotoGallery": "Photo Gallery",
+    "VideoGallery": "Video Gallery"
+  },
+  "Careers": {
+    "Overview": "Job Overview",
+    "Description": "Job Description",
+    "Qualifications": "Job Qualifications",
+    "Requirements": "Job Requirements",
+    "RefrenceNum": "Job Reference Num.",
+    "ExpDate": "Vacancy Expiry Date",
+    "Type": "Type",
+    "Location": "Location",
+    "Apply": "Apply for Vacancy"
+  },
+  "Intern": {
+    "Overview": "Internship  Overview",
+    "Description": "Internship  Description",
+    "Qualifications": "Internship  Qualifications",
+    "Requirements": "Internship  Requirements",
+    "RefrenceNum": "Intern Reference Num.",
+    "ExpDate": "Internship  Expiry Date",
+    "Department": "Department",
+    "Location": "Location",
+    "Apply": "Apply for Internship"
+  },
+  "ContactUs": {
+    "HeadAddress": "Head Office Address",
+    "HeadPhone": "Head Office Phone Number",
+    "Locations": "Locations",
+    "GetLocations": "Get the Locations",
+    "SocialMedial": "Social Media"
+  }
+}

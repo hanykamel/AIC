@@ -1,0 +1,156 @@
+.NewsContainer {
+  position: relative;
+  display: block;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  opacity: 1;
+  width: 90%;
+  height: fit-content;
+  margin: 0 auto 50px;
+  padding: 20px;
+}
+
+.ImgCard {
+  position: relative;
+  display: inline-block;
+  width: calc(94% / 2);
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #00000012;
+  border-radius: 18px;
+  opacity: 1;
+  overflow: hidden;
+  padding: 20px 30px;
+  margin: 1%;
+  cursor:pointer
+}
+
+  .ImgCard img {
+    height: 326px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0
+  }
+
+span.DateLabel {
+  position: relative;
+  display: flex;
+  text-align: left;
+  font: italic normal medium 18px/28px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+  opacity: 1;
+  margin: 10px 0;
+}
+
+p.Title {
+  position: relative;
+  display: block;
+  text-align: left;
+  font: normal normal bold 19px/28px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+}
+p.Discription {
+  position: absolute;
+  bottom: 25px;
+  display: block;
+  text-align: left;
+  font: normal normal normal 17px/19px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  font-weight: 900;
+  padding: 20px;
+  opacity: 1;
+  left: 25px;
+  max-width: calc(100% - 45px);
+}
+::ng-deep .ar p.Discription {
+  left: auto;
+  right: 25px
+}
+.TitleCont {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 2% auto;
+  text-align: left;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+}
+
+  .TitleCont button {
+    background: #F6BE00 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    margin-left: auto;
+    border: navajowhite;
+    font: normal normal normal 18px/22px Roboto;
+    cursor: pointer;
+  }
+.imgHead {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0px
+}
+.ImgCard:nth-child(odd) {
+  margin-right: 3%;
+  margin-left: 0 !important;
+}
+.ImgCard:nth-child(even) {
+  margin-left: 3%;
+  margin-right: 0 !important
+}
+.ar :host ::ng-deep .ImgCard:nth-child(odd) {
+  margin-left: 3% !important;
+  margin-right: 0 !important;
+}
+
+.ar :host ::ng-deep .ImgCard:nth-child(even) {
+  margin-right: 3% !important;
+  margin-left: 0 !important
+}
+::ng-deep .ar p.Discription{
+    text-align:right;
+}
+
+@media only screen and (max-width:768px) {
+  .ImgCard {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 15px !important;
+  }
+  .ar :host ::ng-deep .ImgCard:nth-child(odd) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .ar :host ::ng-deep .ImgCard:nth-child(even) {
+    margin-right: 0 !important;
+    margin-left: 0 !important
+  }
+    .ImgCard img {
+      height: 250px;
+    }
+      
+  .NewsContainer{
+    width: unset;
+    margin: 2% 20px;
+  }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .ImgCard {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 15px !important;
+  }
+    .ImgCard img {
+      height: 250px;
+    }
+}

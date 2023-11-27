@@ -1,0 +1,53 @@
+<div *ngIf="details" class="sectionPadding projDemo">
+
+  <div class="shadowCont p-mb-4">
+    <div class="headerTitle p-mb-3">
+      <p class="blueColor text-24 font-bold">{{details.Title}}</p>
+    </div>
+    <div [innerHTML]="details.Description | safeHtml" class="innerText">
+    </div>
+  </div>
+  <app-generic-slider *ngIf="details.PhotoList" [slides]="MapPhotos(details.PhotoList)"></app-generic-slider>
+
+
+  <div class="shadowCont genericSlider" *ngIf="details.VideosList">
+    <p class="text-20 blackColor ">{{details.VideosList.VideosTitle}}</p>
+    <owl-carousel-o [options]="customOptions" #carousel
+                    [ngClass]="{'hideBtns': details.VideosList.length <= 3 , 'flexItems' : details.VideosList.length <= 3}">
+
+      <ng-container *ngFor="let slide of details.VideosList">
+        <ng-template carouselSlide [id]="slide.id">
+          <div class="imgCard">
+            <img *ngIf="slide.FileRef" class="thumb p-mb-2" [src]="slide.FileRef" [alt]="slide.Title">
+            <img [src]="slide.ThumbURL" />
+
+
+            <div class="layout cursorPointer" (click)="updateVideoData(slide)">
+              <img class="play" src="../../../../../assets/images/play.svg" />
+            </div>
+          </div>
+          <p class="title text-16 p-mt-2 blueColor">{{slide.Title}}</p>
+          <!-- End Card -->
+
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+</div>
+<app-no-data-found *ngIf="!details"></app-no-data-found>
+
+
+<p-dialog [(visible)]="displayVideo" [modal]="true" role="alert"
+          [breakpoints]="{'960px': '75vw', '640px': '95vw'}" [style]="{width: '65vw'}"
+          [draggable]="false" [resizable]="false">
+  <div class="videoModal">
+    <iframe height="315" *ngIf="videoEmbeded" [src]="videoEmbeded | safeUrl" title="videoTitle" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <video height="315" *ngIf="!videoEmbeded" [src]="videoURL" [title]="videoTitle" autoplay></video>
+    <p class="title text-20 p-mt-2">
+      {{videoTitle}}
+    </p>
+
+  </div>
+</p-dialog>

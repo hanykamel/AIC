@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="JSLinks" Url="Style Library/JSlink">
+    <File Path="JSLinks\PhotoGalleryJSLink.js" Url="JSLinks/PhotoGalleryJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE"  />
+    <File Path="JSLinks\VideoGalleryJSLink.js" Url="JSLinks/VideoGalleryJSLink.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE"  />
+    <File Path="JSLinks\ProjectsJsLink.js" Url="JSLinks/ProjectsJsLink.js" />
+    <File Path="JSLinks\MainMenuJSLink.js" Url="JSLinks/MainMenuJSLink.js" />
+    <File Path="JSLinks\MailingListJsLink.js" Url="JSLinks/MailingListJsLink.js" />
+    <File Path="JSLinks\GenericContentJSLink.js" Url="JSLinks/GenericContentJSLink.js" />
+    <File Path="JSLinks\EventsJsLink.js" Url="JSLinks/EventsJsLink.js" />
+    <File Path="JSLinks\EmailsJSLink.js" Url="JSLinks/EmailsJSLink.js" />
+    <File Path="JSLinks\ContactUsJSLink.js" Url="JSLinks/ContactUsJSLink.js" />
+    <File Path="JSLinks\AICMaterialsJSLink.js" Url="JSLinks/AICMaterialsJSLink.js" />
+  </Module>
+</Elements>

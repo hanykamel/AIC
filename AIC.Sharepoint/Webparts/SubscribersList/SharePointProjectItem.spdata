@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="SubscribersListUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="SubscribersList\" Type="ElementManifest" />
+    <ProjectItemFile Source="SubscribersList.webpart" Target="SubscribersList\" Type="ElementFile" />
+    <ProjectItemFile Source="SubscribersListUserControl.ascx" Target="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\SubscribersList\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="AIC.Sharepoint.Webparts.SubscribersList" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

@@ -1,0 +1,15 @@
+
+<h2 class="title">{{'PagesTitle.Sitemap' | translate}}</h2>
+<div *ngIf="siteMap" class="sectionPadding siteMapCont">
+  <div class="homeFooterLayout"></div>
+  <div class="sitemapCard p-relative">
+    <div *ngFor="let item of siteMap" class="">
+      <a *ngIf="item.Url" class="blackColor text-14 p-mb-3" href="{{item.Url}}">{{item | translateobj}}</a>
+      <a *ngIf="!item.Url" class="blackColor text-14 p-mb-3">{{item | translateobj}}</a>
+      <p *ngFor="let child of item.Children" >
+      <a class="greyColor text-14 p-mb-1" href="{{child.Url && !child.OtherUrl ? child.Url : child.OtherUrl ? child.OtherUrl : null}}">{{child | translateobj}}</a>
+      </p>
+    </div>
+   
+  </div>
+</div>

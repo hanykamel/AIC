@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="3aa61852-0a2a-4c9b-8595-6a215c08e199" Scope="Site" Title="Jslinks">
+  <ElementManifests>
+    <ElementManifest Location="JSLinks\Elements.xml" />
+    <ElementFile Location="JSLinks\PhotoGalleryJSLink.js" />
+    <ElementFile Location="JSLinks\VideoGalleryJSLink.js" />
+    <ElementFile Location="JSLinks\ProjectsJsLink.js" />
+    <ElementFile Location="JSLinks\MainMenuJSLink.js" />
+    <ElementFile Location="JSLinks\MailingListJsLink.js" />
+    <ElementFile Location="JSLinks\GenericContentJSLink.js" />
+    <ElementFile Location="JSLinks\EventsJsLink.js" />
+    <ElementFile Location="JSLinks\EmailsJSLink.js" />
+    <ElementFile Location="JSLinks\ContactUsJSLink.js" />
+    <ElementFile Location="JSLinks\AICMaterialsJSLink.js" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="ed79932c-7c54-4a5d-b5cb-b4ddb3b40946" ResetWebServer="TRUE" SharePointProductVersion="19.0">
+  <Assemblies>
+    <Assembly Location="AIC.Sharepoint.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.JoinUsUserDetails" TypeName="*" />
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.UserAppliedToCareerDetails" TypeName="*" />
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.UserAppliedToInternshipDetails" TypeName="*" />
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.SubscribersList" TypeName="*" />
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.JoinUsUsersList" TypeName="*" />
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.AppliedToCareersList" TypeName="*" />
+        <SafeControl Assembly="AIC.Sharepoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6b7af8fe03873811" Namespace="AIC.Sharepoint.Webparts.AppliedToInternshipsList" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="ISAPI\AICService.svc" />
+  </RootFiles>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\JoinUsUserDetails\JoinUsUserDetailsUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\UserAppliedToCareerDetails\UserAppliedToCareerDetailsUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\UserAppliedToInternshipDetails\UserAppliedToInternshipDetailsUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\SubscribersList\SubscribersListUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\JoinUsUsersList\JoinUsUsersListUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\AppliedToCareersList\AppliedToCareersListUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC.Sharepoint.Webparts\AppliedToInternshipsList\AppliedToInternshipsListUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC\AICCtrlAdditionalPageHead.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC\AdminSiteMap.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\AIC\AssetSubscribers.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="AIC.Sharepoint_AIC.Sharepoint.DelegateControl\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_Cash.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_Newsletter.Timerjob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendCareerReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendComplaintReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendFeedbackReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendHPCReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendHRReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendInquiryReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendRAndDReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_SendSuggestionReplays.TimerJob\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_Lookups Synchronization\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_Web Parts\Feature.xml" />
+    <FeatureManifest Location="AIC.Sharepoint_Jslinks\Feature.xml" />
+  </FeatureManifests>
+</Solution>

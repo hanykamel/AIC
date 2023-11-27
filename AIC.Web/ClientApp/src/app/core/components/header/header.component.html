@@ -1,0 +1,200 @@
+<header
+  class="headerCont"
+  (scroll)="onscroll()"
+  [ngClass]="navbarfixed ? 'stickyNav' : ''"
+  (click)="ClickedOut($event)"
+  id="header"
+>
+  <div class="logoCont" *ngIf="!navbarfixed" (keydown)="onKeydownMain($event)" >
+    <img
+      routerLink="/home"
+      *ngIf="router.url === '/home' || router.url == '/home#banner'"
+      class="img-home"
+      src="../../../../assets/images/whitelogohigh1 - Copy.png"
+      alt=""
+    />
+    <img
+      routerLink="/home"
+      *ngIf="!(router.url == '/home' || router.url == '/home#banner')"
+      src="../../../assets/images/coloredLogo.png"
+      alt=""
+    />
+  </div>
+  <div class="logoCont" *ngIf="navbarfixed">
+    <img
+      routerLink="/home"
+      src="../../../assets/images/coloredLogo.png"
+      alt=""
+    />
+  </div>
+  <p-menubar [model]="items" class="smHide" #menu></p-menubar>
+  <div class="optionsCont">
+    <i class="material-icons" (click)="toggleAccess()"> settings </i>
+    <p *ngIf="currentLangText === 'en'" (click)="changeLang('ar')">AR</p>
+    <p *ngIf="currentLangText === 'ar'" (click)="changeLang('en')">EN</p>
+
+    <i
+      class="material-icons-outlined searchIcon"
+      [class.transBG]="isOpenSearch === true"
+      (click)="toggleSearch()"
+    >
+      search
+    </i>
+    <a (click)="openMenu()" class="menuIcon lgHide">
+      <i class="pi pi-align-justify"></i>
+    </a>
+  </div>
+  <!-- Search -->
+  <div
+    class="searchPopup"
+    [@openCloseSearch]="isOpenSearch ? 'open' : 'closed'"
+    *ngIf="isOpenSearch"
+  >
+    <form action="." class="searchForm">
+      <input
+        enterkeyhint="”search”"
+        type="search"
+        name="search"
+        [(ngModel)]="searchKey"
+        (keydown.enter)="goToSearch()"
+        placeholder="{{ 'Search.TypeHereAnything' | translate }}"
+        #SearchBox
+      />
+      <i class="material-icons-outlined cursorPointer" (click)="goToSearch()">
+        search
+      </i>
+    </form>
+    <p class="errorText p-pr-1 p-pl-1" *ngIf="showSearchError">
+      {{ "Search.MinLength" | translate }}
+    </p>
+    <p-dropdown
+      [options]="categories"
+      [(ngModel)]="selected"
+      (onChange)="goToSearch()"
+      placeholder="{{ 'Search.SelectCategory' | translate }}"
+      optionLabel="name"
+      [showClear]="false"
+    ></p-dropdown>
+  </div>
+  <!-- End Search -->
+</header>
+
+<!-- Responsive Menu -->
+<header class="respHeader">
+  <p-sidebar
+    [(visible)]="showMenu"
+    [fullScreen]="true"
+    [baseZIndex]="9999999"
+    class="respCont"
+  >
+    <p-menubar [model]="items"></p-menubar>
+    <!-- End Item -->
+  </p-sidebar>
+</header>
+<!-- End Responsive Menu -->
+<!-- Accessability -->
+<p-dialog
+  [(visible)]="accessDialog"
+  class="accessDialog"
+  [modal]="true"
+  [position]="'top'"
+  [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+  [style]="{ width: '30vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  role="alert"
+>
+  <div class="accessList">
+    <div class="accessItem">
+      <a (click)="accessbility('readPageToggle')">
+        <i class="material-icons-outlined">headphones</i>
+        <span>{{ "AccessbilityFunctions.ReadPage" | translate }}</span>
+      </a>
+    </div>
+    <div class="accessItem">
+      <a (click)="accessbility('contrastToggle')">
+        <i class="material-icons-outlined">flaky</i>
+        <span> {{ "AccessbilityFunctions.Contrast" | translate }}</span>
+      </a>
+    </div>
+  </div>
+  <!--End Row-->
+  <div class="accessList">
+    <div class="accessItem">
+      <a (click)="accessbility('bigTextToggle')">
+        <i class="material-icons-outlined">text_increase</i>
+        <span> {{ "AccessbilityFunctions.BiggerText" | translate }}</span>
+      </a>
+    </div>
+    <div class="accessItem">
+      <a (click)="accessbility('bigCursorToggle')">
+        <i class="material-icons-outlined">zoom_in</i>
+        <span> {{ "AccessbilityFunctions.BiggerCurser" | translate }}</span>
+      </a>
+    </div>
+  </div>
+  <!--End Row-->
+  <div class="accessList">
+    <div class="accessItem">
+      <a (click)="accessbility('highlightToggle')">
+        <i class="material-icons-outlined">link</i>
+        <span>{{ "AccessbilityFunctions.Highlightlinks" | translate }}</span>
+      </a>
+    </div>
+    <div class="accessItem">
+      <a (click)="accessbility('dyslexiaFontToggle')">
+        <i class="material-icons-outlined">history_edu</i>
+        <span>{{ "AccessbilityFunctions.dyslexiaFont" | translate }}</span>
+      </a>
+    </div>
+  </div>
+  <!--End Row-->
+  <div class="accessList">
+    <div class="accessItem">
+      <a (click)="accessbility('legibleFontsToggle')">
+        <i class="material-icons-outlined">edit</i>
+        <span>{{ "AccessbilityFunctions.legibleFonts" | translate }}</span>
+      </a>
+    </div>
+    <div class="accessItem">
+      <a (click)="accessbility('textSpacingToggle')">
+        <i class="material-icons-outlined">article</i>
+        <span>{{ "AccessbilityFunctions.textSpacing" | translate }}</span>
+      </a>
+    </div>
+  </div>
+  <!--End Row-->
+  <div class="accessList">
+    <div class="accessItem">
+      <a (click)="accessbility('lineHeightToggle')">
+        <i class="material-icons-outlined">format_align_justify</i>
+        <span>{{ "AccessbilityFunctions.lineHeight" | translate }}</span>
+      </a>
+    </div>
+    <div class="accessItem">
+      <a (click)="accessbility('pageStructureLinks')">
+        <i class="material-icons-outlined">settings</i>
+        <span>{{
+          "AccessbilityFunctions.pageStructureLinks" | translate
+        }}</span>
+      </a>
+    </div>
+  </div>
+  <!--End Row-->
+  <div class="accessList">
+    <div class="accessItem">
+      <a (click)="accessbility('stopAnimationToggle')">
+        <i class="material-icons-outlined">motion_photos_off</i>
+        <span>{{ "AccessbilityFunctions.stopAnimation" | translate }}</span>
+      </a>
+    </div>
+    <div class="accessItem">
+      <a (click)="accessbility('resetAll')">
+        <i class="material-icons-outlined">restart_alt</i>
+        <span>{{ "AccessbilityFunctions.ResetAll" | translate }}</span>
+      </a>
+    </div>
+  </div>
+  <!--End Row-->
+</p-dialog>
+<!-- End Accessability -->

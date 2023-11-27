@@ -1,0 +1,112 @@
+.vidDetails .vidCont video, .vidDetails .vidCont iframe {
+  width: 100%;
+  height: 400px
+}
+.vidDetails .imgCont {
+  height: 210px;
+  width: 100%;
+  display: block;
+  border-radius:10px;
+  position:relative;
+  cursor:pointer
+}
+  .vidDetails .imgCont .mainImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px
+  }
+  .vidDetails .imgCont .layout {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    background: transparent linear-gradient(0deg, #000000b8 0%, #54545400 100%) 0% 0% no-repeat padding-box;
+    top: 0;
+    right: 0;
+  }
+  .vidDetails .imgCont .play {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 85px;
+    right: 43%;
+  }
+.vidDetails .navBtns {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 100px;
+ 
+}
+
+
+  .ar :host ::ng-deep .vidDetails .navBtns {
+    right: unset !important;
+    left: 100px;
+  }
+
+.vidDetails .navBtns button {
+  box-shadow: 0px 3px 6px #00000012;
+  border: 1px solid #EEEEEE;
+  width: 45px;
+  height: 45px;
+  background: #ffffffb3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: rotate(180deg)
+}
+.ar :host ::ng-deep .vidDetails .navBtns button {
+  transform: rotate(0deg) !important
+}
+.vidDetails .navBtns button:first-child {
+  margin-right: 10px
+}
+.ar :host ::ng-deep .vidDetails .navBtns button:first-child {
+  margin-right: 0 !important;
+  margin-left: 10px
+}
+  @media only screen and (max-width:768px) {
+    .vidDetails .vidCont video {
+    height: 300px
+  }
+    .vidDetails .navBtns {
+      right: 40px;
+      top: 44px;
+    }
+
+    .ar :host ::ng-deep .vidDetails .navBtns {
+      right: unset !important;
+      left: 40px;
+    }
+    .vidDetails app-sharepoint-pagination{
+        display:none
+    }
+    .vidDetails .vidCont video, .vidDetails .vidCont iframe {
+      height: 250px
+    }
+}
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .vidDetails .vidCont video {
+    height: 300px
+  }
+
+  .vidDetails .navBtns {
+    right: 40px;
+    top: 44px;
+  }
+
+  .ar :host ::ng-deep .vidDetails .navBtns {
+    right: unset !important;
+    left: 40px;
+  }
+  .vidDetails app-sharepoint-pagination {
+    display: none
+  }
+  .vidDetails .vidCont video, .vidDetails .vidCont iframe {
+    height: 250px
+  }
+}

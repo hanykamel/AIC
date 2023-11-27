@@ -1,0 +1,68 @@
+<div class="sectionPadding">
+  <div class="applyNowCont">
+    <h2 class="blueColor text-24 font-bold">
+      {{ "JoinUs.ApplyNow" | translate }}
+    </h2>
+    <p class="blackColor text-16">{{ "JoinUs.Description" | translate }}</p>
+    <button class="yellowBtn btn" (click)="emailDialog = true">
+      <i class="material-icons-outlined">description</i>
+      <span>{{ "JoinUs.GeneralApplication" | translate }}</span>
+    </button>
+  </div>
+</div>
+
+<p-dialog
+  [(visible)]="emailDialog"
+  class=""
+  [modal]="true"
+  (onHide)="closeModal()"
+  [breakpoints]="{ '960px': '75vw', '640px': '90vw' }"
+  [style]="{ width: '40vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  role="alert"
+>
+  <form class="emailDialog" [formGroup]="applyForm">
+    <h2 class="blackColor text-18 font-bold">
+      {{ "JoinUs.EnterEMail" | translate }}
+    </h2>
+    <generic-email-input
+      class="genericEmail"
+      formControlName="Email"
+      placeholder="{{ 'JoinUs.Email' | translate }}"
+    ></generic-email-input>
+    <p-captcha
+      #cap
+      siteKey="{{ siteKey }}"
+      [language]="lang ? lang : 'en'"
+      (onResponse)="showResponse($event)"
+      (onExpire)="onExpire()"
+      tabindex="0"
+    ></p-captcha>
+    <p class="errorLenText errorText cvError" *ngIf="recaptchaErrorMsg"  role="alert">
+      {{ "shared.RecaptchaErrorMsg" | translate }}
+    </p>
+    <button class="blueBtn btn" (click)="onClick()">
+      <i class="material-icons-outlined">send</i>
+      <span>{{ "JoinUs.send" | translate }}</span>
+    </button>
+  </form>
+</p-dialog>
+
+<p-dialog
+  [(visible)]="success"
+  (onHide)="closeModal()"
+  [modal]="true"
+  [style]="{ width: '35vw' }"
+  [breakpoints]="{ '960px': '90vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  role="alert"
+>
+  <div class="success">
+    <i class="material-icons-outlined"> done </i>
+    <p class="text-20 blackColor font-bold p-text-center">
+      {{ "shared.CheckMailBox" | translate }}
+    </p>
+  </div>
+</p-dialog>

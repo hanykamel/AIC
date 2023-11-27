@@ -1,0 +1,102 @@
+<element>
+	<element>
+		<Title>Root</Title>
+		<Url></Url>
+		<element>
+			<Title>Documents</Title>
+			<Url>Documents/Forms/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>Images</Title>
+			<Url>PublishingImages/Forms/Thumbnails.aspx</Url>
+		</element>
+		<element>
+			<Title>Site Collection Images</Title>
+			<Url>SiteCollectionImages/Forms/Thumbnails.aspx</Url>
+		</element>
+	</element>
+	<element>
+		<Title>AR</Title>
+		<Url>ar/_layouts/15/viewlsts.aspx</Url>
+		<element>
+			<Title>الأخبار</Title>
+			<Url>ar/Lists/News/CurrentItems.aspx</Url>
+		</element>
+		<element>
+			<Title>الفاعليات</Title>
+			<Url>ar/Lists/Events/CurrentItems.aspx</Url>
+		</element>
+		<element>
+			<Title>المشاريع</Title>
+			<Url>ar/Lists/Projects/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>لافتة رئيسية</Title>
+			<Url>ar/Lists/MainBanner/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>مواضيع الأسئلة الشائعة</Title>
+			<Url>ar/Lists/FAQCategories/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>الأسئلة الشائعة</Title>
+			<Url>ar/Lists/FAQS/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>الصور</Title>
+			<Url>ar/PublishingImages/Forms/Thumbnails.aspx</Url>
+		</element>
+		<element>
+			<Title>مكتبة الصور</Title>
+			<Url>ar/PhotoGallery/Forms/Thumbnails.aspx</Url>
+		</element>
+		<element>
+			<Title>مكتبةالفيديوهات</Title>
+			<Url>ar/VideoGallery/Forms/Thumbnails.aspx</Url>
+		</element>
+	</element>
+	<element>
+		<Title>EN</Title>
+		<Url>en/_layouts/15/viewlsts.aspx</Url>
+		<element>
+			<Title>News</Title>
+			<Url>en/Lists/News/CurrentItems.aspx</Url>
+		</element>
+		<element>
+			<Title>Events</Title>
+			<Url>en/Lists/Events/CurrentItems.aspx</Url>
+		</element>
+		<element>
+			<Title>Programs</Title>
+			<Url>en/Lists/Programs/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>Projects</Title>
+			<Url>en/Lists/Projects/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>Main Banner</Title>
+			<Url>en/Lists/MainBanner/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>FAQ Categories</Title>
+			<Url>en/Lists/FAQCategories/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title>FAQS</Title>
+			<Url>en/Lists/FAQS/AllItems.aspx</Url>
+		</element>
+		<element>
+			<Title> Images</Title>
+			<Url>en/PublishingImages/Forms/Thumbnails.aspx</Url>
+		</element>
+		<element>
+			<Title>Photo Gallery</Title>
+			<Url>en/PhotoGallery/Forms/Thumbnails.aspx</Url>
+		</element>
+		<element>
+			<Title>Video Gallery</Title>
+			<Url>en/VideoGallery/Forms/Thumbnails.aspx</Url>
+		</element>
+	</element>
+</element>

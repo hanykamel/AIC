@@ -1,0 +1,38 @@
+<div class="layout">
+  <div id="skip-link">
+    <button role="button" class="skip-to-main-content-link" [ngClass]="lang == 'en' ? 'skip-en' : 'skip-ar'" *ngIf="!skipContent" (click)="navClick((this.router.url == '/home' || this.router.url == '/home#banner')? 'banner':'divHeight')">{{lang == 'en' ? 'Skip to content' : 'تخطى الى المحتوي'}}</button>
+  </div>
+  <app-header *ngIf="!(router.url == '/home' || router.url == '/home#banner')" aria-labelledby="banner"></app-header>
+  <div class="breadcrumb"   *ngIf="!(router.url == '/home' || router.url == '/home#banner')" >
+    <xng-breadcrumb separator=">">
+     
+      <ng-container *xngBreadcrumbItem="
+              let breadcrumb;
+              let info = info;
+              let first = first
+            ">
+        <ng-container *ngIf="info">
+          <a href="#">
+            {{'Home'|translate}}
+          </a>
+        </ng-container>
+  
+        <ng-container *ngIf="!first">{{ breadcrumb | translate }}</ng-container>
+      </ng-container>
+    </xng-breadcrumb>
+  </div>
+  <!-- role="main" aria-labelledby="main" -->
+  <div id="divHeight" class="mainLayout" role="main" >
+      <router-outlet (activate)="onActivate($event)" ></router-outlet>
+  </div>
+  
+  <div class="socialMedia">
+    <app-generic-social-icons [sharingSocialVisible]="showSocialMediaContent" [sharingContentVisible]="showSocialMediaShare"  *ngIf="!(router.url == '/home' || router.url == '/home#banner')"  [links]="socData"></app-generic-social-icons>
+  </div>
+  <app-footer *ngIf="!(router.url == '/home' || router.url == '/home#banner')"  aria-labelledby="contentinfo"></app-footer>
+  
+  <app-page-loader></app-page-loader>
+  
+  <p-toast key="serverMsgs" position="bottom-center" baseZIndex="9999" ></p-toast>
+  
+</div>

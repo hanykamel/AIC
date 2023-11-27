@@ -1,0 +1,182 @@
+/* Advanced Search */
+.advancedSearch {
+  background: linear-gradient(
+    0deg,
+    rgb(2 0 36 / 72%) 0%,
+    rgb(21 27 91 / 82%) 47%
+  );
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.advancedSearch label {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-left: 12px;
+}
+.alignText {
+  margin-left: 12px;
+}
+.ar :host ::ng-deep .advancedSearch label {
+  margin-left: 0 !important;
+  margin-right: 12px;
+}
+.ar :host ::ng-deep .alignText {
+  margin-left: 0 !important;
+  margin-right: 12px;
+}
+
+.advancedSearch ::ng-deep .p-calendar .p-inputtext {
+  padding: 10px;
+  width: 100%;
+  font-size: 12px;
+  color: #000000;
+  background: #fefefea1 0% 0% no-repeat padding-box;
+  border: 1px solid #7070702d;
+  border-radius: 26px;
+  height: 45px;
+}
+
+.advancedSearch ::ng-deep .p-dropdown {
+  padding: 10px;
+  width: 100%;
+  font-size: 12px;
+  color: #000000;
+  background: #fefefea1 0% 0% no-repeat padding-box;
+  border: 1px solid #7070702d;
+  border-radius: 26px;
+  height: 45px;
+}
+
+.advancedSearch input {
+  padding: 10px;
+  width: 100%;
+  font-size: 12px;
+  color: #000000;
+  background: #fefefea1 0% 0% no-repeat padding-box;
+  border: 1px solid #7070702d;
+  border-radius: 26px;
+  height: 45px;
+}
+
+.advancedSearch ::ng-deep .p-dropdown .p-dropdown-panel {
+  background: #fff;
+  border: 1px solid #80808040;
+  box-shadow: 0px 3px 15px #00000014;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.advancedSearch ::ng-deep .p-dropdown-item {
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+.advancedSearch ::ng-deep .p-dropdown-item:last-child {
+  margin-bottom: 0;
+}
+.flexBtnEnd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.flexBtnEnd .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexBtnEnd .btn:first-child {
+  margin: 0 10px;
+}
+.flexBtnEnd .btn i {
+  margin-right: 5px;
+}
+.ar :host ::ng-deep .flexBtnEnd .btn i {
+  margin-right: 0 !important;
+  margin-left: 5px;
+}
+.advancedSearch hr {
+  margin: 25px 0;
+  margin-bottom: 35px;
+}
+.resultTitle {
+  display: flex;
+  align-items: center;
+}
+.advancedSearch ::-webkit-input-placeholder {
+  /* Edge */
+  color: #5e5e5e;
+  font-size: 12px;
+}
+
+.advancedSearch :-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #5e5e5e;
+  font-size: 12px;
+}
+
+.advancedSearch ::placeholder {
+  color: #5e5e5e;
+  font-size: 12px;
+}
+.advancedSearch ::ng-deep .p-calendar ::-webkit-input-placeholder {
+  /* Edge */
+  color: #5e5e5e;
+  font-size: 12px;
+}
+
+.advancedSearch ::ng-deep .p-calendar :-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #5e5e5e;
+  font-size: 12px;
+}
+
+.advancedSearch ::ng-deep .p-calendar ::placeholder {
+  color: #5e5e5e;
+  font-size: 12px;
+}
+.advancedSearch ::ng-deep .p-placeholder {
+  color: #5e5e5e;
+}
+.advancedSearch ::ng-deep .blueColor {
+  color: #fff !important;
+}
+.advancedSearch .whiteCard .descText {
+  height: 65px;
+  overflow: hidden;
+}
+.advancedSearch .searchText{
+  height: 165px;
+  overflow: hidden; 
+}
+
+.advancedSearch .searchText .innerText  {
+  font-size: 14px !important;
+  font-weight: normal !important;
+}
+
+/* End Advanced Search */
+@media only screen and (min-width: 768px) {
+  .secondDate ::ng-deep .p-calendar .p-datepicker {
+    left: -110px !important;
+  }
+  .ar :host ::ng-deep .secondDate ::ng-deep .p-calendar .p-datepicker {
+    left: unset !important;
+    right: -110px !important;
+  }
+  .searchCard{
+      height:220px;
+  }
+  .advancedSearch .searchText{
+    height: 161px;
+  }
+}
+
+.rtl {
+  direction: rtl !important;
+}
+.ltr {
+  direction: ltr !important;
+}

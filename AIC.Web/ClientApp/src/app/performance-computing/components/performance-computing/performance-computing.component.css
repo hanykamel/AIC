@@ -1,0 +1,42 @@
+.NewsContainer {
+  position: relative;
+  display: block;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #0000000d;
+  border-radius: 15px;
+  opacity: 1;
+  width: 90%;
+  height: fit-content;
+  margin: 50px auto 50px;
+  padding: 20px;
+}
+.TitleCont {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 2% auto;
+  text-align: left;
+  font: normal normal bold 30px/37px Roboto;
+  letter-spacing: 0px;
+  color: #3C57A1;
+}
+
+p.Discription {
+  position: relative;
+  display: block;
+  text-align: left;
+  font: normal normal medium 16px/28px Roboto;
+  letter-spacing: 0px;
+  color: #646464;
+  margin-top: 20px
+}
+.PerfComputing ::ng-deep .NewsContainer{
+    background:transparent;
+    box-shadow:none
+}
+.PerfComputing ::ng-deep  .NewsCard:hover img {
+  height: 184px !important;
+}
+.innerText{
+  margin-top: 20px;
+}

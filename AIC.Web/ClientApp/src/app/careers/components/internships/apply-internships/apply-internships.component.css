@@ -1,0 +1,207 @@
+.formErrorPosition {
+  position: relative;
+}
+
+.formErrorPosition .errorText {
+  position: absolute;
+  bottom: 220px;
+}
+
+.formErrorPosition .errorLenText {
+  bottom: 200px !important;
+  left: 700px;
+}
+.formErrorPosition .cvError {
+  bottom: 200px !important;
+  left: 130px;
+}
+.thirdSection .captcha {
+  position: absolute;
+  bottom: 180px;
+  left: 118px;
+  right: unset;
+}
+.ar :host .thirdSection .captcha {
+  left: unset;
+  right: 50px;
+}
+.thirdSection.applyIntern  .err-captcha{
+  position: absolute;
+    bottom: 173px !important;
+    left: 118px;
+}
+.ar :host .thirdSection.applyIntern  .err-captcha{
+  left: unset;
+  right: 110px;
+}
+
+.ar :host ::ng-deep .formErrorPosition .cvError {
+  right: 130px;
+  left: unset !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .thirdSection p-captcha {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0 !important;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    bottom: 200px !important;
+  }
+  .ar :host .thirdSection p-captcha {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0 !important;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    bottom: 200px !important; 
+  }
+  .ar :host .thirdSection .captcha {
+    left: unset;
+    right: 0px;
+  }
+.thirdSection.applyIntern  .err-captcha{
+    position: absolute;
+      bottom: 173px;
+      left: 75px;
+      right: 75px;
+  }
+  .ar :host .thirdSection.applyIntern  .err-captcha{
+    left:  55px;
+    right: 55px;
+  }
+}
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.complete{
+  border: none;
+  border-radius: 34px;
+  background-color: transparent;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 250px;
+  height: 50px;
+  background-color: #f6be00 !important;
+  text-align: center;
+}
+::ng-deep .sv-footer__complete-btn {
+display: none !important;
+}
+
+::ng-deep #sq_129 .hideTitle{
+  display: block !important;
+ 
+}
+::ng-deep #sq_129{
+ position: relative;
+}
+.en :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+ left: 151px;
+ right: unset;
+ position: absolute;
+ top: 50%;
+ z-index: 999;
+}
+.ar :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+ left: unset;
+ right: 22%;
+ position: absolute;
+ top: 50%;
+ z-index: 999;
+}
+@media only screen and (max-width: 1680px) {
+  .ar :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+   left: unset;
+   right: 25%;
+   position: absolute;
+   top: 50%;
+   z-index: 999;
+  }
+  }
+  @media only screen and (max-width: 1600px) {
+    .ar :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+     left: unset;
+     right: 27%;
+     position: absolute;
+     top: 50%;
+     z-index: 999;
+    }
+    }
+    @media only screen and (max-width: 1440px) {
+      .ar :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+       left: unset;
+       right: 30%;
+       position: absolute;
+       top: 50%;
+       z-index: 999;
+      }
+      }
+      @media only screen and (max-width: 1366px) {
+        .ar :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+         left: unset;
+         right: 190px;
+         position: absolute;
+         top: 50%;
+         z-index: 999;
+        }
+        }
+@media only screen and (max-width: 1280px) {
+.ar :host::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+ left: unset;
+ right: 175px;
+ position: absolute;
+ top: 50%;
+ z-index: 999;
+}
+}
+@media only screen and (max-width: 850px) {
+ .en :host ::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+ left: 130px;
+ position: absolute;
+ top: 50%;
+ z-index: 999;
+ }}
+@media only screen and (max-width: 768px) {
+ .en :host ::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+ left: unset;
+ right: 30%;
+ position: absolute;
+ top: 30%;
+ z-index: 999;
+ }
+ .ar :host ::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+   left: 30%;
+   right: unset;
+   position: absolute;
+   top: 30%;
+   z-index: 999;
+   }
+}
+
+@media only screen and (max-width: 280px) {
+ .en :host ::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+   left: unset;
+   right: 15%;
+   position: absolute;
+   top: 25%;
+   z-index: 999;
+ }
+ .ar :host ::ng-deep #sq_129_ariaTitle .sv-question__required-text{
+   left: 15%;
+   right: unset;
+   position: absolute;
+   top: 30%;
+   z-index: 999;
+ }
+}

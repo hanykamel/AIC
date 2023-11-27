@@ -1,0 +1,21 @@
+<div class="sectionPadding">
+  <h1 class="blueColor font-bold text-28 p-mb-4">{{'PagesTitle.Careers' | translate}}</h1>
+    <app-sharepoint-pagination [url]="url" [pageSize]="pageSize" [pagination]="pagination" [Filters]="Filters" [sortingField]="sortingField" [isSortingAscending]="isSortingAscending">
+      <ng-template let-Data="Data">
+        <div class="p-grid">
+          <div *ngFor="let item of Data" class="p-col-12 p-md-6 p-lg-4 p-mb-3">
+            <div class="whiteCard careersCard cursorPointer"
+                 [routerLink]="['/careers-Opportunities/careers-list/careers-details/', item.Id]">
+              <p class="greyColor text-12 p-mb-1 font-bold">{{item.PublishingDate | formatDate}}  <span *ngIf="item.PublishingDate && item.VacancyExpiryDate">-</span> {{item.VacancyExpiryDate | formatDate}}</p>
+              <p class=" title text-24 p-mb-2" *ngIf="lang == 'en'">{{item.Title}}</p>
+              <p class=" title text-24 p-mb-2" *ngIf="lang == 'ar'">{{item.TitleAr}}</p>
+              <p class="descText text-14 font-bold">
+                {{ (item.ReferenceNumber.length>60)? (item.ReferenceNumber | slice:0:60)+'..':(item.ReferenceNumber) }}
+              </p>
+            </div>
+          </div>
+          <!--End Card-->
+        </div>
+      </ng-template>
+    </app-sharepoint-pagination>
+</div>

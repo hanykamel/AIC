@@ -1,0 +1,37 @@
+<div *ngIf="!noDataAvailable" class="shadowCont genericSlider">
+  <h2 class="text-20 blackColor font-bold">{{title}}</h2>
+  <app-no-data-found *ngIf="noDataAvailable"></app-no-data-found>
+  <div *ngIf="slides">
+    <owl-carousel-o *ngIf="slides" (initialized)="getData(slides)" [options]="customOptions" #carousel
+      [ngClass]="{'hideBtns': !checkConditionalArrow() , 'flexItems' : !checkConditionalArrow()}">
+
+      <ng-container *ngFor="let slide of slides">
+        <ng-template carouselSlide [id]="slide.id">
+          <div class="imgCard">
+            <!--<img *ngIf="!slide.VideosList?.EmbedCode" class="thumb p-mb-2" [src]="slide.URL" [alt]="slide.title">-->
+            <img *ngIf="slide.FileRef" class="thumb p-mb-2" [src]="slide.FileRef" [alt]="slide.Title">
+            <!--<img class="play" src="../../../../../assets/images/play.svg" />-->
+            <!--Eng Img-->
+            <video *ngIf="slide?.URL" controls>
+              <source [src]="slide.URL" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <!--End Video-->
+
+            <iframe *ngIf="slide?.EmbedCode" [src]="slide.EmbedCode | safeUrl" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!--End Embedded Video-->
+
+
+            <p class="title text-16 p-mt-3">{{slide.Title}}</p>
+
+          </div>
+          <!-- End Card -->
+
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+</div>

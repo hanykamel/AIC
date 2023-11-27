@@ -1,0 +1,122 @@
+.careersDetails .title {
+  margin-bottom: 10px;
+}
+.careersDetails .desc {
+  margin-bottom: 15px;
+}
+.jobTitle {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5d3d3;
+  padding-bottom: 20px;
+}
+.jobTitle i {
+  width: 70px;
+  background: #f6be00;
+  height: 70px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jobTitle .titleCont {
+  margin: 0 10px;
+  max-width: 70%;
+}
+.jobTitle .titleCont .text-12 {
+  color: #646464;
+  font-weight: 600;
+}
+.jobDetails {
+  display: flex;
+  justify-content: space-between;
+}
+.detailsWidth {
+  width: 49%;
+}
+.shadowCont {
+  word-break: break-all;
+}
+.shadowCont .jobDetails:nth-child(2) {
+  margin-bottom: 15px;
+  padding-top: 20px;
+}
+.jobDetails .detailsTitle {
+  color: #bdbaba;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+.jobDetails .detailsDesc {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-all;
+}
+.shadowCont .yellowBtn {
+  border-radius: 54px;
+  min-width: 250px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.shadowCont .yellowBtn i {
+  margin-right: 5px;
+}
+.ar :host ::ng-deep .shadowCont .yellowBtn i {
+  margin-right: 0 !important;
+  margin-left: 5px;
+}
+.yellowBtn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 768px) {
+  .detailsWidth {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .jobDetails {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .shadowCont .jobDetails:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .careersDetails .p-grid {
+    flex-direction: column-reverse;
+  }
+}
+::ng-deep .emailDialog .pRelative {
+  margin-bottom: unset;
+}
+.emailDialog ::ng-deep p-captcha {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 304px;
+  height: 78px;
+  
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .detailsWidth {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .jobDetails {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .shadowCont .jobDetails:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .careersDetails .p-grid {
+    flex-direction: column-reverse;
+  }
+}
